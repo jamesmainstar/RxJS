@@ -11,7 +11,8 @@ console.log(RED1 === RED2) //false
 ```javascript
 const height = Symbol('height')
 const obj = {age: 25}
-obj[heighta] = 173
+obj[height] = 173
+
 Object.getOwnPropertyNames(obj)//[ 'age’ ]
 Object.getOwnPropertySymbols(obj)// [ Symbol(height) ]
 ```
@@ -20,10 +21,13 @@ Object.getOwnPropertySymbols(obj)// [ Symbol(height) ]
 ```javascript
 const SWITCH_OFF = 0
 const EQUAL = 0
+
 const getBtnStatus = () => SWITCH_OFF
 const compareVersion = () => EQUAL
+
 const btnStatus = getBtnStatus()
 const result = compareVersion('0.0.1', '0.0.1')
+
 btnStatus === comparedResult //true
 ```
 #### Good
@@ -31,10 +35,13 @@ btnStatus === comparedResult //true
 ```javascript
 const SWITCH_OFF = Symbol(0)
 const EQUAL = Symbol(0)
+
 const getBtnStatus = () => SWITCH_OFF
 const compareVersion = () => EQUAL
+
 const btnStatus = getBtnStatus()
 const result = compareVersion('0.0.1', '0.0.1')
+
 btnStatus === comparedResult //false
 ```
 
