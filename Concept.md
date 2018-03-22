@@ -24,7 +24,7 @@ num = 1 // Fine
 const num = 0
 num = 1 // TypeError
 
-const obj = { a: 'a’ }
+const obj = { a: 'a' }
 obj.b = 'B' //Working
 obj.a = 'A' //Working
 delete obj.a //Working
