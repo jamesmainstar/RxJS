@@ -1,25 +1,25 @@
 #Concept
 ## Block scope
-###var is function scope
+### var is function scope
 ```javascript
 if (true) {
   var x = 3
 }
 console.log(x) //3
 ```
-###let is block scope
+### let is block scope
 ```javascript
 if (true) {
   let x = 3
 }
 console.log(x) //ReferenceError
 ```
-###let is not immutable
+### let is not immutable
 ```javascript
 let num = 0
 num = 1 // Fine
 ```
-###const is immutable
+### const is immutable
 ```javascript
 const num = 0
 num = 1 // TypeError
@@ -30,7 +30,7 @@ obj.a = 'A' //Working
 delete obj.a //Working
 ```
 ##Arrow function
-###function declaration
+### function declaration
 ```javascript
 function sum (a, b) {
   return a + b
@@ -41,7 +41,7 @@ function getBMI (weight, height) {
   return weight / Math.pow(height, 2)
 }
 ```
-###Arrow function
+### Arrow function
 ```javascript
 const sum = (a, b) => a + b
 
@@ -50,14 +50,14 @@ const getBMI = (weight, height) => {
   return weight / Math.pow(height, 2)
 }
 ```
-###Always anonymous
+### Always anonymous
 ```javascript
 const sum = (a, b) => a + b
 
 const sum = sum(a, b) => a + b
 //SyntaxError
 ```
-###Lexical this
+### Lexical this
 ```javascript
 const obj = {
   data: '',
@@ -67,24 +67,24 @@ const obj = {
   }
 }
 ```
-###It can’t be used constructor
+### It can’t be used constructor
 ```javascript
 const Person = () => {}
 new Person() //TypeError
 ```
 
 ## Class
-###Class declaration
+### Class declaration
 ```javascript
 class MyClass {}
 const instance = new MyClass()
 ```
-###Class expression
+### Class expression
 ```javascript
 const MyClass = class {}
 const instance = new MyClass()
 ```
-###Sub classing
+### Sub classing
 ```javascript
 class Point {
   constructor (x, y) {
@@ -105,7 +105,7 @@ class ColorPoint extends Point {
   }
 }
 ```
-###Static
+### Static
 ```javascript
 class Point {
   static pointMethod() {
@@ -122,7 +122,7 @@ Point.pointmethod()
 
 ColorPoint.pointmethod()
 ```
-###Getter & Setter
+### Getter & Setter
 ```javascript
 class Point {
   constructor(x, y) {
