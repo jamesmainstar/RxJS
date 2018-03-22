@@ -1,1 +1,4 @@
-Welcome to the es6 wiki!
+* [Concept](https://github.com/ChoDragon9/es6/wiki/Concept)
+* [Better](https://github.com/ChoDragon9/es6/wiki/Better)
+* [New Features](https://github.com/ChoDragon9/es6/wiki/New-Features)
+* [For Library](https://github.com/ChoDragon9/es6/wiki/For-Library)
