@@ -1,4 +1,3 @@
-# Concept
 ## Block scope
 ### var is function scope
 ```javascript
