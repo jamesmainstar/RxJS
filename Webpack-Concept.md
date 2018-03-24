@@ -2,7 +2,7 @@
 #### 요약
 * Entry : 웹팩 빌드 시작점
 * Output : 웹팩 빌드 결과물 만들어지는 곳
-* Loaders : .js 확장자 이외 파일이 import를 통해 사용될 때 전용 로더를 사용해야함. 예를 들어 .txt 파일을 raw-loader를 사용함
+* Loaders : import를 통해 읽은 파일을 컴파일하고 싶을 때 사용
 * Plugins : 코드 최적화를 하고 싶을 때 사용
 
 #### Entry
@@ -17,6 +17,7 @@
 #### Loaders
 - webpack.config.js에 작성할 때 `module`이라는 프로퍼티명을 사용한다.
 - 로더는 자바스크립트 파일이외 다른 파일을 처리할 수 있게 도와주는 역할을 한다.
+- import의 기본 확장자는 `.js`로 로더를 추가없이 사용가능하지만 ES Feature를 사용하기 위해서 로더를 추가할 수 있다.
 - 로더를 사용하지 않으면 웹팩은 자바스크립트만 사용가능하다
 ```javascript
 module.exports = {
