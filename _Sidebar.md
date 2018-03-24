@@ -12,3 +12,6 @@
 * [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
 * [Using-babel-in-webpack](https://github.com/ChoDragon9/posts/wiki/Using-babel-in-webpack)
 * [Babel Stage](https://github.com/ChoDragon9/posts/wiki/Babel-Stage)
+
+**Algorithm**
+* [Hacker-Rank](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
