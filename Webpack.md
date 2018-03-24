@@ -18,7 +18,8 @@ module.exports = {
   }
 }
 ```
-#### entry.js
+#### 샘플 코드 만들기
+##### entry.js
 ```javascript
 import { foo } from './foo'
 import { bar } from './bar'
@@ -26,7 +27,7 @@ import { bar } from './bar'
 foo()
 bar()
 ```
-#### bar.js
+##### bar.js
 ```javascript
 export const bar = {
   bar () {
@@ -34,7 +35,7 @@ export const bar = {
   }
 }
 ```
-#### foo.js
+##### foo.js
 ```javascript
 export const foo = {
   foo () {
@@ -42,14 +43,14 @@ export const foo = {
   }
 }
 ```
-### build
-#### package.json 에 `build`명령어 추가
+#### build
+##### package.json 에 `build`명령어 추가
 ```
 "scripts": {
   "build": "webpack --config webpack.config.js"
 }
 ```
-#### webpack build
+##### webpack build
 ```bash
 $ npm run build
 ```
