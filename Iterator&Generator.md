@@ -1,3 +1,4 @@
+## Iterator
 ### Iterable Protocol
 순차적으로 접근할 수 있는 Iterator Protocol를 접근하기 위한 엑세스 포인트를 정의할 수 있는 프로토콜
 ```javascript
@@ -56,4 +57,58 @@ obj[Symbol.iterator] = () => {
 }
 
 console.log([...obj]) // [60, 20, 'Smith']
+```
+### Using Generator
+```javascript
+const obj = {
+  name: 'Smith',
+  age: 20,
+  weight: 60
+}
+
+obj[Symbol.iterator] = function* () {
+  const arr = Object.keys(obj)
+  yield obj[arr.pop()]
+  yield obj[arr.pop()]
+  yield obj[arr.pop()]
+}
+
+console.log([...obj]) // [60, 20, 'Smith']
+```
+### Iterable data sources
+Arrays, Maps, DOM queies, Strings, Sets, Arguments
+
+## Generator
+실행 흐름을 조절할 수 있는 기능을 제공한다(?)
+### function*
+```javascript
+function* genFour () {
+  yield 1
+  yield 2
+  yield 3
+  return 4
+}
+let four = getFour()
+```
+### Generators are both an iterator and an iterable.
+```javascript
+four.next() // Object { value: 1, done: false)
+four.next() // Object { value: 2, done: false)
+four.next() // Object { value: 3, done: false)
+four.next() // Object { value: 4, done: true)
+
+[....getFour()] // Array [1, 2, 3, 4]
+```
+### yield* yields every yield inside a called generator
+```javascript
+function* flatten(arr){
+  for (let x of arr) {
+    if (x instanceof Array){
+      yield* flatten(x)
+    } else {
+      yield x
+    }
+  }
+}
+let t = flatten([1, 2, [3, 4]])
 ```
