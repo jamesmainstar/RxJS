@@ -43,6 +43,7 @@ Array.of(1, 2, 3, 4, 5) //[1, 2, 3, 4, 5]
 (new Array(7)).fill(2).fill(3, 2, 5) //[2, 2, 3, 3, 3, 2, 2]
 ```
 ### Object
+```javascript
 //Object.assign()
 let x = {a: 1}
 Object.assign(x, {b: 2}) //{ a: 1, b: 2}
@@ -51,3 +52,4 @@ Object.assign(x, {b: 2}) //{ a: 1, b: 2}
 Object.is('y', 'y') //true
 Object.is({x: 1}, {x: 1}) //false
 Object.is(NaN, NaN) //true
+```
