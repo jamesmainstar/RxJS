@@ -42,13 +42,14 @@ export const foo = {
   }
 }
 ```
-### build 명령어 추가
-### package.json 에 `build`명령어 추가
+### build
+#### package.json 에 `build`명령어 추가
 ```
 "scripts": {
   "build": "webpack --config webpack.config.js"
 }
 ```
+#### webpack build
 ```bash
 $ npm run build
 ```
