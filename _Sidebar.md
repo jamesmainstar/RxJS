@@ -8,3 +8,4 @@
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
 * [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
+* [Using-babel-in-webpack](https://github.com/ChoDragon9/wiki/wiki/Using-babel-in-webpack)
