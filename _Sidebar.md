@@ -1,5 +1,5 @@
 **ECMAScript 2015**
-* Concept
-* Better
-* New Features
-* For library
+* [Concept](https://github.com/ChoDragon9/es6/wiki/Concept)
+* [Better](https://github.com/ChoDragon9/es6/wiki/Better)
+* [New Features](https://github.com/ChoDragon9/es6/wiki/New+Features)
+* [For library](https://github.com/ChoDragon9/es6/wiki/For+library)
