@@ -7,4 +7,4 @@
 **Libraries**
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
-* [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babal+Basic)
+* [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
