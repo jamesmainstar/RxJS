@@ -1,4 +1,6 @@
 ## Iterator
+내부 표현부를 노출하지 않고 어떤 객체 집합에 속한 원소들을 순차적으로 접근할 수 있는 방법을 제공하는 패턴이다.
+
 ### Iterable Protocol
 순차적으로 접근할 수 있는 Iterator Protocol를 접근하기 위한 엑세스 포인트를 정의할 수 있는 프로토콜
 ```javascript
