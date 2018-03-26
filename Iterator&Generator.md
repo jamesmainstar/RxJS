@@ -42,6 +42,7 @@ console.log(it.next().done); // true
 ```
 
 ### Customize Iterables
+Object는 Iterable 하지 않지만 Iterator/Iterable Protocol를 통해 Iterable 하게 만들 수 있다.
 ```javascript
 const obj = {
   name: 'Smith',
