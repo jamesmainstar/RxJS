@@ -2,7 +2,11 @@
 내부 표현부를 노출하지 않고 어떤 객체 집합에 속한 원소들을 순차적으로 접근할 수 있는 방법을 제공하는 패턴이다.
 
 ### Iterable Protocol
-순차적으로 접근할 수 있는 Iterator Protocol를 접근하기 위한 엑세스 포인트를 정의할 수 있는 프로토콜
+순차적으로 접근할 수 있는 Iterator를 접근하기 위한 프로토콜
+
+Java에서 Iterator를 구현할 때는 hasNext/next 인터페이스를 사용하지만 Javascript에서는 next만 사용된다.
+
+죵료된 것은 done property가 true일 때로 확인 가능하다.
 ```javascript
 const str = "hi"
 const iterator = str[Symbol.iterator]()
