@@ -3,8 +3,8 @@
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
 * [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
 * [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
-* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 * [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
+* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 
 ***
 
