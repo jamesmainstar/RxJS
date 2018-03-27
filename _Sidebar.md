@@ -8,8 +8,6 @@
 
 ***
 
-### Libraries
-
 #### Webpack
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
