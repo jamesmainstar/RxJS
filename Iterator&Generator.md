@@ -86,7 +86,7 @@ console.log([...obj]) // [60, 20, 'Smith']
 Arrays, Maps, DOM queies, Strings, Sets, Arguments
 
 ## Generator
-실행 흐름을 조절할 수 있는 기능을 제공한다(?)
+실행 흐름을 조절할 수 있는 기능을 제공한다
 ### function*
 ```javascript
 function* genFour () {
