@@ -32,6 +32,7 @@ arr.sort((a, b) => {
 })
 ```
 ### Array Manipulation
+#### Data
 ```javascript
 /**
  * Hacker Rank
@@ -56,9 +57,10 @@ let arr = [];
 for(let i = 0; i < arrSize; i++){
     arr[i] = 0;
 }
+```
 
-//Solution
-
+#### Solution
+```javascript
 for(let i = 0; i < itemLength; i++){
     const self = inputItem[i];
     for(let j = self.startIndex - 1; j < self.endIndex; j++){
@@ -68,8 +70,10 @@ for(let i = 0; i < itemLength; i++){
 
 console.log(arr);
 console.log(Math.max.apply(null, arr));
+```
 
-//Best Solution
+#### Best Solution
+```javascript
 //Score의 사용범위를 지정하여 루프와 연산 비용을 줄인다.
 
 for(let i = 0; i < itemLength; i++){
