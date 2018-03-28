@@ -21,6 +21,7 @@
 
 ### Vue
 * [router-link](https://github.com/ChoDragon9/posts/wiki/router-link)
+* [axios 응답 데이터 SSR에 포함하기](https://github.com/ChoDragon9/posts/wiki/axios-%EC%9D%91%EB%8B%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-SSR%EC%97%90-%ED%8F%AC%ED%95%A8%ED%95%98%EA%B8%B0)
 
 ***
 
