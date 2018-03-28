@@ -12,6 +12,7 @@
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
 * [env variable](https://github.com/ChoDragon9/posts/wiki/env-variable)
+* [externals](https://github.com/ChoDragon9/posts/wiki/externals)
 
 #### Babel
 * [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
