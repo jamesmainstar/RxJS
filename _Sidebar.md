@@ -12,7 +12,7 @@
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
 * [환경변수사용](https://github.com/ChoDragon9/posts/wiki/%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EC%82%AC%EC%9A%A9)
-* [번들링시 노드모듈 예외처리](https://github.com/ChoDragon9/posts/wiki/번들링시 노드모듈 예외처리)
+* [번들링시 노드모듈 예외처리](https://github.com/ChoDragon9/posts/wiki/%EB%B2%88%EB%93%A4%EB%A7%81%EC%8B%9C-%EB%85%B8%EB%93%9C%EB%AA%A8%EB%93%88-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC)
 
 #### Babel
 * [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
