@@ -1,5 +1,6 @@
 ### 소개
-[Parcel](https://ko.parceljs.org/)는 모듈 번들러로 사용률이 높은 webpack과 같은 역할을 한다.
+[Parcel](https://ko.parceljs.org/)는 모듈 번들러로 사용률이 높은 webpack과 같은 역할을 한다. 플러그인을 추가해 컴포넌트 확장자(
+vue, react 등)를 사용할 수 있다.
 
 #### 장점
 Parcel를 사용하면 얻을 수 있는 장점은 초기 프로젝트 세팅 비용을 절약할 수 있으며 자세한 것은 아래와 같다.
