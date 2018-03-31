@@ -1,11 +1,11 @@
 Parcel는 모듈 번들러로 사용률이 높은 webpack과 같은 역할을 한다.
 
-Parcel의 특징은 
+Parcel를 사용하면 얻을 수 있는 장점은 초기 프로젝트 세팅 비용을 절약할 수 있으며 자세한 것은 아래와 같다.
+
 * Zero Configuation : 설정없이 ES Feature와 hot module 지원
 * Entry 포인트를 HTML로 지정 가능
 * Code Splitting : import() 사용으로 자동으로 코드 분할해줌
 * 파일명 Hash Code : 캐시 방지에 필요한 hash code를 자동으로 해줌
-이 두가지가 강력하다.
 
 #### 설치
 ```bash
