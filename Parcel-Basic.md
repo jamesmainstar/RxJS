@@ -5,7 +5,7 @@ vue, react 등)를 사용할 수 있다.
 #### 장점
 Parcel를 사용하면 얻을 수 있는 장점은 초기 프로젝트 세팅 비용을 절약할 수 있으며 자세한 것은 아래와 같다.
 
-* Zero Configuation : 설정없이 TypeScript/ES Feature/Hot module 지원
+* Zero Configuation : 설정없이 TypeScript/ES6+/Hot module 지원
 * Entry 포인트를 HTML로 지정 가능
 * Code Splitting : import() 사용으로 자동으로 코드 분할해줌
 * 파일명 Hash Code : 캐시 방지에 필요한 hash code를 자동으로 해줌
