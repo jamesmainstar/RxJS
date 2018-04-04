@@ -25,6 +25,9 @@
 
 ### Parcel
 * [Parcel Basic](https://github.com/ChoDragon9/es6/wiki/Parcel+Basic)
+
+### Lodash
+* [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
 ***
 
 ### Algorithm
