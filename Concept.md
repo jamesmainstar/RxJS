@@ -28,7 +28,7 @@ obj.b = 'B' //Working
 obj.a = 'A' //Working
 delete obj.a //Working
 ```
-##Arrow function
+## Arrow function
 ### function declaration
 ```javascript
 function sum (a, b) {
