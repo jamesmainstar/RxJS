@@ -1,3 +1,5 @@
+앞에서 필더링한 chunk인 `vendor`를 기준으로 `vendor-a-k`,`vendor-l`,`vendor-m-z`로 분리한 예제
+
 ```javascript
 new webpack.optimize.CommonsChunkPlugin({
   name: 'vendor',
