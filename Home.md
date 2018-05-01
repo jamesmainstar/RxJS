@@ -1,3 +1,5 @@
+[리펙토링 고찰](https://github.com/ChoDragon9/posts/wiki/%EB%A6%AC%ED%8E%99%ED%86%A0%EB%A7%81-%EA%B3%A0%EC%B0%B0) 작성중
+
  ### ECMAScript 2015
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
