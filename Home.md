@@ -1,10 +1,16 @@
 [리펙토링 고찰](https://github.com/ChoDragon9/posts/wiki/%EB%A6%AC%ED%8E%99%ED%86%A0%EB%A7%81-%EA%B3%A0%EC%B0%B0) 작성중
 
 ### 추천 도서 : 소프트웨어 지식에 대해 이해하기 쉽게 기술한 도서들
+#### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
-* [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정
 * [실용주의 소프트웨어 개발](http://book.naver.com/bookdb/book_detail.nhn?bid=11885425) : 요구사항, 설계, 테스트, 개발 방법론
-* [자바스크립트 자료 구조와 알고리즘](http://m.book.naver.com/bookdb/book_detail.nhn?biblio.bid=9755482#) : 자료구조, 알고리즘
+* [클린 소프트웨어](http://book.naver.com/bookdb/book_detail.nhn?bid=12035385) : 에자일 설계
+
+#### 프로그래밍
+* [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정
+* [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
+* [자바스크립트 성능 이야기](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7006583) : 브라우저 동작 및 최적화
+* [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
 
  ### ECMAScript 2015
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
