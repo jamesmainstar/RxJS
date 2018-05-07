@@ -7,7 +7,7 @@
 * [클린 소프트웨어](http://book.naver.com/bookdb/book_detail.nhn?bid=12035385) : 에자일 설계
 
 #### 프로그래밍
-* [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정
+* [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정, 형이 왜 존재하는 지
 * [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
 * [자바스크립트 성능 이야기](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7006583) : 브라우저 동작 및 최적화
 * [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
