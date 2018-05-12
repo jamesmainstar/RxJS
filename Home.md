@@ -1,5 +1,3 @@
-[리펙토링 고찰](https://github.com/ChoDragon9/posts/wiki/%EB%A6%AC%ED%8E%99%ED%86%A0%EB%A7%81-%EA%B3%A0%EC%B0%B0) 작성중
-
 #### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
 * [실용주의 소프트웨어 개발](http://book.naver.com/bookdb/book_detail.nhn?bid=11885425) : 요구사항, 설계, 테스트, 개발 방법론
