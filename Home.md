@@ -50,7 +50,6 @@
 
 ### Test
 * [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
-* [spy toThrow](https://github.com/ChoDragon9/posts/wiki/spy-toThrow)
 
 ### Algorithm
 * [Hacker-Rank](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
