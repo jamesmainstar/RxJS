@@ -48,12 +48,15 @@
 * [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
 ***
 
+### Test
+* [expect](https://github.com/ChoDragon9/posts/wiki/mjackson-expect)
+* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
+
 ### Algorithm
 * [Hacker-Rank](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
 
 ### ETC
 * [개발 환경 세팅](https://github.com/ChoDragon9/posts/wiki/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85) : ES6 import/export 테스트 환경 구축하기 귀찮으므로 RequireJs 사용
-* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
 * [package-lock.json](https://github.com/ChoDragon9/posts/wiki/package-lock.json)
 * [Intellij 확장자 안열릴 때](https://github.com/ChoDragon9/posts/wiki/%5Bintellij%5D-확장자-안열릴-때)
 * href = Hypertext Reference
