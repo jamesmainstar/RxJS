@@ -49,7 +49,6 @@
 ***
 
 ### Test
-* [expect](https://github.com/ChoDragon9/posts/wiki/mjackson-expect)
 * [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
 
 ### Algorithm
