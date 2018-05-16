@@ -13,6 +13,9 @@
 #### 기타
 * [실용주의 사고와 학습](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9720757) : 우리 뇌를 효율적으로 사용하는 법
 
+#### 참고 사이트
+* [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
+
  ### ECMAScript 2015
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
