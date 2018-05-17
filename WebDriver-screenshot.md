@@ -1,7 +1,12 @@
 ### Screen Capture : https://www.w3.org/TR/webdriver/#screen-capture
 Viewport의 Framebuffer의 스냅샷을 가져와 PNG 이미지로 만듬.
 
-#### Framebuffer를 Bounding Box에 그리는 과정
+#### 프레임버퍼를 바운딩 박스에 그리는 과정
+주어진 사각형를 기준으로 바운딩 박스에 그림을 그리는 데, 스크린샷을 찍을 때 document를 전달하기 때문에 여기에 사각형은 document임.
+1. viewport의 가로/세로 사이즈 둘중 하나라도 0px이면 return error
+2. 패인팅되는 부분은 뷰포트의 (x, y)부터 (x + width, y + height)까지
+3. 캔버스를 새로 생성 후 캔버스의 2D 컨텍스트 모드로 설정한 뒤 캔버스에 패인팅
+4. 캔버스를 리턴함
 
 #### 모니터 출력 원리
 1. User Application에서 *Frame Buffer Data 전송
