@@ -53,6 +53,7 @@
 
 ### Test
 * [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
+* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
 
 ### Algorithm
 * [Hacker-Rank](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
