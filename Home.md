@@ -65,3 +65,4 @@
 * href = Hypertext Reference
 * eslint-disable-line
 * [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
+* Pull Request에서 develop과 conflict 발생시 feature 브랜치와 머지를 하지 않는 것이 좋음 : feature에 머지시 conflict의 정상동작을 보장 할 수 없음.
