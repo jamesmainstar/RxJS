@@ -1,3 +1,11 @@
+### 레시피
+* [Hacker-Rank - 알고리즘](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
+* [개발 환경 세팅](https://github.com/ChoDragon9/posts/wiki/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85) : ES6 import/export 테스트 환경 구축하기 귀찮으므로 RequireJs 사용
+* 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
+
+***
+
+### 문서
 #### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
 * [실용주의 소프트웨어 개발](http://book.naver.com/bookdb/book_detail.nhn?bid=11885425) : 요구사항, 설계, 테스트, 개발 방법론
@@ -16,7 +24,7 @@
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
 
- ### ECMAScript 2015
+#### ECMAScript 2015
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
 * [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
@@ -25,7 +33,7 @@
 * [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 
 ***
-
+### 라이브러리
 #### Webpack
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
@@ -39,30 +47,26 @@
 * [Using-babel-in-webpack](https://github.com/ChoDragon9/posts/wiki/Using-babel-in-webpack)
 * [Babel Stage](https://github.com/ChoDragon9/posts/wiki/Babel-Stage)
 
-### Vue
+#### Vue
 * [router-link](https://github.com/ChoDragon9/posts/wiki/router-link)
 * [axios 응답 데이터 SSR에 포함하기](https://github.com/ChoDragon9/posts/wiki/axios-%EC%9D%91%EB%8B%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-SSR%EC%97%90-%ED%8F%AC%ED%95%A8%ED%95%98%EA%B8%B0)
 * [Vue SSR + Vuex 상태 쌓이는 이슈](https://github.com/ChoDragon9/posts/wiki/%5BVue-SSR---Vuex%5D-상태-쌓이는-이슈)
 
-### Parcel
+#### Parcel
 * [Parcel Basic](https://github.com/ChoDragon9/es6/wiki/Parcel+Basic)
 
-### Lodash
+#### Lodash
 * [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
 ***
+### 글
 
-### Test
 * [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
 * [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
-
-### Algorithm
-* [Hacker-Rank](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
-
-### ETC
-* [개발 환경 세팅](https://github.com/ChoDragon9/posts/wiki/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85) : ES6 import/export 테스트 환경 구축하기 귀찮으므로 RequireJs 사용
+* [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
 * [package-lock.json](https://github.com/ChoDragon9/posts/wiki/package-lock.json)
 * [Intellij 확장자 안열릴 때](https://github.com/ChoDragon9/posts/wiki/%5Bintellij%5D-확장자-안열릴-때)
 * href = Hypertext Reference
 * eslint-disable-line
-* [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
 * Pull Request에서 develop과 conflict 발생시 feature 브랜치와 머지를 하지 않는 것이 좋음 : feature에 머지시 conflict의 정상동작을 보장 할 수 없음.
+
+
