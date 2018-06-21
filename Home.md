@@ -68,5 +68,11 @@
 * href = Hypertext Reference
 * eslint-disable-line
 * Pull Request에서 develop과 conflict 발생시 feature 브랜치와 머지를 하지 않는 것이 좋음 : feature에 머지시 conflict의 정상동작을 보장 할 수 없음.
+* Intellij 단축키
+  - 코드 정리 : option + command + L
+  - multi cursor : shift + option(alt) + click
+  - 테스크 자동 실행 : control + R
+  - 코드 구조 표현 : command + 7
+  - 최근 사용 파일 : command + E
 
 
