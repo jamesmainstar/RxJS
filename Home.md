@@ -4,6 +4,7 @@
 * 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
 * javascript style 작성 시 `const style = dom.style` 또는 `Object.assign(dom.style, {})` 방식으로 처리. 
 * 고정 텍스트 추출 `const [year, month, date] = birthDateStr.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3').split('-')`
+* 외부에서 들어오는 값도 가드가 필요.
 
 ***
 
