@@ -29,9 +29,6 @@
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
 
-#### Syntax
-* [Flow Control Statement](https://github.com/ChoDragon9/posts/wiki/Flow-Control-Statement)
-
 #### ECMAScript 2015
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
