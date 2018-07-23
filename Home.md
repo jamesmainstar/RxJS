@@ -29,6 +29,7 @@
 
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
+* [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
 
 #### ECMAScript 2015
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
