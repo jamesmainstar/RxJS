@@ -81,3 +81,4 @@
   - 테스크 자동 실행 : control + R
   - 코드 구조 표현 : command + 7
   - 최근 사용 파일 : command + E
+* placeholder content
