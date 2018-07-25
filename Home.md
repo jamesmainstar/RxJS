@@ -8,7 +8,7 @@
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
 * [컴퓨터 과학 용어](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B3%BC%ED%95%99-%EC%9A%A9%EC%96%B4)
 * [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
-
+* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
 ***
 
 ### 문서
