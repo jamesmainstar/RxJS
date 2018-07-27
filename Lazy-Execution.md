@@ -98,4 +98,11 @@ console.log(...take(odd(take(arr, 5)), 2))
 // take(5)[yield] odd[yield] take(2)[yield]
 // take(5)[yield] odd
 // take(5)[yield] odd[yield] take(2)[yield]
+
+console.log(...odd(take(odd(take(arr, 5)), 2)))
+
+// [0] take(5)[yield] odd
+// [1] take(5)[yield] odd[yield] take(2)[yield] odd[yield]
+// [2] take(5)[yield] odd
+// [3] take(5)[yield] odd[yield] take(2)[yield] odd[yield]
 ```
