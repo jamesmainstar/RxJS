@@ -1,8 +1,7 @@
-#### Yield 동작 과정 및 조건
-- 실행 우선 순위는 내부함수가 가장 높고 감싸고 있는 함수가 한단계씩 줄어든다.
-- `yield`가 없을 경우 다름 루틴으로 이동한다.
-- `yield`가 실행되면 `코드 블럭`에 위치가 저장되고, 해당 루틴에서 빠져나온다.
-- 저장된 코드 블럭이 없으면 종료된다.
+#### yield 동작
+- 라인별로 `Record` 저장한다.
+- `yield`를 만나면 바깥에 `Iterator Result Object`를 반환하게 되고, 멈추게 된다.
+- `next()`를 호출하게 되면 `Iterator Result Object`를 받을 수 있고, 다음 `Record`를 실행하게 된다.
 
 ```js
 function* odd(arr) {
