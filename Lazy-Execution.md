@@ -82,3 +82,20 @@ console.log(...take(odd(arr), 2))
 // take 3
 // 1 3
 ```
+
+#### 실행 순서 분석
+```js
+console.log(...take(odd(arr)), 2))
+
+// [0] odd
+// [1] odd[yield] take(2)[yield]
+// [2] odd
+// [3] odd[yield] take(2)[yield]
+
+console.log(...take(odd(take(arr, 5)), 2))
+
+// take(5)[yield] odd
+// take(5)[yield] odd[yield] take(2)[yield]
+// take(5)[yield] odd
+// take(5)[yield] odd[yield] take(2)[yield]
+```
