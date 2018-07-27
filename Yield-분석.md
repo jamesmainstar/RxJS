@@ -26,26 +26,36 @@ function* take(arr, n) {
 }
 ```
 ```js
+const gene = take(odd(arr), 2)
+gene.next()
+gene.next()
+gene.next()
+// [0] odd
+// [1] odd[yield] take(2)[yield]
+// [2] odd
+// [3] odd[yield] take(2)[yield] break
+```
+```js
 console.log(...take(odd(arr)), 2))
 
 // [0] odd
 // [1] odd[yield] take(2)[yield]
 // [2] odd
-// [3] odd[yield] take(2)[yield]
+// [3] odd[yield] take(2)[yield] break
 
 console.log(...take(odd(take(arr, 5)), 2))
 
 // [0] take(5)[yield] odd
 // [1] take(5)[yield] odd[yield] take(2)[yield]
 // [2] take(5)[yield] odd
-// [3] take(5)[yield] odd[yield] take(2)[yield]
+// [3] take(5)[yield] odd[yield] take(2)[yield] break
 
 console.log(...odd(take(odd(take(arr, 5)), 2)))
 
 // [0] take(5)[yield] odd
 // [1] take(5)[yield] odd[yield] take(2)[yield] odd[yield]
 // [2] take(5)[yield] odd
-// [3] take(5)[yield] odd[yield] take(2)[yield] odd[yield]
+// [3] take(5)[yield] odd[yield] take(2)[yield] break odd[yield]
 ```
 
 루프가 종료되고 저장된 코드 블럭이 없기 때문에 `take(5)` `odd`만 실행되고, 이것들을 감싸고 있는 `take(2)` `odd`는 실행되지 않는 다.
