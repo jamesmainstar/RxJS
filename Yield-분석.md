@@ -1,7 +1,7 @@
 #### yield 동작
 - 라인별로 `Record` 저장한다.
-- `yield`를 만나면 바깥에 `Iterator Result Object`를 반환하게 되고, 멈추게 된다.
-- `next()`를 호출하게 되면 `Iterator Result Object`를 받을 수 있고, 다음 `Record`를 실행하게 된다.
+- `yield`를 만나면 바깥에 `Iterator Result Object`를 반환하게 되고, 멈추게 된다.(서스펜션 효과)
+- `next()`를 호출하게 되면 `Iterator Result Object`를 받을 수 있고, 다음 `Record`를 실행하게 된다.(코루틴)
 
 ```js
 function* odd(arr) {
