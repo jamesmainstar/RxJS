@@ -38,6 +38,7 @@
 * [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
 * [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
   * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
+  * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
 * [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 
 ***
