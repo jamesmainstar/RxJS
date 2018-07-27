@@ -39,6 +39,7 @@
 * [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
   * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
   * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
+  * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
 * [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 
 ***
