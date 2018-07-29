@@ -19,6 +19,7 @@
 
 #### 프로그래밍
 * [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정, 형이 왜 존재하는 지
+  * [요약](https://github.com/ChoDragon9/posts/wiki/코딩을-지탱하는-기술-요약)
 * [함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=12800140) : 함수 하나라도 잘짜고 싶을 때
 * [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
 * [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
