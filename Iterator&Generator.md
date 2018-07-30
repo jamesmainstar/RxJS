@@ -89,6 +89,7 @@ Arrays, Maps, DOM queies, Strings, Sets, Arguments
 `yield`로 `Iterator`를 쉽게 정의하여 `Iterable`를 쉽게 만들 수 있음. `코루틴`을 지원함.
 
 ### function*
+함수 실행 시 Generator Object를 반환한다. Generator Object의 인터페이스는 `next`, `return`, `throw`가 있다.
 ```javascript
 function* genFour () {
   yield 1
