@@ -24,6 +24,8 @@ function* take(arr, n) {
     }
   }
 }
+
+const arr = [0, 1, 2, 3, 4, 5]
 ```
 ```js
 const gene = take(odd(arr), 2)
