@@ -57,34 +57,3 @@ console.log(...odd(take(odd(take(arr, 5)), 2)))
 // [2] take(5)[yield] odd
 // [3] take(5)[yield] odd[yield] take(2)[yield] break odd[yield]
 ```
-
-루프가 종료되고 저장된 코드 블럭이 없기 때문에 `take(5)` `odd`만 실행되고, 이것들을 감싸고 있는 `take(2)` `odd`는 실행되지 않는 다.
-```js
-function* odd(arr) {
-  for (const v of arr) {
-    console.log(`odd ${v}`)
-  }
-}
-
-function* take(arr, n) {
-  let count = 0
-  for (const v of arr) {
-    console.log(`take(${n}) ${v}`)
-    count++
-    yield v
-    if (count === n) {
-      break;
-    }
-  }
-}
-
-const arr = [0,1,2,3,4,5]
-
-console.log(...odd(take(odd(take(arr, 5)), 2)))
-
-// [0] take(5)[yield] odd
-// [1] take(5)[yield] odd
-// [2] take(5)[yield] odd
-// [3] take(5)[yield] odd
-// [4] take(5)[yield] odd
-```
