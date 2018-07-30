@@ -20,7 +20,7 @@ function* take(arr, n) {
     count++
     yield v
     if (count === n) {
-      break;
+      break
     }
   }
 }
