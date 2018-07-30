@@ -38,16 +38,6 @@ gene.next()
 // [3] odd[yield] take(2)[yield] break
 ```
 ```js
-const arr = Array.from({length: 5}, (v, i) => i)
-const result = [...take(odd(arr), 2)] // [1, 3]
-
-const oddGenObj = odd(arr)
-const takeGenObj = take(oddGenObj, 2)
-const result = []
-result.push(takeGenObj.next().value)
-result.push(takeGenObj.next().value)
-```
-```js
 console.log(...take(odd(arr)), 2))
 
 // [0] odd
@@ -68,4 +58,12 @@ console.log(...odd(take(odd(take(arr, 5)), 2)))
 // [1] take(5)[yield] odd[yield] take(2)[yield] odd[yield]
 // [2] take(5)[yield] odd
 // [3] take(5)[yield] odd[yield] take(2)[yield] break odd[yield]
+```
+> `const result = [...take(odd(arr), 2)]`를 풀어서 쓰면 아래와 같다.
+```js
+const oddGenObj = odd(arr)
+const takeGenObj = take(oddGenObj, 2)
+const result = []
+result.push(takeGenObj.next().value)
+result.push(takeGenObj.next().value)
 ```
