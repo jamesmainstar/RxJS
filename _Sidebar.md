@@ -4,16 +4,13 @@
 * 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
 * javascript style 작성 시 `const style = dom.style` 또는 `Object.assign(dom.style, {})` 방식으로 처리. 
 * [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
-* 외부에서 들어오는 값도 가드가 필요.
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
-* [컴퓨터 과학 용어](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B3%BC%ED%95%99-%EC%9A%A9%EC%96%B4)
-* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
-* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
 ***
 
 ### 문서
 #### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
+  * [컴퓨터 과학 용어](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B3%BC%ED%95%99-%EC%9A%A9%EC%96%B4)
 * [실용주의 소프트웨어 개발](http://book.naver.com/bookdb/book_detail.nhn?bid=11885425) : 요구사항, 설계, 테스트, 개발 방법론
 * [클린 소프트웨어](http://book.naver.com/bookdb/book_detail.nhn?bid=12035385) : 에자일 설계
 
@@ -32,7 +29,8 @@
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
 * [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
 
-#### ECMAScript 2015
+#### ECMAScript
+* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
 * [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
@@ -43,6 +41,10 @@
   * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
 * [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 
+#### 테스트
+* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
+* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
+* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
 ***
 ### 라이브러리
 #### Webpack
@@ -71,8 +73,6 @@
 ***
 ### 글
 
-* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
-* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
 * [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
 * [package-lock.json](https://github.com/ChoDragon9/posts/wiki/package-lock.json)
 * [Intellij 확장자 안열릴 때](https://github.com/ChoDragon9/posts/wiki/%5Bintellij%5D-확장자-안열릴-때)
