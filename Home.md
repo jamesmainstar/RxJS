@@ -6,6 +6,7 @@
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
 * [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
 * [설계 문서 웹서비스](https://www.draw.io/)
+* `Computed` 기능은 의존성있는 프로퍼티들의 변경이 일어났을 때만 새로 연산한다.
 ***
 
 ### 문서
