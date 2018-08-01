@@ -27,6 +27,8 @@
 
 #### 기타
 * [실용주의 사고와 학습](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9720757) : 우리 뇌를 효율적으로 사용하는 법
+* [생각정리스피치](https://book.naver.com/bookdb/book_detail.nhn?bid=12896858) : 스피츠를 잘하고 싶을 때
+  * [생각정리스피치 정리](https://github.com/ChoDragon9/posts/wiki/생각정리스피치-정리)
 
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
