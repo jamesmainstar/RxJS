@@ -22,6 +22,7 @@
 * [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
 * [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
 * [자바스크립트 성능 이야기](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7006583) : 브라우저 동작 및 최적화
+* [손에 잡히는 정규표현식](http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788991268630&n_media=27758&n_query=%EC%86%90%EC%97%90%EC%9E%A1%ED%9E%88%EB%8A%94%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D&n_rank=2&n_ad_group=grp-m001-01-000000208662314&n_ad=nad-a001-01-000000015636516&n_keyword_id=nkw-m001-01-000000286044841&n_keyword=%EC%86%90%EC%97%90%EC%9E%A1%ED%9E%88%EB%8A%94%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D&n_campaign_type=1&NaPm=ct%3Djkae01lk%7Cci%3D0z00000ZZk1pb2DmMf0O%7Ctr%3Dsa%7Chk%3D0ebbcffa27e2b8af6ac18d0d59251878ed443964)
 
 #### 기타
 * [실용주의 사고와 학습](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9720757) : 우리 뇌를 효율적으로 사용하는 법
