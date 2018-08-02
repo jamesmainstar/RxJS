@@ -1,8 +1,8 @@
 ### 팁
 * [개발 환경 세팅](https://github.com/ChoDragon9/posts/wiki/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85) : ES6 import/export 테스트 환경 구축하기 귀찮으므로 RequireJs 사용
 * 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
-* javascript style 작성 시 `const style = dom.style` 또는 `Object.assign(dom.style, {})` 방식으로 처리. 
 * [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
+* [코딩팁](https://github.com/ChoDragon9/posts/wiki/코딩팁)
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
 * [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
 * [설계 문서 웹서비스](https://www.draw.io/)
