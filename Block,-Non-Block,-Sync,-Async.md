@@ -110,3 +110,13 @@ console.log(double(2)); //4
 const double = (v, f)=>f(v*2);
 double(2, console.log); //4
 ```
+
+#### 요약
+- 싱크 : 서브루틴이 즉시 값을 반환함
+- 어싱크 : 서브루틴이 콜백을 통해 값을 반환함
+- 블록 : 즉시 플로우제어권을 반환하지 않음
+- 논블록 : 즉시 플로우제어권을 반환함
+- 싱크&블록 : normalAPI, legacyAPI
+- 싱크&논블록 : old API(img.complete)
+- 어싱크&블록 : TRAP
+- 어싱크&논블록 : modern API
