@@ -29,6 +29,7 @@
 ### 코드 스피츠
 #### CSS Rendering
 #### ES6+ 기초편
+* [Block, Non Block, Sync, Async](https://github.com/ChoDragon9/posts/wiki/Block,-Non-Block,-Sync,-Async)
 #### ES6+ 함수와 OOP
 #### ES6+ 디자인패턴과 뷰패턴
 ***
