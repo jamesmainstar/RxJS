@@ -1,12 +1,38 @@
-### 레시피
-* [Hacker-Rank - 알고리즘](https://github.com/ChoDragon9/posts/wiki/Hacker-Rank)
-* [개발 환경 세팅](https://github.com/ChoDragon9/posts/wiki/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85) : ES6 import/export 테스트 환경 구축하기 귀찮으므로 RequireJs 사용
-* 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
-* javascript style 작성 시 `const style = dom.style` 또는 `Object.assign(dom.style, {})` 방식으로 처리. 
-* [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
-* [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
-***
+### 기본기
+#### ECMAScript
+* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
+* [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
+* [Better](https://github.com/ChoDragon9/posts/wiki/Better)
+* [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
+* [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
+* [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
+  * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
+  * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
+  * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
+* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
 
+#### DOM
+* [Event](https://github.com/ChoDragon9/posts/wiki/Event)
+* [Selector](https://github.com/ChoDragon9/posts/wiki/Selector)
+
+#### 테스트
+* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
+* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
+* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
+
+#### 기타
+* [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
+* [코딩팁](https://github.com/ChoDragon9/posts/wiki/코딩팁)
+* [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
+
+***
+### 코드 스피츠
+#### CSS Rendering
+#### ES6+ 기초편
+* [Block, Non Block, Sync, Async](https://github.com/ChoDragon9/posts/wiki/Block,-Non-Block,-Sync,-Async)
+#### ES6+ 함수와 OOP
+#### ES6+ 디자인패턴과 뷰패턴
+***
 ### 문서
 #### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
@@ -21,30 +47,18 @@
 * [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
 * [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
 * [자바스크립트 성능 이야기](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7006583) : 브라우저 동작 및 최적화
+* [손에 잡히는 정규표현식](http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788991268630&n_media=27758&n_query=%EC%86%90%EC%97%90%EC%9E%A1%ED%9E%88%EB%8A%94%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D&n_rank=2&n_ad_group=grp-m001-01-000000208662314&n_ad=nad-a001-01-000000015636516&n_keyword_id=nkw-m001-01-000000286044841&n_keyword=%EC%86%90%EC%97%90%EC%9E%A1%ED%9E%88%EB%8A%94%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D&n_campaign_type=1&NaPm=ct%3Djkae01lk%7Cci%3D0z00000ZZk1pb2DmMf0O%7Ctr%3Dsa%7Chk%3D0ebbcffa27e2b8af6ac18d0d59251878ed443964)
 
 #### 기타
 * [실용주의 사고와 학습](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9720757) : 우리 뇌를 효율적으로 사용하는 법
+* [생각정리스피치](https://book.naver.com/bookdb/book_detail.nhn?bid=12896858) : 스피츠를 잘하고 싶을 때
+  * [생각정리스피치 정리](https://github.com/ChoDragon9/posts/wiki/생각정리스피치-정리)
 
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
 * [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
-
-#### ECMAScript
-* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
-* [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
-* [Better](https://github.com/ChoDragon9/posts/wiki/Better)
-* [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
-* [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
-* [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
-  * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
-  * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
-  * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
-* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
-
-#### 테스트
-* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
-* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
-* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
+* [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
+* [설계 문서 웹서비스](https://www.draw.io/)
 ***
 ### 라이브러리
 #### Webpack
@@ -70,9 +84,11 @@
 
 #### Lodash
 * [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
-***
-### 글
 
+***
+
+### 팁
+* 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
 * [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
 * [package-lock.json](https://github.com/ChoDragon9/posts/wiki/package-lock.json)
 * [Intellij 확장자 안열릴 때](https://github.com/ChoDragon9/posts/wiki/%5Bintellij%5D-확장자-안열릴-때)
