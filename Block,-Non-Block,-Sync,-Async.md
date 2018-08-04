@@ -30,3 +30,60 @@ f(100000000000000000000000);
    - 프레임(명령큐)
 2. 백그라운드 쓰레드 n개
 3. 웹 워커 쓰레드
+
+#### 블록킹 회피
+> 블록킹 함수
+```js
+const looper = (n, f)=>{
+  for(let i = 0; i < n; i++) f(i);
+};
+```
+1. 타임 슬라이스 메뉴얼
+```
+const looper = (n, f, slice = 3) => {
+    let limit = 0,
+        i = 0;
+    const runner = _ => {
+        while (i < n) {
+            if (limit++ < slice) f(i++);
+            else {
+                limit = 0;
+                requestAnimationFrame(runner);
+                break;
+            }
+        }
+    };
+    requestAnimationFrame(runner);
+};
+```
+2. 타임 슬라이스 오토
+```js
+const looper = (n, f, ms = 5000, i = 0) => {
+    let old = performance.now(),
+        curr;
+    const runner = curr => {
+        while (i < n) {
+            if (curr - old < ms) f(i++);
+            else {
+                old = performance.now();
+                requestAnimationFrame(runner);
+                break;
+            }
+        }
+    };
+    requestAnimationFrame(runner);
+};
+```
+3. 웹 워커
+```js
+const backRun = (f, end, ...arg) => {
+    const blob = new Blob([`onmessage =e=>postMessage((${f})(e.data));`], {
+        type: 'text/javascript'
+    });
+    const url = URL.createObjectURL(blob);
+    const worker = new Worker(url); //new Worker("some.js");
+    worker.onmessage = e => end(e.data);
+    worker.onerror = e => end(null);
+    worker.postMessage(arg);
+};
+```
