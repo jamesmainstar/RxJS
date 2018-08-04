@@ -1,6 +1,5 @@
 ### 기본기
 #### ECMAScript
-* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
 * [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
