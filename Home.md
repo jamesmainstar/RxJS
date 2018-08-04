@@ -1,10 +1,31 @@
-### 팁
-* 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
+
+### 기본기
+#### ECMAScript
+* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
+* [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
+* [Better](https://github.com/ChoDragon9/posts/wiki/Better)
+* [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
+* [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
+* [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
+  * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
+  * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
+  * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
+* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
+
+#### DOM
+* [Event](https://github.com/ChoDragon9/posts/wiki/Event)
+* [Selector](https://github.com/ChoDragon9/posts/wiki/Selector)
+
+#### 테스트
+* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
+* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
+* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
+
+#### 기타
 * [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
 * [코딩팁](https://github.com/ChoDragon9/posts/wiki/코딩팁)
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
 ***
-
 ### 문서
 #### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
@@ -31,27 +52,6 @@
 * [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
 * [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
 * [설계 문서 웹서비스](https://www.draw.io/)
-
-#### ECMAScript
-* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
-* [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
-* [Better](https://github.com/ChoDragon9/posts/wiki/Better)
-* [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
-* [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
-* [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
-  * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
-  * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
-  * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
-* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
-
-#### DOM
-* [Event](https://github.com/ChoDragon9/posts/wiki/Event)
-* [Selector](https://github.com/ChoDragon9/posts/wiki/Selector)
-
-#### 테스트
-* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
-* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
-* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
 ***
 ### 라이브러리
 #### Webpack
@@ -77,9 +77,11 @@
 
 #### Lodash
 * [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
-***
-### 글
 
+***
+
+### 팁
+* 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
 * [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
 * [package-lock.json](https://github.com/ChoDragon9/posts/wiki/package-lock.json)
 * [Intellij 확장자 안열릴 때](https://github.com/ChoDragon9/posts/wiki/%5Bintellij%5D-확장자-안열릴-때)
