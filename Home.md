@@ -59,6 +59,7 @@
 * [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
 * [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
 * [설계 문서 웹서비스](https://www.draw.io/)
+* [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
 ***
 ### 라이브러리
 #### Webpack
