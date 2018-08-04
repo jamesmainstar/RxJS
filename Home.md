@@ -3,8 +3,6 @@
 * [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
 * [코딩팁](https://github.com/ChoDragon9/posts/wiki/코딩팁)
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
-* [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
-* [설계 문서 웹서비스](https://www.draw.io/)
 ***
 
 ### 문서
@@ -31,6 +29,8 @@
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
 * [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
+* [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
+* [설계 문서 웹서비스](https://www.draw.io/)
 
 #### ECMAScript
 * [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
