@@ -1,4 +1,3 @@
-
 ### 기본기
 #### ECMAScript
 * [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
@@ -25,6 +24,13 @@
 * [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
 * [코딩팁](https://github.com/ChoDragon9/posts/wiki/코딩팁)
 * [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
+
+***
+### 코드 스피츠
+#### CSS Rendering
+#### ES6+ 기초편
+#### ES6+ 함수와 OOP
+#### ES6+ 디자인패턴과 뷰패턴
 ***
 ### 문서
 #### 소프트웨어 공학
