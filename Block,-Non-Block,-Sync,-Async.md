@@ -8,7 +8,7 @@ for(const i of (function*(){
 })()) console.log(i);
 ```
 #### 블록
-- 점유하는 시간만큼 블록을 일으키는 함수
+- 즉시 플로우제어권을 반환하지 않음
 - 디바이스들은 60fps로 디스플레이됨
 - 1fps에 딜레이를 생기면 블록킹을 일으켰다고 한다.
 ```js
@@ -90,3 +90,23 @@ const backRun = (f, end, ...arg) => {
 
 #### 논 블록킹
 서브루틴이 즉시 플로우 제어권을 내놓는 것
+```js
+consta = 123;
+looper(12, console.log);
+backRun(v => v[0] + v[1], console.log, 3, 5);
+console.log(a); //어쨌든콘솔은123부터출력
+```
+
+#### 싱크
+서브루틴이 즉시 값을 반환함
+```js
+const double = v=>v*2;
+console.log(double(2)); //4
+```
+
+#### 어싱크
+서브루틴이 콜백을 통해 값을 반환함
+```js
+const double = (v, f)=>f(v*2);
+double(2, console.log); //4
+```
