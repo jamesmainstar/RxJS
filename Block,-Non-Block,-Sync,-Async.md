@@ -87,3 +87,6 @@ const backRun = (f, end, ...arg) => {
     worker.postMessage(arg);
 };
 ```
+
+#### 논 블록킹
+서브루틴이 즉시 플로우 제어권을 내놓는 것
