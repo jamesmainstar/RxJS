@@ -9,6 +9,7 @@
   * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
   * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
 * [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
+* [Decorators](https://github.com/ChoDragon9/posts/wiki/Decorators)
 
 #### DOM
 * [Event](https://github.com/ChoDragon9/posts/wiki/Event)
