@@ -9,3 +9,16 @@ npm install babel-preset-env --save-dev
   "presets": ["env"]
 }
 ```
+
+### With Javascript Standard Style
+```bash
+npm install babel-eslint --save-dev
+```
+#### package.json
+```json
+{
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
+```
