@@ -3,19 +3,18 @@ npm install --save-dev jest
 ```
 #### sum.js
 ```js
-function sum(a, b) {
-  return a + b;
+export function sum (a, b) {
+    return a + b
 }
-module.exports = sum;
 ```
 
 #### sum.spec.js
 ```js
-const sum = require('./sum');
+import { sum } from './sum'
 
 test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+  expect(sum(1, 2)).toBe(3)
+})
 ```
 
 #### package.json
