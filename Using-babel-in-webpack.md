@@ -10,13 +10,13 @@ npm i babel-loader babel-core -D
 #### webpack.config.js
 ```javascript
 module: {
-  rules: {
+  rules: [
     {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
     }
-  }
+  ]
 }
 ```
 
