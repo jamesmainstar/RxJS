@@ -78,6 +78,7 @@
 * [Using-babel-in-webpack](https://github.com/ChoDragon9/posts/wiki/Using-babel-in-webpack)
 * [Babel Stage](https://github.com/ChoDragon9/posts/wiki/Babel-Stage)
 * [ES Next 설정 with standard](https://github.com/ChoDragon9/posts/wiki/ES-Next-%EC%84%A4%EC%A0%95-with-standard)
+* [Babel: Javascript Decorators](https://github.com/ChoDragon9/posts/wiki/Babel:-Javascript-Decorators)
 
 #### Vue
 * [router-link](https://github.com/ChoDragon9/posts/wiki/router-link)
