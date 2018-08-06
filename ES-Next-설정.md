@@ -3,3 +3,9 @@
 ```bash
 npm install babel-preset-env --save-dev
 ```
+#### .babelrc
+```js
+{
+  "presets": ["env"]
+}
+```
