@@ -1,6 +1,5 @@
 ### 기본기
 #### ECMAScript
-* [자바스크립트 문법](https://github.com/ChoDragon9/posts/wiki/자바스크립트-문법)
 * [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
 * [Better](https://github.com/ChoDragon9/posts/wiki/Better)
 * [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
@@ -10,6 +9,7 @@
   * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
   * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
 * [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
+* [Decorators](https://github.com/ChoDragon9/posts/wiki/Decorators)
 
 #### DOM
 * [Event](https://github.com/ChoDragon9/posts/wiki/Event)
@@ -29,6 +29,10 @@
 ### 코드 스피츠
 #### CSS Rendering
 #### ES6+ 기초편
+* [Programming&Javascript Elementry](https://github.com/ChoDragon9/posts/wiki/Programming&Javascript-Elementry)
+* [Flow Control Statement](https://github.com/ChoDragon9/posts/wiki/Flow-Control-Statement)
+* [Iteration&Generator](https://github.com/ChoDragon9/posts/wiki/Iteration&Generator)
+* [Abstract loop&Lazy execution](https://github.com/ChoDragon9/posts/wiki/Abstract-loop&Lazy-execution)
 * [Block, Non Block, Sync, Async](https://github.com/ChoDragon9/posts/wiki/Block,-Non-Block,-Sync,-Async)
 #### ES6+ 함수와 OOP
 #### ES6+ 디자인패턴과 뷰패턴
@@ -59,6 +63,7 @@
 * [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
 * [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
 * [설계 문서 웹서비스](https://www.draw.io/)
+* [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
 ***
 ### 라이브러리
 #### Webpack
@@ -73,6 +78,8 @@
 * [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
 * [Using-babel-in-webpack](https://github.com/ChoDragon9/posts/wiki/Using-babel-in-webpack)
 * [Babel Stage](https://github.com/ChoDragon9/posts/wiki/Babel-Stage)
+* [ES Next 설정 with standard](https://github.com/ChoDragon9/posts/wiki/ES-Next-%EC%84%A4%EC%A0%95-with-standard)
+* [Babel: Javascript Decorators](https://github.com/ChoDragon9/posts/wiki/Babel:-Javascript-Decorators)
 
 #### Vue
 * [router-link](https://github.com/ChoDragon9/posts/wiki/router-link)
@@ -84,6 +91,9 @@
 
 #### Lodash
 * [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
+
+#### Jest
+* [Getting Started](https://github.com/ChoDragon9/es6/wiki/Getting-Started-Jest)
 
 ***
 
