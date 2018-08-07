@@ -16,6 +16,11 @@ class Counter {
   x = 0
   constructor () { }
 }
-> Private fields
 ```
-- 
+> Private methods and fields
+```js
+class Counter {
+  #x = 0
+  #clicked () { }
+}
+```
