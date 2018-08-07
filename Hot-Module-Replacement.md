@@ -25,3 +25,5 @@ module.exports = {
   "start": "webpack-dev-server --open"
 }
 ```
+
+- https://webpack.js.org/configuration/dev-server/
