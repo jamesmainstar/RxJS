@@ -27,3 +27,4 @@ module.exports = {
 ```
 
 - https://webpack.js.org/configuration/dev-server/
+- https://webpack.js.org/guides/environment-variables/
