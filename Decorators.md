@@ -4,6 +4,9 @@
 - 장식자는 추가 기능을 만드는 것에 유용함
 - 메모이제이션, 접근 제어, 인증, 계측, 타이밍 처리, 로깅, 속도 제한 등에 사용된다.
 - 아래와 같은 기능을 할 수 있다.
+  - `@defineElement` 커스텀 엘레멘트를 생성하는 기능
+  - `@bound` 디바운드 처리 기능
+  - `@observed` 필드를 감시하며 변경시 자동으로 `render()`를 호출하는 기능
 ```js
 @defineElement('num-counter')
 class Counter extends HTMLElement {
@@ -27,9 +30,6 @@ class Counter extends HTMLElement {
   }
 }
 ```
-  - `@defineElement` 커스텀 엘레멘트를 생성하는 기능
-  - `@bound` 디바운드 처리 기능
-  - `@observed` 필드를 감시하며 변경시 자동으로 `render()`를 호출하는 기능
 
 #### Orthogonal = 직교성
 - **직교**란 둘 이상의 서로 다른 체계가 서로 영향을 주지 않으면서 함께 동작할 수 있는 상태나 특징을 말한다.
