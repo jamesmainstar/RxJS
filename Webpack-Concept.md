@@ -50,3 +50,21 @@ module.exports = {
   ]
 }
 ```
+
+#### Resolve
+- 모듈(`import`, `require`)이 어떻게 해석되는 지를 설정
+- 자주 사용되는 기능은 `alias`로 상대경로를 절대경로로 사용하여 기술할 수 있다.
+```js
+module.exports = {
+  //...
+  resolve: {
+    alias: {
+      Utilities: path.resolve(__dirname, 'src/utilities/'),
+      Templates: path.resolve(__dirname, 'src/templates/')
+    }
+  }
+};
+```
+```js
+import Utility from '../../utilities/utility';
+```
