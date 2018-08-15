@@ -52,6 +52,7 @@
 * [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정, 형이 왜 존재하는 지
   * [요약](코딩을-지탱하는-기술-요약)
 * [함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=12800140) : 함수 하나라도 잘짜고 싶을 때
+* [RxJs 퀵스타트](http://naver.me/GciIqLoq) : 반응형 프로그래밍
 * [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
 * [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
 * [자바스크립트 성능 이야기](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7006583) : 브라우저 동작 및 최적화
@@ -70,6 +71,18 @@
 * [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
 
 ## 라이브러리
+### 매니저 도구
+#### [NVM](https://github.com/creationix/nvm)
+- Node Version Manager
+- nodeJs 버전 스위칭
+
+#### [Yarn](https://yarnpkg.com)
+- Facebook에서 만든 자바스크립트 패키지 매니저
+- npm의 일관성, 보안, 성능 이슈로 만듬
+- [새로운 NPM CLIENT YARN](http://fetobe.co.kr/%EC%83%88%EB%A1%9C%EC%9A%B4-npm-client-yarn/)
+- Yarn 설치 후 환경변수 설정해줘야 함
+
+### 개발 환경
 #### Webpack
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
@@ -86,19 +99,30 @@
 * [ES Next 설정 with standard](ES-Next-%EC%84%A4%EC%A0%95-with-standard)
 * [Babel: Javascript Decorators](Babel:-Javascript-Decorators)
 
+#### Parcel
+* [Parcel Basic](https://github.com/ChoDragon9/es6/wiki/Parcel+Basic)
+
+#### Jest
+* [Getting Started](https://github.com/ChoDragon9/es6/wiki/Getting-Started-Jest)
+
+#### ESDoc
+- [Getting Started](Getting-Started-ESDoc)
+- [Document Coverage Hosting Service](Document-Coverage-Hosting-Service)
+
+#### Travis CI
+- [Getting Started](Getting-Started-Travis-CI)
+
+#### Coveralls
+- [Getting Started](Getting-Started-Coveralls)
+
+### 프레임워크
 #### Vue
 * [router-link](router-link)
 * [axios 응답 데이터 SSR에 포함하기](axios-%EC%9D%91%EB%8B%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-SSR%EC%97%90-%ED%8F%AC%ED%95%A8%ED%95%98%EA%B8%B0)
 * [Vue SSR + Vuex 상태 쌓이는 이슈](%5BVue-SSR---Vuex%5D-상태-쌓이는-이슈)
 
-#### Parcel
-* [Parcel Basic](https://github.com/ChoDragon9/es6/wiki/Parcel+Basic)
-
 #### Lodash
 * [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
-
-#### Jest
-* [Getting Started](https://github.com/ChoDragon9/es6/wiki/Getting-Started-Jest)
 
 ## 팁
 * 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
