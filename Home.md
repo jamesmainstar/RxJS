@@ -72,6 +72,11 @@
 
 ## 라이브러리
 #### NVM : Node Version Manager, nodeJs 버전 스위칭
+#### Yarn
+- Facebook에서 만든 자바스크립트 패키지 매니저
+- npm의 일관성, 보안, 성능 이슈로 만듬
+- [새로운 NPM CLIENT YARN](http://fetobe.co.kr/%EC%83%88%EB%A1%9C%EC%9A%B4-npm-client-yarn/)
+
 #### Webpack
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
