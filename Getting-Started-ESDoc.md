@@ -72,3 +72,45 @@ describe('MyClass has foo bar feature', ()=>{
   });
 });
 ```
+
+### [ESDoc ECMAScript Proposal Plugin](https://github.com/esdoc/esdoc-plugins/tree/master/esdoc-ecmascript-proposal-plugin)
+#### Install
+```bash
+npm i esdoc-ecmascript-proposal-plugin -D
+
+yarn add esdoc-ecmascript-proposal-plugin -D
+```
+
+#### Config
+```js
+{
+  "source": "./src",
+  "destination": "./doc",
+  "plugins": [
+    {"name": "esdoc-ecmascript-proposal-plugin", "option": {"all": true}}
+  ]
+}
+```
+> If you want to enable each proposals
+```js
+{
+  "source": "./src",
+  "destination": "./doc",
+  "plugins": [
+    {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "classProperties": true,
+        "objectRestSpread": true,
+        "doExpressions": true,
+        "functionBind": true,
+        "functionSent": true,
+        "asyncGenerators": true,
+        "decorators": true,
+        "exportExtensions": true,
+        "dynamicImport": true
+      }
+    }
+  ]
+}
+```
