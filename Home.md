@@ -71,8 +71,10 @@
 * [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
 
 ## 라이브러리
-#### NVM : Node Version Manager, nodeJs 버전 스위칭
-#### Yarn
+#### [NVM](https://github.com/creationix/nvm)
+- Node Version Manager
+- nodeJs 버전 스위칭
+#### [Yarn](https://yarnpkg.com)
 - Facebook에서 만든 자바스크립트 패키지 매니저
 - npm의 일관성, 보안, 성능 이슈로 만듬
 - [새로운 NPM CLIENT YARN](http://fetobe.co.kr/%EC%83%88%EB%A1%9C%EC%9A%B4-npm-client-yarn/)
