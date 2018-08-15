@@ -78,6 +78,7 @@
 - Facebook에서 만든 자바스크립트 패키지 매니저
 - npm의 일관성, 보안, 성능 이슈로 만듬
 - [새로운 NPM CLIENT YARN](http://fetobe.co.kr/%EC%83%88%EB%A1%9C%EC%9A%B4-npm-client-yarn/)
+- Yarn 설치 후 환경변수 설정해줘야 함
 
 #### Webpack
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
