@@ -112,6 +112,7 @@
 
 #### ESDoc
 - [Getting Started](Getting-Started-ESDoc)
+- [Document Coverage Hosting Service](Document-Coverage-Hosting-Service)
 
 ## 팁
 * 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
