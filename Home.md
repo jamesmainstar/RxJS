@@ -1,53 +1,53 @@
 ### 기본기
 #### ECMAScript
-* [Concept](https://github.com/ChoDragon9/posts/wiki/Concept)
-* [Better](https://github.com/ChoDragon9/posts/wiki/Better)
-* [New Features](https://github.com/ChoDragon9/posts/wiki/New+Features)
-* [For library](https://github.com/ChoDragon9/posts/wiki/For+library)
-* [Iterator&Generator](https://github.com/ChoDragon9/posts/wiki/Iterator&Generator)
-  * [Coroutine](https://github.com/ChoDragon9/posts/wiki/Coroutine)
-  * [Lazy Execution](https://github.com/ChoDragon9/posts/wiki/Lazy-Execution)
-  * [Yield 분석](https://github.com/ChoDragon9/posts/wiki/Yield-분석)
-* [New-built-in-method](https://github.com/ChoDragon9/posts/wiki/New-built-in-method)
-* [Decorators](https://github.com/ChoDragon9/posts/wiki/Decorators)
+* [Concept](Concept)
+* [Better](Better)
+* [New Features](New+Features)
+* [For library](For+library)
+* [Iterator&Generator](Iterator&Generator)
+  * [Coroutine](Coroutine)
+  * [Lazy Execution](Lazy-Execution)
+  * [Yield 분석](Yield-분석)
+* [New-built-in-method](New-built-in-method)
+* [Decorators](Decorators)
 
 #### DOM
-* [Event](https://github.com/ChoDragon9/posts/wiki/Event)
-* [Selector](https://github.com/ChoDragon9/posts/wiki/Selector)
+* [Event](Event)
+* [Selector](Selector)
 
 #### 테스트
-* [테스트 작성](https://github.com/ChoDragon9/posts/wiki/테스트-작성)
-* [BDD & TDD](https://github.com/ChoDragon9/posts/wiki/BDD-&-TDD)
-* [테스트 종류](https://github.com/ChoDragon9/posts/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
+* [테스트 작성](테스트-작성)
+* [BDD & TDD](BDD-&-TDD)
+* [테스트 종류](%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A2%85%EB%A5%98)
 
 #### 기타
-* [정규식](https://github.com/ChoDragon9/posts/wiki/정규식)
-* [코딩팁](https://github.com/ChoDragon9/posts/wiki/코딩팁)
-* [컴포넌트](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
+* [정규식](정규식)
+* [코딩팁](코딩팁)
+* [컴포넌트](%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
 * [개발환경](개발환경)
 
 ***
 ### 코드 스피츠
 #### CSS Rendering
 #### ES6+ 기초편
-* [Programming&Javascript Elementry](https://github.com/ChoDragon9/posts/wiki/Programming&Javascript-Elementry)
-* [Flow Control Statement](https://github.com/ChoDragon9/posts/wiki/Flow-Control-Statement)
-* [Iteration&Generator](https://github.com/ChoDragon9/posts/wiki/Iteration&Generator)
-* [Abstract loop&Lazy execution](https://github.com/ChoDragon9/posts/wiki/Abstract-loop&Lazy-execution)
-* [Block, Non Block, Sync, Async](https://github.com/ChoDragon9/posts/wiki/Block,-Non-Block,-Sync,-Async)
+* [Programming&Javascript Elementry](Programming&Javascript-Elementry)
+* [Flow Control Statement](Flow-Control-Statement)
+* [Iteration&Generator](Iteration&Generator)
+* [Abstract loop&Lazy execution](Abstract-loop&Lazy-execution)
+* [Block, Non Block, Sync, Async](Block,-Non-Block,-Sync,-Async)
 #### ES6+ 함수와 OOP
 #### ES6+ 디자인패턴과 뷰패턴
 ***
 ### 문서
 #### 소프트웨어 공학
 * [컴퓨터 과학 로드맵](http://book.naver.com/bookdb/book_detail.nhn?bid=13496659) : 컴퓨터 과학
-  * [컴퓨터 과학 용어](https://github.com/ChoDragon9/posts/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B3%BC%ED%95%99-%EC%9A%A9%EC%96%B4)
+  * [컴퓨터 과학 용어](%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B3%BC%ED%95%99-%EC%9A%A9%EC%96%B4)
 * [실용주의 소프트웨어 개발](http://book.naver.com/bookdb/book_detail.nhn?bid=11885425) : 요구사항, 설계, 테스트, 개발 방법론
 * [클린 소프트웨어](http://book.naver.com/bookdb/book_detail.nhn?bid=12035385) : 에자일 설계
 
 #### 프로그래밍
 * [코딩을 지탱하는 기술](http://book.naver.com/bookdb/book_detail.nhn?bid=7317474) : 프로그래밍 역사 및 문법 발전 과정, 형이 왜 존재하는 지
-  * [요약](https://github.com/ChoDragon9/posts/wiki/코딩을-지탱하는-기술-요약)
+  * [요약](코딩을-지탱하는-기술-요약)
 * [함수형 프로그래밍](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=12800140) : 함수 하나라도 잘짜고 싶을 때
 * [리펙토링](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=7047630) : 리펙토링 방법론
 * [자바스크립트 자료 구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9755482) : 자료구조, 알고리즘
@@ -57,7 +57,7 @@
 #### 기타
 * [실용주의 사고와 학습](http://book.naver.com/bookdb/book_detail.nhn?device=pc&bid=9720757) : 우리 뇌를 효율적으로 사용하는 법
 * [생각정리스피치](https://book.naver.com/bookdb/book_detail.nhn?bid=12896858) : 스피츠를 잘하고 싶을 때
-  * [생각정리스피치 정리](https://github.com/ChoDragon9/posts/wiki/생각정리스피치-정리)
+  * [생각정리스피치 정리](생각정리스피치-정리)
 
 #### 참고 사이트
 * [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
@@ -70,23 +70,23 @@
 #### Webpack
 * [Webpack Basic](https://github.com/ChoDragon9/es6/wiki/Webpack+Basic)
 * [Webpack Concept](https://github.com/ChoDragon9/es6/wiki/Webpack+Concept)
-* [환경변수사용](https://github.com/ChoDragon9/posts/wiki/%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EC%82%AC%EC%9A%A9)
-* [번들링시 노드모듈 예외처리](https://github.com/ChoDragon9/posts/wiki/%EB%B2%88%EB%93%A4%EB%A7%81%EC%8B%9C-%EB%85%B8%EB%93%9C%EB%AA%A8%EB%93%88-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC)
-* [Multi Chunk](https://github.com/ChoDragon9/posts/wiki/Multi-chunk-file)
+* [환경변수사용](%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EC%82%AC%EC%9A%A9)
+* [번들링시 노드모듈 예외처리](%EB%B2%88%EB%93%A4%EB%A7%81%EC%8B%9C-%EB%85%B8%EB%93%9C%EB%AA%A8%EB%93%88-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC)
+* [Multi Chunk](Multi-chunk-file)
 * [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) : 미사용 코드 삭제
-* [Hot Module Replacement](https://github.com/ChoDragon9/posts/wiki/Hot-Module-Replacement)
+* [Hot Module Replacement](Hot-Module-Replacement)
 
 #### Babel
 * [Babel Basic](https://github.com/ChoDragon9/es6/wiki/Babel+Basic)
-* [Using-babel-in-webpack](https://github.com/ChoDragon9/posts/wiki/Using-babel-in-webpack)
-* [Babel Stage](https://github.com/ChoDragon9/posts/wiki/Babel-Stage)
-* [ES Next 설정 with standard](https://github.com/ChoDragon9/posts/wiki/ES-Next-%EC%84%A4%EC%A0%95-with-standard)
-* [Babel: Javascript Decorators](https://github.com/ChoDragon9/posts/wiki/Babel:-Javascript-Decorators)
+* [Using-babel-in-webpack](Using-babel-in-webpack)
+* [Babel Stage](Babel-Stage)
+* [ES Next 설정 with standard](ES-Next-%EC%84%A4%EC%A0%95-with-standard)
+* [Babel: Javascript Decorators](Babel:-Javascript-Decorators)
 
 #### Vue
-* [router-link](https://github.com/ChoDragon9/posts/wiki/router-link)
-* [axios 응답 데이터 SSR에 포함하기](https://github.com/ChoDragon9/posts/wiki/axios-%EC%9D%91%EB%8B%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-SSR%EC%97%90-%ED%8F%AC%ED%95%A8%ED%95%98%EA%B8%B0)
-* [Vue SSR + Vuex 상태 쌓이는 이슈](https://github.com/ChoDragon9/posts/wiki/%5BVue-SSR---Vuex%5D-상태-쌓이는-이슈)
+* [router-link](router-link)
+* [axios 응답 데이터 SSR에 포함하기](axios-%EC%9D%91%EB%8B%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-SSR%EC%97%90-%ED%8F%AC%ED%95%A8%ED%95%98%EA%B8%B0)
+* [Vue SSR + Vuex 상태 쌓이는 이슈](%5BVue-SSR---Vuex%5D-상태-쌓이는-이슈)
 
 #### Parcel
 * [Parcel Basic](https://github.com/ChoDragon9/es6/wiki/Parcel+Basic)
@@ -101,9 +101,9 @@
 
 ### 팁
 * 정적 페이지 개발(SPA x) : Webpack 사용. entry에 각 페이지의 js를 정의.
-* [WebDriver screenshot](https://github.com/ChoDragon9/posts/wiki/WebDriver-screenshot)
-* [package-lock.json](https://github.com/ChoDragon9/posts/wiki/package-lock.json)
-* [Intellij 확장자 안열릴 때](https://github.com/ChoDragon9/posts/wiki/%5Bintellij%5D-확장자-안열릴-때)
+* [WebDriver screenshot](WebDriver-screenshot)
+* [package-lock.json](package-lock.json)
+* [Intellij 확장자 안열릴 때](%5Bintellij%5D-확장자-안열릴-때)
 * href = Hypertext Reference
 * eslint-disable-line
 * Pull Request에서 develop과 conflict 발생시 feature 브랜치와 머지를 하지 않는 것이 좋음 : feature에 머지시 conflict의 정상동작을 보장 할 수 없음.
