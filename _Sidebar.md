@@ -69,6 +69,7 @@
 * [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
 * [설계 문서 웹서비스](https://www.draw.io/)
 * [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
+* [jQuery 바닐라로 구현](http://youmightnotneedjquery.com/)
 
 ## 라이브러리
 ### 매니저 도구
@@ -114,6 +115,9 @@
 
 #### Coveralls
 - [Getting Started](Getting-Started-Coveralls)
+
+#### Code Climate
+- [Getting Started](Getting-Started-Code-Climate)
 
 ### 프레임워크
 #### Vue
