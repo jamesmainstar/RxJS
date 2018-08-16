@@ -38,7 +38,7 @@
 - [Iteration&Generator](Iteration&Generator)
 - [Abstract loop&Lazy execution](Abstract-loop&Lazy-execution)
 - [Block, Non Block, Sync, Async](Block,-Non-Block,-Sync,-Async)
-- [Generator,Promise,Async/Await](Generator,Promise,Async/Await)
+- [Generator,Promise,Async/Await](Generator,Promise,Async-Await)
 #### ES6+ 함수와 OOP
 #### ES6+ 디자인패턴과 뷰패턴
 
