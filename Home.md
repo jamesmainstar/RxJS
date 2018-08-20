@@ -65,12 +65,14 @@
   - [생각정리스피치 정리](생각정리스피치-정리)
 
 #### 참고 사이트
+- [웹 서비스 아키텍쳐](https://medium.com/@strncpy/%EB%B2%88%EC%97%AD-web-architecture-101-5fda6095688c)
 - [CPU, RAM, HDD 속도 및 웹 캐싱](https://mingrammer.com/translation-the-hidden-components-of-web-caching/)
 - [소프트웨어 합성](https://midojeong.github.io/2018/04/28/composing-software-translation-epilogue/)
 - [IOS Event Delegation](http://gravitydept.com/blog/js-click-event-bubbling-on-ios)
-- [설계 문서 웹서비스](https://www.draw.io/)
-- [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
-- [jQuery 바닐라로 구현](http://youmightnotneedjquery.com/)
+- 서비스
+  - [설계 문서 웹서비스](https://www.draw.io/)
+  - [코드 뷰티파이 웹서비스](http://jsbeautifier.org/)
+  - [jQuery 바닐라로 구현](http://youmightnotneedjquery.com/)
 
 ## 라이브러리
 ### 매니저 도구
