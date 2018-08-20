@@ -53,3 +53,24 @@ const key$ = fromEvent(document, 'keydown')
 const arrayFrom$ = from([10, 20, 30])
 const numberOf$ = of(10, 20, 30)
 ```
+
+#### 상태 전파 문제
+웹 애플리케이션의 상태 변화로 인한 문제점은 크게 세가지가 있다.
+1. 인터페이스 변경되면 함께 변경해야 한다.
+2. 상태를 확인하기 우해 인터페이스에 대한 의사소통 비용이 발생한다.
+3. 다수가 A라는 한 클래스에 의존 관계가 있는 경우 A의 변경 여부를 반영하기 위해 다수에 A의 상태를 모두 반영해야 한다.
+
+이러한 문제를 해결하기 위해 우리가 이미 알고 있는 솔루션 `옵서버 패턴`을 사용한다.
+`느슨한 결함`, `자동 상태 전파`, `인터페이시의 단일화` 를 해결할 수 있다.
+
+```js
+class Subject {
+  add(observer) {}
+  remove(observer) {}
+  nofity(observer) {}
+}
+
+class Observer {
+  update(status) {}
+}
+```
