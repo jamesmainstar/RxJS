@@ -74,3 +74,25 @@ class Observer {
   update(status) {}
 }
 ```
+
+하지만 RxJS는 `옵서버 패턴`의 아쉬웠던 몇 가지를 개선하였다.
+1. 상태 변화는 언제 종료되는 지
+2. 상태 변화에서 에러가 발생할 경우
+   => `인터페이스의 확장`을 통해 종료시점과 에러발생을 해결했다. 
+3. Observer에 의해 Subject 상태가 변경되는 경우
+   => Read-Only와 단방향 데이터 흐름으로 해결
+
+```js
+class Observable {
+  subscribe(observer) {}
+}
+
+class Observer {
+  next(status) {}
+  error(error) {}
+  complete() {}
+}
+```
+
+> 리액티브 프로그래밍은 데이터 흐름과 상태 변화 전파에 중점을 둔 프로그램 패러다임이다. 사용되는 프로그래밍 언어에서
+> 데이터 흐름을 쉽게 표현할 수 있어야 하며 기본 실행 모델이 변경 사항을 데이터 흐름을 통해 자동으로 전파한다는 것을 의미한다.
