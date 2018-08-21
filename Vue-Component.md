@@ -57,3 +57,19 @@ bus.$on('id-selected', function (id) {
   // ...
 })
 ```
+
+#### 컨텐츠 배포 프로세스
+컴포넌트를 사용할 때 다음과 같이 컴포넌트를 구성하는 것이 좋습니다.
+```html
+<app>
+  <app-header></app-header>
+  <app-footer></app-footer>
+</app>
+```
+주목해야할 두가지 사항이 있습니다.
+1. `<app>` 컴포넌트는 어떤 컨텐츠를 받을 지 모릅니다. 그것은 `<app>`이 사용하는 컴포넌트에 의해 결정됩니다.
+2. `<app>` 컴포넌트에는 자체 템플릿이 있을 가능성이 큽니다.
+
+위 구성으로 작동하도록 하려면 부모 콘텐츠와 컴포넌트의 자체의 템플릿을 섞는 방법이 필요합니다. 이것은 `콘텐츠 배포 프로세스`입니다.
+VueJS는 현재 [웹 컴포넌트 사양 초안](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md)을
+모델로 한 콘텐츠 배포 API를 구현하며 원본 콘텐츠의 배포판 역할 하기 위해 특수한 `<slot>` 엘리먼트를 사용합니다.
