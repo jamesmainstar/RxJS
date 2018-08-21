@@ -60,7 +60,7 @@ bus.$on('id-selected', function (id) {
 
 #### 컨텐츠 배포 프로세스
 컴포넌트를 사용할 때 다음과 같이 컴포넌트를 구성하는 것이 좋습니다.
-```html
+```xml
 <app>
   <app-header></app-header>
   <app-footer></app-footer>
