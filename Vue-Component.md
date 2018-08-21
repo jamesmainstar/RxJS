@@ -66,7 +66,7 @@ bus.$on('id-selected', function (id) {
 })
 ```
 
-#### 컨텐츠 배포 프로세스
+### 컨텐츠 배포 프로세스
 컴포넌트를 사용할 때 다음과 같이 컴포넌트를 구성하는 것이 좋습니다.
 ```xml
 <app>
@@ -81,3 +81,18 @@ bus.$on('id-selected', function (id) {
 위 구성으로 작동하도록 하려면 부모 콘텐츠와 컴포넌트의 자체의 템플릿을 섞는 방법이 필요합니다. 이것은 `콘텐츠 배포 프로세스`입니다.
 VueJS는 현재 [웹 컴포넌트 사양 초안](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md)을
 모델로 한 콘텐츠 배포 API를 구현하며 원본 콘텐츠의 배포판 역할 하기 위해 특수한 `<slot>` 엘리먼트를 사용합니다.
+
+#### 범위 컴파일
+컴파일되는 범위를 명확히 해야 합니다. 다음과 같은 템플릿이 있다고 상상해보겠습니다.
+```xml
+<child-component>{{message}}</child-component>
+```
+`message`가 부모 데이터 또는 자식 데이터 중 부모에 바인딩되어야 합니다. 컴포넌트 범위에 대한 간단한 법칙은 다음과 같습니다.
+1. 상위 템플릿의 모든 내용은 상위 범위로 컴파일됩니다.
+2. 하위 템플릿의 모든 내용은 하위 범위에서 컴파일됩니다.
+
+일반적인 실수는 부모 템플릿의 하위 속성/메소드에 디렉티브를 바인딩하려고하는 것입니다.
+```xml
+<child-component v-show="someChildProperty"></child-component>
+```
+`someChildProperty`가 자식 컴포넌트의 속성이라고 가정하면, 위의 예제는 작동하지 않을 것입니다.
