@@ -72,7 +72,7 @@ export const toJSON = (state) => ({...state})
 ## Hypertext
 - [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) 객체 생성 오퍼레이터를 제공한다.
 - Hypertext의 각 오퍼레이터는 `Spec`의 펙토리 메서드이며, 항상 새로운 `Spec`을 반환한다.
-- `div() : Sepc`
+- `div() : Spec`
 - div, p, ...tags
 
 ## 사용예제
