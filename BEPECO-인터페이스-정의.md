@@ -57,8 +57,7 @@ export const on = (state, eventName, listener) => {
 - [Hypertext](#hypertext)를 데이터 타입으로 변환해주는 오퍼레이터를 제공한다.
 - `operator(state: ImmutableState, [...arguments]) : DataType` 형태로 추가한다.
   - 사용자에게는 `operator(...arguments) : DataType` 형태로 사용된다.
-- `toString() : String`, `toJSON() : Object`, `toDOM() : HTMLElement`
-- toJSON, toDOM, toString
+  - 예) `toString() : String`, `toJSON() : Object`, `toDOM() : HTMLElement`
 #### Exporter.js
 ```js
 export { toJSON } from './toJSON'
@@ -71,7 +70,7 @@ export const toJSON = (state) => ({...state})
 ```
 
 ## Hypertext
-- [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) 객체 생성 오퍼레이터
+- [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) 객체 생성 오퍼레이터를 제공한다.
 - Hypertext의 각 오퍼레이터는 `Spec`의 펙토리 메서드이며, 항상 새로운 `Spec`을 반환한다.
 - `div() : Sepc`
 - div, p, ...tags
