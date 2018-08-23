@@ -2,6 +2,7 @@
 ### 용어 정리
 #### Spec
 [Descriptor](#Descriptor)와 [Exporter](#Exporter)로 이뤄진 단일 인터페이스이다.
+> Spec.js
 ```js
 export * from './Descriptor'
 export * from './Exporter'
