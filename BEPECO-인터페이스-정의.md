@@ -1,21 +1,26 @@
 ## Spec
 - 사용자에게 노출 될 인터페이스이다.
 - [Descriptor](#descriptor)와 [Exporter](#exporter)로 이뤄진다.
-- SpecWrapper를 통해 `Immutable State`를 공유한다.
+- [OperatorWrapper](#operatorWrapper)를 통해 `Immutable State`를 공유한다.
 #### Spec.js
 ```js
 import * as Descriptor from './Descriptor'
 import * as Exporter from './Exporter'
-import SpecWrapper from './SpecWrapper'
+import OperatorWrapper from './OperatorWrapper'
 
 export default (state = {}) => {
-  return SpecWrapper(state, {
+  return OperatorWrapper(state, {
     ...Descriptor,
     ...Exporter
   })
 }
 ```
-#### SpecWrapper.js, Immutable State 처리가 되지 않은 예제
+
+### OperatorWrapper
+- 모든 오퍼레이터에 Wrapper를 씌운다.
+- Wrapper를 통해 호출되면 사용자가 전달한 인자앞에 `Immutable State`를 공유한다.
+
+#### OperatorWrapper.js, Immutable State 처리가 되지 않은 예제
 ```js
 export default (state, operators) => {
   const newOperators = {}
