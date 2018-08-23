@@ -5,12 +5,12 @@
 
 #### Descriptor
 - [Hypertext](#Hypertext)의 속성을 정의한다.
-- Descriptor의 각 오퍼레이터는 `Spec`의 펙토리 메서드이며, 항상 새로운 `Spec`을 반환한다.
+- Descriptor의 각 오퍼레이터는 [Spec](#Spec)의 펙토리 메서드이며, 항상 새로운 [Spec](#Spec)을 반환한다.
 - on, className, ... attributes
 
 #### Exporter
 - [Hypertext](#Hypertext)를 데이터 타입으로 변환해주는 오퍼레이터를 제공한다.
-- Descriptor의 각 오퍼레이터는 `Spec`의 펙토리 메서드이며, 항상 새로운 `Spec`을 반환한다.
+- Descriptor의 각 오퍼레이터는 [Spec](#Spec)의 펙토리 메서드이며, 항상 새로운 [Spec](#Spec)을 반환한다.
 - toJSON, toDOM, toString
 
 #### Hypertext
