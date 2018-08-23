@@ -16,7 +16,16 @@ export default (state = {}) => {
     ...Exporter
   })
 }
-
+```
+> SpecWrapper.js, Immutable State 처리가 되지 않은 예제
+```js
+export default (state, operators) => {
+  const newOperators = {}
+  for (const [name, cb] of Object.entries(operators)) {
+    newOperators[name] = (...args) => cb(state, ...args)
+  }
+  return newOperators
+}
 ```
 
 #### Descriptor
@@ -31,9 +40,13 @@ export { className } from './className'
 export { chlidren } from './chlidren'
 ```
 
-> on.js
+> on.js, Immutable State 처리가 되지 않은 예제
 ```js
-export const on = () => new Spec()
+import Spec from '../Spec'
+export const on = (state, eventName, listener) => {
+  state[eventName] = listener
+  return new Spec(state)
+}
 ```
 
 #### Exporter
@@ -48,7 +61,7 @@ export { toString } from './toString'
 ```
 > toJSON.js
 ```js
-export const toJSON = () => {}
+export const toJSON = (state) => ({...state})
 ```
 
 #### Hypertext
