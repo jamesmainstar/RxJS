@@ -1,11 +1,22 @@
 ## [2018.08.22] 인터페이스 정의
 ### 용어 정리
 #### Spec
-[Descriptor](#Descriptor)와 [Exporter](#Exporter)로 이뤄진 단일 인터페이스이다.
+- 사용자에게 노출 될 단일 인터페이스이다.
+- [Descriptor](#Descriptor)와 [Exporter](#Exporter)로 이뤄진다.
+- SpecWrapper를 통해 `Immutable State`를 공유한다.
 > Spec.js
 ```js
-export * from './Descriptor'
-export * from './Exporter'
+import * as Descriptor from './Descriptor'
+import * as Exporter from './Exporter'
+import SpecWrapper from './SpecWrapper'
+
+export default (state = {}) => {
+  return SpecWrapper(state, {
+    ...Descriptor,
+    ...Exporter
+  })
+}
+
 ```
 
 #### Descriptor
