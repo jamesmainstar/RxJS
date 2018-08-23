@@ -1,5 +1,5 @@
 ## Spec
-- 사용자에게 노출 될 단일 인터페이스이다.
+- 사용자에게 노출 될 인터페이스이다.
 - [Descriptor](#Descriptor)와 [Exporter](#Exporter)로 이뤄진다.
 - SpecWrapper를 통해 `Immutable State`를 공유한다.
 #### Spec.js
@@ -27,7 +27,7 @@ export default (state, operators) => {
 ```
 
 ### Descriptor
-- [Hypertext](#Hypertext)의 속성을 정의한다.
+- [Hypertext](#Hypertext)의 속성을 정의할 수 있는 오퍼레이터를 제공한다.
 - Descriptor의 각 오퍼레이터는 [Spec](#Spec)의 펙토리 메서드이며, 항상 새로운 [Spec](#Spec)을 반환한다.
 - `operator(state: ImmutableState, [...arguments]) : Spec` 형태로 추가한다.
   - 사용자에게는 `operator(...arguments) : Spec` 형태로 사용된다.
@@ -70,3 +70,15 @@ export const toJSON = (state) => ({...state})
 - Hypertext의 각 오퍼레이터는 `Spec`의 펙토리 메서드이며, 항상 새로운 `Spec`을 반환한다.
 - `div() : Sepc`
 - div, p, ...tags
+
+## 사용예제
+```js
+import Spec from './core/Spec'
+
+console.log(
+  Spec()
+    .on('click', () => {})
+    .className('table table-border')
+    .toJSON()
+)
+```
