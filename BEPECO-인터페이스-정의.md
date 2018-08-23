@@ -29,7 +29,8 @@ export default (state, operators) => {
 ### Descriptor
 - [Hypertext](#Hypertext)의 속성을 정의한다.
 - Descriptor의 각 오퍼레이터는 [Spec](#Spec)의 펙토리 메서드이며, 항상 새로운 [Spec](#Spec)을 반환한다.
-- `on(eventName: String, handle: Function) : Spec`
+- `operator(state: ImmutableState, [...arguments]) : Spec` 형태로 추가한다.
+  - 사용자에게는 `operator(...arguments) : Spec` 형태로 사용된다.
 
 #### Descriptor.js
 ```js
@@ -49,6 +50,8 @@ export const on = (state, eventName, listener) => {
 
 ### Exporter
 - [Hypertext](#Hypertext)를 데이터 타입으로 변환해주는 오퍼레이터를 제공한다.
+- `operator(state: ImmutableState, [...arguments]) : DataType` 형태로 추가한다.
+  - 사용자에게는 `operator(...arguments) : DataType` 형태로 사용된다.
 - `toString() : String`, `toJSON() : Object`, `toDOM() : HTMLElement`
 - toJSON, toDOM, toString
 #### Exporter.js
