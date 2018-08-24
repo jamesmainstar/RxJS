@@ -113,6 +113,28 @@ RxJS은 오퍼레이터는 항상 새로운 `Observable`을 반환함으로써 �
 로직상에 존재하는 반복문, 분기문, 변수를 제거하기 위해서 `함수형 프로그래밍` 개념을 근간으로 하는 오퍼레이터를 제공한다.
 `Observable`이 제공하는 오퍼레이터를 통해 생성, 변환, 병합, 분리와 같은 다양한 연산을 적용할 수 있으며 항상 `Immutable Object`를 반환한다.
 
+##### 불변 객체 Observable
+`불변 객체(Immutable Object)`은 생성 후 그 상태를 바꿀 수 없는 객체이다. 불변 객체는 외부에서 값을 변경할 수 없기 때문에 
+불변 객체를 사용하는 것으로도 프로그램의 복잡도가 줄어들 수 있다.
+
+`Observable`은 새로운 `Observable`을 만들고 그 `Observable`이 오퍼레이터를 호출한 원래의 `Observable`을 내부적으로 구독한다.
+즉, 링크드 리스트 형태로 기존 `Observable` 객체와 새롭게 만든 `Observable` 객체를 오퍼레이터로 연결한다.
+
+> map 오퍼레이터는 다음과 같은 원리로 구현되어 있다.
+```js
+const map = function (transformationFn) {
+  const source = this
+  const result = Observable(observer => {
+    source.subscribe(
+      (x) => { observer.next(transformationFn(x)) },
+      (err) => { observer.error(err) },
+      () => { observer.complete() }
+    )
+  })
+  return result
+}
+```
+
 ### 도트체이닝 -> 파이프 오퍼레이터
 도트체이닝을 구성하기 위해서는 옵서버 객체가 모든 오퍼레이터를 가지고 있어야 한다. 따라서 `Observable.prototype`에 사용하는 모든 오퍼레이터가 추가된다. 이는 RxJS를 사용할 때 불필요한 오퍼레이터를 모두 가지고 있어야 하기 때문에 파일 사이즈를 증가시킨다.
 
