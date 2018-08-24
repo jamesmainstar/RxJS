@@ -1,8 +1,7 @@
-RxJS의 오퍼레이터들은 새로운 `Observable`를 생성하고 호출한 `Observable`를 구독한다.
+RxJS의 오퍼레이터들은 새로운 `Observable`를 생성하고 호출한 `Observable`를 구독한다. 외부에서는 변경이 불가는 한 객체 `Immutable Object`를 만들기 위함이다.
 
 #### filter
 > https://rxjs-dev.firebaseapp.com/api/operators/filter
-
 ```js
 function filter(predicate, thisArg) {
     return function filterOperatorFunction(source) {
