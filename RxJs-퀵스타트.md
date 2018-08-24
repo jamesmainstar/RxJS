@@ -140,7 +140,7 @@ RxJS에서 자바스크립트의 비동기 작업을 효과적으로 처리할 �
 만약 마이크로테스크 큐가 비어서 더 이상 처리할 작업이 없으면 태스크 큐를 확인한다. 태스크 큐에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
 
 #### 자바스크립트 처리 과정
-1. 비동기 작업으로 등록되는 작업은 Task와 Microtask 그리고 animationFrame 작업으로 구분된다.
+1. 비동기 작업으로 등록되는 작업은 Task와 Microtask 그리고 AnimationFrame 작업으로 구분된다.
 2. Microtask는 Task보다 먼저 작업이 처리된다.
 3. Microtask가 처리된 이후 requestAnimationFrame이 호출되고 이후 브라우저 렌더링이 발생한다.
 ```js
