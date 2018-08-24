@@ -141,4 +141,23 @@ RxJS에서 자바스크립트의 비동기 작업을 효과적으로 처리할 �
 
 #### 자바스크립트 처리 과정
 ```js
+console.log('script start')
+
+setTimeout(() => console.log('setTimeout'), 0)
+
+Promise.resolve()
+  .then(() => console.log('promise1'))
+  .then(() => console.log('promise2'))
+
+requestAnimationFrame(() => console.log('requestAnimationFrame'))
+
+console.log('script end')
+```
+```
+$ script start
+$ script end
+$ promise1
+$ promise2
+$ requestAnimationFrame
+$ setTimeout
 ```
