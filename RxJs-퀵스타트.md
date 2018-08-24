@@ -164,3 +164,15 @@ $ promise2
 $ requestAnimationFrame
 $ setTimeout
 ```
+
+#### RxJS 스케줄러와 자바스크립트 비동기 작업의 종류
+1. 태스크
+   - 비동기 작업을 순차적으로 수행될 수 있도록 보장하는 형태의 작업 유형
+   - RxJS에서 `asyncScheduler` 스케줄러를 이용하여 구현
+   - `asyncScheduler`는 `setInterval`로 구현됨
+2. 마이크로태스크
+   - 비동기 작업이 현재 실행되는 자바스크립트 바로 다음에 일어나는 작업
+   - 태스크보다 항상 먼저 실행
+   - `MutationObserver`와 `Promise`가 해당
+   - RxJS에서 `asapScheduler` 스케줄러는 이용하여 구현
+   - `asapScheduler`는 `Promise`로 구현됨
