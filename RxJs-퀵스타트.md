@@ -120,7 +120,7 @@ RxJS은 오퍼레이터는 항상 새로운 `Observable`을 반환함으로써 �
 `Observable`은 새로운 `Observable`을 만들고 그 `Observable`이 오퍼레이터를 호출한 원래의 `Observable`을 내부적으로 구독한다.
 즉, 링크드 리스트 형태로 기존 `Observable` 객체와 새롭게 만든 `Observable` 객체를 오퍼레이터로 연결한다.
 
-> map 오퍼레이터는 다음과 같은 원리로 구현되어 있다.
+> map 오퍼레이터는 다음과 같은 원리로 구현되었다. 실제 구현은 lift 함수를 이용하여 이전 Observable과 연결하는 방식을 사용한다.
 ```js
 const map = function (transformationFn) {
   const source = this
