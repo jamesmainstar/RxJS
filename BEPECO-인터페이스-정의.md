@@ -78,11 +78,11 @@ export const toJSON = (state) => ({...state})
 ## 사용예제
 ```js
 import Spec from './core/Spec'
+import HyperText from './core/HyperText'
 
-console.log(
-  Spec()
+const spec = Spec()
     .on('click', () => {})
     .className('table table-border')
     .toJSON()
-)
+const component = div().children(p('Hello'), p('World'))
 ```
