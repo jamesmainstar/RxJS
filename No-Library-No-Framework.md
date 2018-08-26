@@ -10,3 +10,4 @@
 - [Vue Reactive](Vue-Reactive)
 - [Vue Computed Watcher](Vue-Computed-Watcher)
 - [RxJS Immutable Object](RxJS-Immutable-Object)
+- [Angular](Angular)
