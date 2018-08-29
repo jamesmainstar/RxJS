@@ -29,3 +29,6 @@
   - 코드 구조 표현 : command + 7
   - 최근 사용 파일 : command + E
 - placeholder content
+- ADID
+  - 개인을 식별하지 않고 맞춤형 광고 서비스를 제공할 수 있도록 부여하는 '광고 식별자'
+  - Android : GAID(Google Advertising ID), IOS : IDFA(IDentifier For Advertisers)
