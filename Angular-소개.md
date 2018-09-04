@@ -50,3 +50,16 @@ class Product {
   price : number;
 }
 ```
+
+#### Angular 기능 구현 방식
+- 업무 로직 구현 : 클래스 사용
+- 클래스 멤버 참조 : this 사용
+- 컴포넌트 구현 : @Component
+- 템플릿 정의 : template, templateUrl in @Component
+- HTML 조작 : ngIf, NgFor 또는 @Directive
+- 프로퍼티 바인딩 : `<input [value]="greeting">`
+- 이벤트 : `<button (click)="onClickEvent()">Get Products</button>`
+- 양방향 바인딩 : `<input [(ngModel)]="myComponentProperty">`
+- 컴포넌트에 데이터 전달 : @Input
+- 컴포넌트에서 데이터 받기 : @Output, EventEmitter
+- HTTP 요청 : Http 객체 주입 후 `this.http.get('/products')`
