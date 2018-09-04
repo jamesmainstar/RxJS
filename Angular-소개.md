@@ -42,4 +42,11 @@ class SearchComponent {
   findProduct (prodName : string) {
   }
 }
+class Product {
+  id : number,
+  name : string;
+  description : string;
+  bid : number;
+  price : number;
+}
 ```
