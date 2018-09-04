@@ -34,7 +34,18 @@ function calcTax (state : string, income : number, dependents : number) : number
 #### 인자 기본값
 기본값이 있는 인자는 인자들 중에 마지막에 있어야함.
 ```ts
-function calcTax (income : number, dependents : number, state : string = 'NY') : number {
+function calcTax (dependents : number, state : string = 'NY') : number {
+  if (state === 'NY') {
+  ...
+  } else {
+  ...
+  }
+}
+```
+
+#### 옵션 인자
+```ts
+function calcTax (dependents : number, state? : string = 'NY') : number {
   if (state === 'NY') {
   ...
   } else {
