@@ -8,7 +8,7 @@
 - 모듈 로더
 - ES6 모듈 문법 사용
 - systemjs.config.js 파일은 SystemJS의 설정 파일
-```js
+```html
 <html>
 <head>
   <script>
@@ -19,4 +19,27 @@
   <app></app>
 </body>
 </html>
+```
+
+#### @NgModule : 모듈 선언
+#### @Component
+```js
+@Component({
+  selector: 'search-product',
+  template: `
+    <form>
+      <div>
+        <input id="prodToFind" #prod>
+        <button (click)="findProduct(prod.value)">Find Product</button>
+        Product name: {{ product.name }}
+      </div>
+    </form>
+  `
+})
+class SearchComponent {
+  @Input () productID : number;
+  product : Product; // Product 클래스의 내용은 생략한다.
+  findProduct (prodName : string) {
+  }
+}
 ```
