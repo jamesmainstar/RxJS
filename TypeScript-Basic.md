@@ -1,3 +1,5 @@
+https://www.typescriptlang.org/docs/handbook/basic-types.html
+
 #### 타입 지정
 ```ts
 let name1 = 'John Smith';
