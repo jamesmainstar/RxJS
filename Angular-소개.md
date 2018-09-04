@@ -62,4 +62,6 @@ class Product {
 - 양방향 바인딩 : `<input [(ngModel)]="myComponentProperty">`
 - 컴포넌트에 데이터 전달 : @Input
 - 컴포넌트에서 데이터 받기 : @Output, EventEmitter
-- HTTP 요청 : Http 객체 주입 후 `this.http.get('/products')`
+- HTTP
+  - 요청 : Http 객체 주입 후 `this.http.get('/products')`
+  - 응답 : subscribe 함수, `this.http.get('/products').subscribe(...)`
