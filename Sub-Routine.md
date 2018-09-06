@@ -29,6 +29,7 @@ console.log(b) // 2
 ### Sub Routine in Sub Routine
 - When Routine have Sub Routine, Routine have to remember Keep Point
 - Keep Point is called Call Stack
+- When Sub Routine return, Call Stack is free
 ```
 [Main Flow]
   => [Routine A]
