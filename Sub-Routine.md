@@ -38,3 +38,7 @@ console.log(b) // 2
   = [Free Keep Point of Routine B]
   <= [Routine A Return]
 ```
+
+### Structured Design
+- Larry Constantine - Structured Design
+- High Cohesion, Low Coupling
