@@ -35,5 +35,6 @@ console.log(b) // 2
   => [Routine A]
       => [Routine B]
       <= [Routine B Return]
+  = [Free Keep Point of Routine B]
   <= [Routine A Return]
 ```
