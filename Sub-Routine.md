@@ -27,7 +27,7 @@ console.log(b) // 2
 ```
 
 ### Sub Routine in Sub Routine
-- When Routine has Sub Routine, Routine have to remember Keep Point
+- When Routine have Sub Routine, Routine have to remember Keep Point
 ```
 [Main Flow]
   => [Routine A]
