@@ -15,3 +15,12 @@ console.log(b) // 2
   => [Routine B] => [Routine B Sub Flow]
   <= [Routine B Return]
 ```
+
+### Communicate with routine
+- Main routine communicate by Arguments with Sub routine
+- Sub routine communicate by Return with Main routine
+```
+[Main Flow]
+  => [Routine A Arguments] => [Routine A Sub Flow]
+  <= [Routine A Return]
+```
