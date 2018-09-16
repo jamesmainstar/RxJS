@@ -101,6 +101,7 @@ const result = parser(`<div>
   ]
 }
 ```
+- [html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/html_parser.js)
 
 3회차 숙제
 - stack 제거 후 curr만 남겨 외곽 루프 제거
