@@ -104,5 +104,6 @@ const result = parser(`<div>
 
 3회차 숙제
 - stack 제거 후 curr만 남겨 외곽 루프 제거
+  - stack은 curr 가져오는 역할을 함으로 stack에 넣지 않고 curr에 넣어서 해결
 - 속성 포함된 html 파싱 `<div style="background:red" class="test">...</div>`
 - json 문자열 파싱
