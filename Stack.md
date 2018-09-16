@@ -108,5 +108,6 @@ const result = parser(`<div>
   - stack은 curr 가져오는 역할을 함으로 stack에 넣지 않고 curr에 넣어서 해결
   - [remove_stack_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/remove_stack_html_parser.js)
 - 속성 포함된 html 파싱 `<div style="background:red" class="test">...</div>`
+  - elementNode에서 `<`와 `>` 사이의 값을 처리함으로, elementNode에서 attribute를 가져옴
   - [add_attr_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/add_attr_html_parser.js)
 - json 문자열 파싱
