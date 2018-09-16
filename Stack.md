@@ -111,3 +111,4 @@ const result = parser(`<div>
   - elementNode에서 `<`와 `>` 사이의 값을 처리함으로, elementNode에서 attribute를 가져옴
   - [add_attr_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/add_attr_html_parser.js)
 - json 문자열 파싱
+  - [json_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/json_parser.js)
