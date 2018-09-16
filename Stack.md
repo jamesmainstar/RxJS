@@ -68,6 +68,39 @@ const textNode = (input, cursor, curr) => {
   return idx
 }
 ```
+결과
+```js
+const result = parser(`<div>
+  a
+  <a>b</a>
+  c
+  <img/>
+  d
+</div>`)
+{
+  name: 'ROOT',
+  type: 'node',
+  children: [
+    {
+      name: 'div',
+      type: 'node',
+      children: [
+        {type: 'text', text: 'a'},
+        {
+          type: 'node',
+          name: 'a',
+          children: [
+            {type: 'text', text: 'b'}
+          ]
+        },
+        {type: 'text', text: 'c'},
+        {type: 'node', name: 'img', children: []},
+        {type: 'text', text: 'd'}
+      ]
+    }
+  ]
+}
+```
 
 3회차 숙제
 - stack 제거 후 curr만 남겨 외곽 루프 제거
