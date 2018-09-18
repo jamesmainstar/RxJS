@@ -106,9 +106,9 @@ const result = parser(`<div>
 3회차 숙제
 - stack 제거 후 curr만 남겨 외곽 루프 제거
   - stack은 curr 가져오는 역할을 함으로 stack에 넣지 않고 curr에 넣어서 해결
-  - [remove_stack_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/remove_stack_html_parser.js)
+  - [remove_stack_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/html-parser/remove-stack-html-parser.js)
 - 속성 포함된 html 파싱 `<div style="background:red" class="test">...</div>`
   - elementNode에서 `<`와 `>` 사이의 값을 처리함으로, elementNode에서 attribute를 가져옴
-  - [add_attr_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/add_attr_html_parser.js)
+  - [add_attr_html_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/html-parser/add-attr-html-parser.js)
 - json 문자열 파싱
-  - [json_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/json_parser.js)
+  - [json_parser.js](https://github.com/ChoDragon9/posts/blob/master/codespitz/json-parser/json-parser.js)
