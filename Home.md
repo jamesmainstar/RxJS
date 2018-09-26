@@ -33,3 +33,5 @@
 - ADID
   - 개인을 식별하지 않고 맞춤형 광고 서비스를 제공할 수 있도록 부여하는 '광고 식별자'
   - Android : GAID(Google Advertising ID), IOS : IDFA(IDentifier For Advertisers)
+- XAMPP 파일 서버 설정을 위한 php.ini 수정
+  - upload_max_filesize=2M => upload_max_filesize=4096M
