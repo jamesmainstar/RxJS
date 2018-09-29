@@ -40,3 +40,15 @@ class LogDirective {
 ```html
 <input type="text" log-directive>
 ```
+
+#### 데이터 바인딩 기초
+```html
+<h1>Hello {{ name }}!!</h1>
+// Property
+<span [hidden]="isValid">The field is required</span>
+// Event
+<button (click)="placeBid()">Place Bid</button>
+
+<input #title type="text">
+<span>{{ title.value }}</span>
+```
