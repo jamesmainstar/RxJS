@@ -43,12 +43,16 @@ class LogDirective {
 
 #### 데이터 바인딩 기초
 ```html
+// Property Value
 <h1>Hello {{ name }}!!</h1>
+
 // Property
 <span [hidden]="isValid">The field is required</span>
+
 // Event
 <button (click)="placeBid()">Place Bid</button>
 
+// Element Property
 <input #title type="text">
 <span>{{ title.value }}</span>
 ```
