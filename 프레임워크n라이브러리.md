@@ -17,10 +17,8 @@
   - [유닛 테스트](유닛-테스트)
   - [번들링, 배포](번들링-배포)
 - 컴포넌트 셀렉터를 []를 감싸면 Attribute 로 적용가능
-- 폴더 구조 가이드
-- https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
--  https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81
-- https://bulldogjob.com/articles/539-scalable-angular-application-architecture
+- Anchor preventDefault : `<a href=“#” (click)=“onClick(); false”></a>` 
+- [CoreModule, SharedModule](CoreModule-SharedModule)
 
 #### Vue
 - [router-link](router-link)
