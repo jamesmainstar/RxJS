@@ -1,0 +1,1 @@
+- [기술적부채란](https://brunch.co.kr/@pubjinson/23)
