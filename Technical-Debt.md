@@ -1,1 +1,2 @@
 - [기술적부채란](https://brunch.co.kr/@pubjinson/23)
+- [기술적부채 해결은 보이스카웃 규칙으로](https://www.slideshare.net/mobile/jinhyuckkim7/ss-79626046)
