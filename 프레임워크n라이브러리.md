@@ -19,6 +19,7 @@
 - 컴포넌트 셀렉터를 []를 감싸면 Attribute 로 적용가능
 - Anchor preventDefault : `<a href=“#” (click)=“onClick(); false”></a>` 
 - [CoreModule, SharedModule](CoreModule-SharedModule)
+- [SonarTS](https://github.com/SonarSource/SonarTS/blob/master/README.md) : 기술적 부채 해결
 
 #### Vue
 - [router-link](router-link)
