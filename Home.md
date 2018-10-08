@@ -11,6 +11,7 @@
 - 연구
   - [No Library No Framework](No-Library-No-Framework)
   - [FP Lab](FP-Lab)
+  - [Technical Debt](Technical-Debt)
 - 도메인
   - [챗봇](챗봇)
 - [참고사이트](참고사이트)
