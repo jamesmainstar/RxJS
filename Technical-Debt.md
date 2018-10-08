@@ -1,3 +1,5 @@
 - [기술적부채란](https://brunch.co.kr/@pubjinson/23)
 - [기술적부채 해결은 보이스카웃 규칙으로](https://www.slideshare.net/mobile/jinhyuckkim7/ss-79626046)
-- [오버 엔지니어링](https://zetawiki.com/wiki/오버엔지니어링) : 요구사항보다 높은 스펙일 때
+- [오버 엔지니어링](https://zetawiki.com/wiki/오버엔지니어링)
+  - 요구사항보다 높은 스펙일 때
+  - KISS 원칙 위배
