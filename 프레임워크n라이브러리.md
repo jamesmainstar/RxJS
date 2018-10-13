@@ -20,7 +20,9 @@
 - Anchor preventDefault : `<a href=“#” (click)=“onClick(); false”></a>` 
 - [CoreModule, SharedModule](CoreModule-SharedModule)
 - [SonarTS](https://github.com/SonarSource/SonarTS/blob/master/README.md) : 기술적 부채 해결
-- [constructor는 의존성 바인딩만 사용](https://angular.io/tutorial/toh-pt4#call-it-in-ngoninit)
+- 코딩 스타일
+  - [Angular - Style Guide](https://angular.io/guide/styleguide)
+  - [constructor는 의존성 바인딩만 사용](https://angular.io/tutorial/toh-pt4#call-it-in-ngoninit)
 
 #### Vue
 - [router-link](router-link)
