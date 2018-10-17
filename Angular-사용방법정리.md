@@ -5,14 +5,10 @@
 #### 부모 컴포넌트에서 자식 컴포넌트 접근하기
 ```js
 class ParentComponent {
-...
   @ViewChild('childRef')
   childRef: ChildComponent;
-
   validate() {
-    ...
     this.childRef.focus();
-    ...
   }
 }
 
