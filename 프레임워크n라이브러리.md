@@ -16,7 +16,7 @@
   - [서버와 데이터 주고받기](서버와-데이터-주고받기)
   - [유닛 테스트](유닛-테스트)
   - [번들링, 배포](번들링-배포)
-- [사용방법정리](사용방법정리)
+- [사용방법정리](angular-사용방법정리)
 - [CoreModule, SharedModule](CoreModule-SharedModule)
 - [SonarTS](https://github.com/SonarSource/SonarTS/blob/master/README.md) : 기술적 부채 해결
 - 코딩 스타일
