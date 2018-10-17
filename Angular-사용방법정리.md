@@ -4,3 +4,9 @@
 
 #### Anchor preventDefault
 `<a href=“#” (click)=“onClick(); false”></a>` 
+
+#### HTTPClient
+- http.get은 Observable를 리턴함
+  - https://angular.io/tutorial/toh-pt6#http-methods-return-one-value
+- 리턴값인 Observable를 Subscribing 하여 사용
+  - https://rxjs-dev.firebaseapp.com/guide/observable#subscribing-to-observables
