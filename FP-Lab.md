@@ -29,3 +29,6 @@ match :: fn1, fn2 -> val -> fn1(val) ? fn2(val) : undefined
 
 #### dispatch : 값이 있을 때 반환하기
 dispatch는 인자로 받은 함수를 실행해 값이 undefined가 아닐 때 반환한다.
+
+#### identity : 인자를 리턴
+https://github.com/indongyoo/functional-javascript/wiki/1.3-%ED%95%A8%EC%88%98%ED%98%95-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%8B%A4%EC%9A%A9%EC%84%B1-2#135-function-identityv--return-v--%EC%9D%B4%EA%B1%B4-%EC%96%B4%EB%94%94%EB%8B%A4-%EC%93%B0%EB%8A%94-%EA%B1%B0%EC%A7%80
