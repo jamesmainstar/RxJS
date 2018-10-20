@@ -19,6 +19,27 @@ class ChildComponent {
 ```html
 <child-component #childRef></child-component>
 ```
+#### 컴포넌트 태그 접근 : Host
+- Angular에서는 컴포넌트 정의시 커스텀 태그에 접근하는 것을 Host라고 한다.
+- 커스텀 태그에 class 사용시 아래와 같이 사용할 수 있다.
+```ts
+@Component({
+  selector: 'mytag',
+  templateUrl: './layout.template.html',
+  host: {
+    'class' : 'myclass1 myclass2 myclass3'
+  }
+})
+export class MyTagComponent {}
+```
+```html
+<mytag></mytag>
+
+// Result
+<mytag class="myclass1 myclass2 myclass3"></mytag>
+```
+***
+
 
 #### Anchor preventDefault
 `<a href=“#” (click)=“onClick(); false”></a>`
