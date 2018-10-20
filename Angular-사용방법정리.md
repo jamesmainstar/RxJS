@@ -70,6 +70,15 @@ get class() {
 ```
 ***
 
+### element 접근
+```ts
+constructor(private element: ElementRef) {}
+
+ngAfterViewInit(): void {
+  console.log(this.element.nativeElement.style);
+}
+```
+
 ### Anchor preventDefault
 `<a href=“#” (click)=“onClick(); false”></a>`
 
