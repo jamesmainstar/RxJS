@@ -38,6 +38,23 @@ export class MyTagComponent {}
 // Result
 <mytag class="myclass1 myclass2 myclass3"></mytag>
 ```
+- 동적으로 프로퍼티 수정
+```ts
+@HostBinding('attr.something') 
+get something() { 
+  return this.somethingElse; 
+}
+
+@HostBinding('style.backgroundColor') c_colorrr = "red"; 
+
+@HostListener('mouseenter') c_onEnterrr() {
+  this.c_colorrr= "blue" ;
+}
+
+@HostListener('mouseleave') c_onLeaveee() {
+  this.c_colorrr = "yellow" ;
+} 
+```
 ***
 
 
