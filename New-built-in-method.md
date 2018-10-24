@@ -28,6 +28,7 @@ let arrayLike = {
 }
 Array.from(arrayLike) //['zero', 'one', 'two', 'three']
 Array.from({length: 5}, (v, i) => i) // [0, 1, 2, 3, 4]
+Array.from('zero') ['z', 'e', 'r', 'o']
 
 Array.of()
 //A better way to create arrays
