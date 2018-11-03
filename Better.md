@@ -10,9 +10,11 @@ const serverInfo = {ip, port}
 #### Method Definition
 ```javascript
 const person = {
-  name: '', getName() {
+  name: '',
+  getName() {
     return this.name
-  }, setName(name) {
+  },
+  setName(name) {
     this.name = name;
   }
 }
