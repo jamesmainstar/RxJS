@@ -61,7 +61,7 @@ const peter = {weight: 72, height: 173}
 const {weight, height, age = 25} = peter
 console.log(weight, height, age)//72, 173, 25
 ```
-#### 할당
+#### 해체할당
 나머지 연산자를 통해 객체 프로퍼티와 배열 요소에 할당할 수도 있다.
 ```js
 const obj = {};
@@ -77,6 +77,11 @@ const arr = [];
 console.log(obj) //{prop: 123}
 console.log(arr) // [true]
 ```
+```js
+{a, b} = someObject; //SyntaxError
+({a, b} = someObject) //Ok
+```
+
 ### ...
 #### Rest Parameter
 ```javascript
