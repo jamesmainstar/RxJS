@@ -45,7 +45,9 @@ console.log(a, b) //0 2
 #### Parameter
 ```javascript
 const serverInfo = {
-  ip: null, port: null, setDevInfo(ip = '127.0.0.1', port = 1234) {
+  ip: null,
+  port: null,
+  setDevInfo(ip = '127.0.0.1', port = 1234) {
     this.ip = ip
     this.port = port
   }
