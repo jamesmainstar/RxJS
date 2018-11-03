@@ -28,6 +28,28 @@ obj.b = 'B' //Working
 obj.a = 'A' //Working
 delete obj.a //Working
 ```
+### freeze
+```js
+const obj = {a: 'a'}
+Object.freeze(obj)
+obj.b = 'B' //Not Working
+obj.a = 'A' //Not Working
+delete obj.a //Not Working
+```
+```js
+const obj = {x:{}}
+Object.freeze(obj)
+obj.x.a = 'A' //Working
+```
+### var vs let - loop scoping
+```js
+for(var i = 0; i < 3; i++) {}
+console.log(i); //3
+
+for(let i = 0; i < 3; i++) {}
+console.log(i); //ReferenceError
+```
+
 ## Arrow function
 ### function declaration
 ```javascript
