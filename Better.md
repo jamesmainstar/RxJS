@@ -61,6 +61,10 @@ const peter = {weight: 72, height: 173}
 const {weight, height, age = 25} = peter
 console.log(weight, height, age)//72, 173, 25
 ```
+```js
+const obj = {};
+[, ...obj.prop] = ['a', 'b', c'];
+```
 ### ...
 #### Rest Parameter
 ```javascript
