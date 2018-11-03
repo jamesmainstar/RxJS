@@ -51,6 +51,11 @@ Array.of(1, 2, 3, 4, 5) //[1, 2, 3, 4, 5]
 let x = {a: 1}
 Object.assign(x, {b: 2}) //{ a: 1, b: 2}
 
+Object.assign(dom.style, {
+  color: '#fff',
+  fontSize: '12px'
+})
+
 //Object.is() checks if two values are the same
 Object.is('y', 'y') //true
 Object.is({x: 1}, {x: 1}) //false
