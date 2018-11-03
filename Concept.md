@@ -70,6 +70,8 @@ const obj = {
 ```javascript
 const Person = () => {}
 new Person() //TypeError
+
+Person.prototype //Undefined
 ```
 
 ## Class
