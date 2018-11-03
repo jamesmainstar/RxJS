@@ -61,9 +61,21 @@ const peter = {weight: 72, height: 173}
 const {weight, height, age = 25} = peter
 console.log(weight, height, age)//72, 173, 25
 ```
+#### 할당
+나머지 연산자를 통해 객체 프로퍼티와 배열 요소에 할당할 수도 있다.
 ```js
 const obj = {};
 [, ...obj.prop] = ['a', 'b', c'];
+```
+해체를 통해 할당하는 경우 할당 대상은 좌변에 올수 있는 모든 것이 될 수 있다.
+```js
+const obj = {};
+const arr = [];
+
+({foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true});
+
+console.log(obj) //{prop: 123}
+console.log(arr) // [true]
 ```
 ### ...
 #### Rest Parameter
