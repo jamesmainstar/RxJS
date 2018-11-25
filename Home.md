@@ -24,6 +24,7 @@
   - [No Library No Framework](No-Library-No-Framework)
   - [FP Lab](FP-Lab)
   - [Technical Debt](Technical-Debt)
+  - [Design Pattern](Design-Pattern)
 - 프로젝트 회고
   - [18.10~11 오픈빌더](오픈빌더)
 - 도메인
