@@ -1,0 +1,2 @@
+- 코드스피츠 정리 : https://www.youtube.com/playlist?list=PLBNdLLaRx_rLSwAiLS52IXEo26KsMhzLC
+- GOF 디자인 패턴책 정리
