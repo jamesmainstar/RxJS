@@ -28,7 +28,6 @@
 - [Vue LifeCycle](Vue-LifeCycle)
 - [Vue Template Binding](Vue-Template-Binding)
 - [Vue Reactive](Vue-Reactive)
-- [Vue Computed Watcher](Vue-Computed-Watcher)
 
 #### Lodash
 - [Lodash](https://github.com/ChoDragon9/es6/wiki/lodash)
