@@ -12,7 +12,7 @@ console.log(arr) // => ['1','2','3','4','5']
 
 reduce를 사용하면 내부에서 모두 처리한 결과만 리턴하여 외부변수를 접근하지 않게 할 수 있다.
 ```js
-const arr2 = reduce([...'12345'], (acc, val) => {
+const arr = reduce([...'12345'], (acc, val) => {
   acc.push(val)
   return acc
 }, [])
