@@ -58,7 +58,7 @@ keyup$.subscribe(subject);
 위와 같이 될 수 있는 이유는 Subject가 Observable을 상속하고 Observer가 구현되어 있기 때문에 가능하다. Subject는 Observable이기도 하고 Observer이기도 하다.
 
 Subject를 연결하는 작업은 사실 좀 번거로운 작업이다. 또한 RxJS에서는 가급적이면 Subject를 외부에서 단독으로 사용하지 않기를 권고한다.
-Subject는 Observable과 다르게 데이터를 변경할 수 있기 때문에 가급적이면 Subject를 구현의 내부로 감추어서 사이드 이벤트를 최소화하는 방향을 권고한다. RxJS에서는 "하나의 데이터 소스를 함께 공유한다"는 의미로 share이라는 오퍼레이터를 제공한다.
+Subject는 Observable과 다르게 데이터를 변경할 수 있기 때문에 가급적이면 Subject를 구현의 내부로 감추어서 사이드 이펙트를 최소화하는 방향을 권고한다. RxJS에서는 `하나의 데이터 소스를 함께 공유한다`는 의미로 share이라는 오퍼레이터를 제공한다.
 
 ```js
 const keyup$ = formEvent(document.getElementById('search'), 'keyup')
