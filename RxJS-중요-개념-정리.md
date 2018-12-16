@@ -75,6 +75,45 @@ const keyup$ = formEvent(document.getElementById('search'), 'keyup')
 Observable를 생성 및 조작하는 함수를 오퍼레이터라고 한다. 오퍼레이터는 Observable를 생성하기도 하고, 각각의 Observable을 연결하기도 한다.
 또한 Observable을 분리하거나 합치기도 한다. 오퍼레이터는 현재의 Observable 인스턴스를 기반으로 항상 새로운 Observable 인스턴스를 반환한다.
 
+#### 상태관리
+RxJS에서는 데이터의 상태를 유지하기 위해서 scan 오퍼레이터를 제공한다.
+scan은 reduce와 사용법이 비슷하여 혼란스러울 때가 많다. 하지만 둘은 비슷해 보이지만 그 결과와 쓰임새는 완전히 다르다.
+reduce를 Observable이 완료되었을 때 한 번 데이터가 전달된다. 반면, scan은 데이터가 발생할 때마다 데이터가 발생한다.
+scan은 데이터가 발생할 때마다 기존 상태를 유지 또는 관리하기 위한 용도로 사용된다.
+
+```js
+const {of} = rxjs;
+const {reduce} = rxjs.operators;
+of(10, 10, 20, 0, 50).pipe(
+  reduce((acc, value, index) => {
+    acc.sum += value;
+    acc.ave = acc.sum / (index + 1);
+    return acc;
+  }, { sum: 0, ave: 0 })
+).subscribe(v => console.log('reduce' , v));
+
+// reduce { sum: 90, ave: 15 }
+```
+
+```js
+const {of} = rxjs;
+const {scan} = rxjs.operators;
+of(10, 10, 20, 0, 50).pipe(
+  scan((acc, value, index) => {
+    acc.sum += value;
+    acc.ave = acc.sum / (index + 1);
+    return acc;
+  }, { sum: 0, ave: 0 })
+).subscribe(v => console.log('scan' , v));
+
+// scan { sum: 0, ave: 0 }
+// scan { sum: 10, ave: 5 }
+// scan { sum: 20, ave: 6.666666666667 }
+// scan { sum: 40, ave: 10 }
+// scan { sum: 40, ave: 8 }
+// scan { sum: 90, ave: 15 }
+```
+
 ### Observer
 Observable에 의해 전달된 데이터를 소비하는 주체이다. Observer는 next, error, complete 함수를 가진 객체를 가리킨다.
 Observable에 의해 데이터가 전달될 때는 next 함수가 호출되고, 에러가 발생했을 때는 error 함수,
