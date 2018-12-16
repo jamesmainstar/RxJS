@@ -1,6 +1,9 @@
-#### Observable
+### Observable
 시간을 축으로 연속적인 데이터를 저장하는 컬렉션을 표현한 객체이다. Observable은 데이터를 제공하는 소스를 Observer에게 전달한다.
 오퍼레이터와 함께 RxJS의 핵심중의 핵심인 개념이다. 이를 스트림이라고 부른다.
+
+Observable를 두가지 타입으로 나뉘다. 첫번째는 지금까지 우리가 사용해왔던 Observable인 Cold Observable과
+두 번째는 하나의 Observable을 여러 Observable이 공유할 때 필요한 Hot Observable이다.
 
 | 구분                  | Cold Observable                          | Hot Observable                                                     |
 |-----------------------|------------------------------------------|--------------------------------------------------------------------|
@@ -10,16 +13,60 @@
 | 데이터 전달 시점      | 구독하는 순간부터 데이터를 전달하기 시작 | 구독과 상관없이 데이터를 중간부터 전달                             |
 | RxJS 객체             | Observable                               | fromEvent에 의해 생성된 Observable, ConnectableObservable, Subject |
 
-#### Operator
+### Subject
+RxJS의 대표적인 Hot Observable로는 Subject가 있다. Subject는 Observable과 마찬가지로 rxjs 네임스페이스에 존재한다.
+Subject는 위에서 언급한 Hot Observable과 같이 여러 Observable가 데이터를 공유한다.
+뿐만 아니라 Subject는 Observable과 다르게 새로운 상태를 전달할 수 있다.
+
+즉, Observable이 읽기 전용이라면 Subject는 읽기 쓰기가 가능한 Observable이다.
+
+```js
+const {Subject} = rxjs;
+const subject = new Subject();
+
+// observerA를 등록
+subject.subscribe({
+  next: (v) => console.log(`observerA: ${v}`);
+});
+// 데이터 1을 전달
+subject.next(1);
+
+// observerB를 등록
+subject.subscribe({
+  next: (v) => console.log(`observerB: ${v}`);
+});
+// 데이터 2을 전달
+subject.next(2);
+
+// 결과
+// "observerA: 1"
+// "observerA: 2"
+// "observerB: 2"
+```
+
+```js
+const {Subject, Observable} = rxjs;
+const subject = new Subject();
+const keyup$ = fromEvent(document.getElementById('search'), 'keyup')
+let [user$, reset$] = subject.pipe(partition(query => query.trim().length > 0));
+user$.subscribe({ /* observer */ });
+reset$.subscribe({ /* observer */ });
+
+keyup$.subscribe(subject);
+```
+
+위와 같이 될 수 있는 이유는 Subject가 Observable을 상속하고 Observer가 구현되어 있기 때문에 가능하다. Subject는 Observable이기도 하고 Observer이기도 하다.
+
+### Operator
 Observable를 생성 및 조작하는 함수를 오퍼레이터라고 한다. 오퍼레이터는 Observable를 생성하기도 하고, 각각의 Observable을 연결하기도 한다.
 또한 Observable을 분리하거나 합치기도 한다. 오퍼레이터는 현재의 Observable 인스턴스를 기반으로 항상 새로운 Observable 인스턴스를 반환한다.
 
-#### Observer
+### Observer
 Observable에 의해 전달된 데이터를 소비하는 주체이다. Observer는 next, error, complete 함수를 가진 객체를 가리킨다.
 Observable에 의해 데이터가 전달될 때는 next 함수가 호출되고, 에러가 발생했을 때는 error 함수,
 데이터를 전달이 완료되었을 때는 complete함수가 호출된다. Observer는 Observable과 subscribe 메소드를 통해 연결된다.
 
-#### Subscription
+### Subscription
 Observable.prototype.subscribe의 반환값이다. Subscription 객체는 자원의 해제를 담당한다.
 등록된 Observable의 데이터를 더이상 전달받고 싶지 않을 경우 unsubscribe 메소드를 호출하여 자원을 해제한다.
 
