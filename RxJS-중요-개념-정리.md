@@ -57,6 +57,20 @@ keyup$.subscribe(subject);
 
 위와 같이 될 수 있는 이유는 Subject가 Observable을 상속하고 Observer가 구현되어 있기 때문에 가능하다. Subject는 Observable이기도 하고 Observer이기도 하다.
 
+Subject를 연결하는 작업은 사실 좀 번거로운 작업이다. 또한 RxJS에서는 가급적이면 Subject를 외부에서 단독으로 사용하지 않기를 권고한다.
+Subject는 Observable과 다르게 데이터를 변경할 수 있기 때문에 가급적이면 Subject를 구현의 내부로 감추어서 사이드 이벤트를 최소화하는 방향을 권고한다. RxJS에서는 "하나의 데이터 소스를 함께 공유한다"는 의미로 share이라는 오퍼레이터를 제공한다.
+
+```js
+const keyup$ = formEvent(document.getElementById('search'), 'keyup')
+  .pipe(
+    debounceTime(300),
+    map(event => event.target.value)
+    distinctUntilChanged(), // 특수티가 입력된 경우에 나오지 않기 위해 중복 데이터 처리
+    tap(v => console.log('from keyup$', v)),
+    share()
+  );
+```
+
 ### Operator
 Observable를 생성 및 조작하는 함수를 오퍼레이터라고 한다. 오퍼레이터는 Observable를 생성하기도 하고, 각각의 Observable을 연결하기도 한다.
 또한 Observable을 분리하거나 합치기도 한다. 오퍼레이터는 현재의 Observable 인스턴스를 기반으로 항상 새로운 Observable 인스턴스를 반환한다.
