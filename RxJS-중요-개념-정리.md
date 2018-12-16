@@ -14,3 +14,12 @@ Observable에 의해 데이터가 전달될 때는 next 함수가 호출되고, 
 #### Subscription
 Observable.prototype.subscribe의 반환값이다. Subscription 객체는 자원의 해제를 담당한다.
 등록된 Observable의 데이터를 더이상 전달받고 싶지 않을 경우 unsubscribe 메소드를 호출하여 자원을 해제한다.
+
+#### RxJS 개발 방법
+RxJS를 사용하여 개발할 경우 프로세스는 대부분 다음과 같은 과정을 거친다.
+- 첫째. 데이터 소스를 Observable로 변경한다.
+- 둘째. 오퍼레이터를 통해 데이터를 변경하거나 추출한다. 또는 여러 개의 Observable을 하나의 Observable로 합치거나 하나의
+Observable을 여러 개의 Observable로 만든다.
+- 셋째. 원하는 데이터를 받아 처리하는 Observer를 만든다.
+- 넷째. Observable의 subscribe를 통해 Observer를 등록한다.
+- 다섯째. Observable 구독을 정지하고 자원을 해지한다.
