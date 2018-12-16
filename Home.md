@@ -5,7 +5,7 @@
 - [오픈소스](오픈소스)
 - 스터디
   - [코드스피츠](코드스피츠)
-  - [함수형프로그래밍과 ES6+ | 유인동](함수형프로그래밍과-ES6+)
+  - [함수형프로그래밍과 ES6+ | 유인동](함수형프로그래밍과-ES6)
   - [BEPECO](BEPECO)
 - 연구
   - [No Library No Framework](No-Library-No-Framework)
