@@ -4,6 +4,5 @@
 - [RxJs 퀵스타트 - RxJs란 무엇인가](RxJs란-무엇인가)
 - [RxJs 퀵스타트 - RxJS 스케줄러](RxJs-퀵스타트-RxJS-스케줄러)
 - [RxJs 퀵스타트 - Pull과 Push가 가지는 의미](RxJs-퀵스타트-Pull과-Push가-가지는-의미)
-- [RxJs 퀵스타트 - Cold Observable과 Hot Observable](RxJs-퀵스타트-Cold-Observable과-Hot-Observable)
 - [RxJs 퀵스타트 - 자동완성 UI](RxJs-퀵스타트-자동완성-UI)
 - [RxJS 중요 개념 정리](RxJS-중요-개념-정리)
