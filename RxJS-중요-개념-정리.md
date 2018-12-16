@@ -130,7 +130,34 @@ RxJS로 타이머 기반의 애니메이션을 구현하기 위해서는 스케�
 애플리케이션 자체가 멈출 수 있다는 의미이기도 하다. 이렇게 RxJS에서도 단일 스레드에서 동기적으로 작업을 처리할 수 있지만 브라우저가
 블록되는 문제를 해결하기 위해서 비동기적 처리 방식으로 데이터를 전달하거나 받는다. 이런 일을 해주는 것이 바로 RxJS 스케줄러이다.
 
+RxJS에서는 `구독의 시점을 제어`할 수 있는 subscribeOn 오퍼레이터와 `데이터 처리의 시점을 제어`할 수 있도록 observeOn 오퍼레이터를 제공한다. subscribeOn와 observeOn을 asyncScheduler과 사용하면 바로 제어권을 메인 스레드에게 넘길 수 있다.
 
+```js
+const {of, asyncScheduler} = rxjs;
+const {tap, observeOn, subscribeOn} = rxjs.operators;
+const obs$ = of('A', 'B')
+  .pipe(
+    tap(v => console.log(v, '데이터 처리1')),
+    tap(v => console.log(v, '데이터 처리2')),
+    observeOn(asyncScheduler),
+    subscribeOn(asyncScheduler)
+  );
+
+const start = new Date().getTime();
+console.log('subscribe');
+obs$.subscribe(v => console.log('observer received', v));
+console.log(`subscribe 후 ${new Date().getTime() - start}ms`);
+
+// 결과
+// subscribe
+// subscribe 후 5ms
+// A 데이터 처리1
+// A 데이터 처리2
+// B 데이터 처리1
+// B 데이터 처리2
+// observer received A
+// observer received B
+```
 
 #### RxJS 개발 방법
 RxJS를 사용하여 개발할 경우 프로세스는 대부분 다음과 같은 과정을 거친다.
