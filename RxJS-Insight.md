@@ -102,3 +102,32 @@ const observer = {
 data$.subscribe(observer);
 // output: Error!
 ```
+
+### error를 받은 뒤에 동작 Observable이 멈춘다!!
+Error를 받게되면 Observable의 동작은 멈추게 된다.
+```js
+const subject = new BehaviorSubject();
+const data$ = from(subject);
+
+interval(500)
+  .subscribe(v => {
+    if (v === 4) {
+      data$.error(4);
+    } else {
+      data$.next(v);
+    }
+  });
+
+data$.subscribe({
+  next: console.log,
+  error: () => console.log('Error!')
+})
+
+// output: 0
+// output: 1
+// output: 2
+// output: 3
+// output: Error!
+```
+
+하지만 지속적으로 함수합성을 계속적으로 하고 싶을 때가 있을 것이다. catchError를 사용하면 에러는 한곳에서 처리하게 하고 지속적으로 함수합성을 할 수 있다.
