@@ -102,6 +102,3 @@ const observer = {
 data$.subscribe(observer);
 // output: Error!
 ```
-
-### Observable로 Maybe, Either 모나드 구현해보기
-Maybe 모나드는 Just, Nothing 두 하위형으로 구성된 빈 형식으로서, 주목적은 null 체크 로직을 효과적으로 통합하는 것입니다. 여기서 null 체크 로직을 처리하도록 하겠습니다.
