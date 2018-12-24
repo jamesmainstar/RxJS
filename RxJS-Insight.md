@@ -1,4 +1,4 @@
-#### operator를 사용하면 항상 데이터는 불변 객체가 만들어 지나??
+### operator를 사용하면 항상 데이터는 불변 객체가 만들어 지나??
 
 여기 of operator를 통해 Observable를 생성했습니다.
 ```js
@@ -78,3 +78,30 @@ data$.subscribe(console.log);
 // output { n: 2 }
 // output { n: 3 }
 ```
+
+### pipe 중간에 에러가 발생하면 어떻게 되지??
+안전한 함수합성을 위해 모나드를 사용하는 데, Observable은 에러가 발생되면 어떻게 처리되는 지 알아보기 위해 테스트를 해봤다. 아래 코드를 보면 정의되지 않는 객체를 접근하게 되어 `TypeError`가 발생하게 되었다.
+```js
+const data$ = of({v: null}).pipe(
+  map(({v: {v}}) => v)
+);
+data$.subscribe(console.log);
+// output: TypeError: Cannot destructure property `v` of 'undefined' or 'null'.
+```
+
+만약에 옵져버에 error 함수를 받으면 어떻게 될까? 놀랍게도 Throw로 던져지는 것은 모두 error 함수에 들어온다.
+Throw를 발생시키지 않고 error 함수를 통해 처리를 가능하도록 할 수 있다.
+```js
+const data$ = of({v: null}).pipe(
+  map(({v: {v}}) => v)
+);
+const observer = {
+  next: console.log,
+  error: () => (console.log('Error!'))
+};
+data$.subscribe(observer);
+// output: Error!
+```
+
+### Observable로 Maybe, Either 모나드 구현해보기
+Maybe 모나드는 Just, Nothing 두 하위형으로 구성된 빈 형식으로서, 주목적은 null 체크 로직을 효과적으로 통합하는 것입니다. 여기서 null 체크 로직을 처리하도록 하겠습니다.
