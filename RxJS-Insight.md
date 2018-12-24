@@ -54,3 +54,25 @@ data$.subscribe(console.log);
 
 누구도 `data$`를 구독했을 때 변경된 값이 나오는 것을 원하지 않을 것입니다. 여기서 알 수 있는 것은
 `operator`를 사용하더라도 내부 값은 공유를 하고 있다는 것입니다. 즉, `operator`에 등록하는 함수도 모두 순수함수로 작성을 해야 합니다.
+
+`identity$`와 `div$`에 모두 순수함수를 사용한 뒤 결과입니다.
+```js
+const identity$ = data$.pipe(map(({n}) => ({n})));
+const div$ = data$.pipe(map(({n}) => ({n: n * n})));
+```
+```js
+div$.subscribe(console.log);
+// output { n: 1 }
+// output { n: 4 }
+// output { n: 9 }
+
+identity$.subscribe(console.log);
+// output { n: 1 }
+// output { n: 2 }
+// output { n: 3 }
+
+data$.subscribe(console.log);
+// output { n: 1 }
+// output { n: 2 }
+// output { n: 3 }
+```
