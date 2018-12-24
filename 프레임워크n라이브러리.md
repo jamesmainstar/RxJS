@@ -2,6 +2,7 @@
 
 #### RxJS
 - [RxJS Immutable Object](RxJS-Immutable-Object)
+- [RxJS Insight](RxJS-Insight)
 
 #### Angular
 - [Angular 철학](Angular)
