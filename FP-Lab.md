@@ -2,6 +2,7 @@
 - [왜 모나드를 사용해야 하는가](왜-모나드를-사용해야-하는가)
 - [Kleisli category](https://www.youtube.com/watch?v=i9CU4CuHADQ)
 
+#### 함수형 프로그래밍 정리
 - 함수의 시그니처
   - 함수이름
   - 인자 타입 목록
