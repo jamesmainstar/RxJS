@@ -19,6 +19,7 @@
 #### 범주론 참고
 - [왜 모나드를 사용해야 하는가](왜-모나드를-사용해야-하는가)
 - [Kleisli category](https://www.youtube.com/watch?v=i9CU4CuHADQ)
+- [js Generator와 Free Monad](https://medium.com/@jooyunghan/js-제너레이터와-함수형-프로그래밍-8bba6c2ce459)
 
 #### 함수형 프로그래밍 정리
 - 함수의 시그니처
