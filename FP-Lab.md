@@ -39,5 +39,6 @@
 
 #### 참고자료
 - [인프런 동영상 강의 - 자바스크립트로 알아보는 함수형 프로그래밍 | 유인동](https://www.inflearn.com/course/함수형-프로그래밍/)
+- [Lazysoul | Medium](https://medium.com/@lazysoul/kotlin-functors-applicatives-and-monads-in-pictures-part-1-3-a5ac668df83a)
 - [mido | Github Page](https://midojeong.github.io/)
 - [한주영 | Medium](https://medium.com/@jooyunghan)
