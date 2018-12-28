@@ -26,7 +26,6 @@ Size: {{size$ | async}}
 ### 사용자 이벤트
 
 #### 참고 자료
-- https://github.com/jasonaden/angular-ngrx
-- https://github.com/benlesh/add-features-with-rxjs
+- https://github.com/RxJS-CN/angular-rxjs-todos/blob/master/src/app/services/todo.service.ts
 - https://angular.io/api/common/AsyncPipe
 - https://angular.io/api/forms/FormControlDirective
