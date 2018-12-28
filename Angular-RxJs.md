@@ -1,0 +1,2 @@
+- https://github.com/jasonaden/angular-ngrx
+- https://github.com/benlesh/add-features-with-rxjs
