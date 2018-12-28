@@ -1,2 +1,4 @@
 - https://github.com/jasonaden/angular-ngrx
 - https://github.com/benlesh/add-features-with-rxjs
+- https://angular.io/api/common/AsyncPipe
+- https://angular.io/api/forms/FormControlDirective
