@@ -58,7 +58,7 @@ run(main, { DOM: makeDOMDriver('#app-container') })
 
 > Functional enables "predictable" code, and Reactive enables "separated" code. Cycle.js apps are made of pure functions, which means you know they only take inputs and generate predictable outputs, without performing any I/O effects. The building blocks are reactive streams from libraries like [xstream](http://staltz.com/xstream), [RxJS](http://reactivex.io/rxjs) or [Most.js](https://github.com/cujojs/most/), which greatly simplify code related to events, asynchrony, and errors.
 
-함수형은 예측 가능한 코드를 가능하게 하고, 반응형은 분리된 가능한 코드를 가능하게 한다. Cycle.js 앱들은 어떠한 I/O 이펙트가 없는 입력을 받으면 예측가능한 출력을 만들어내는 순수함수로 만들어진다. 빌딩 블록은 xstream, RxJs 또는 Most.js와 같은 라이브러리에서 발생하는 반응형 스트림으로, 이벤트, 비동기 및 오류와 관련된 코드를 엄청나게 단순화한다.
+함수형은 예측 가능한 코드를 가능하게 하고, 반응형은 분리된 코드를 가능하게 한다. Cycle.js 앱들은 어떠한 I/O 이펙트가 없는 입력을 받으면 예측가능한 출력을 만들어내는 순수함수로 만들어진다. 빌딩 블록은 xstream, RxJs 또는 Most.js와 같은 라이브러리에서 발생하는 반응형 스트림으로, 이벤트, 비동기 및 오류와 관련된 코드를 엄청나게 단순화한다.
 
 > Structuring the application with streams also separates concerns, because all [dynamic updates to a piece of data are co-located](streams.html#streams-reactive-programming) and impossible to change from outside. As a result, apps in Cycle are entirely `this`-less and have nothing comparable to imperative calls such as `setState()` or `update()`.
 
