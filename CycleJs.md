@@ -61,11 +61,14 @@ run(main, { DOM: makeDOMDriver('#app-container') })
 
 스트림이 포함된 애플리케이션 구조는 관심사를 분리한다. 왜냐하면 데이터 조각은 대한 모든 동적 업데이트는 함께 배치되어 외부에서 변경할 수 없기 때문이다.
 
-## Simple and Concise
+## 간단함 그리고 간결함 Simple and Concise
 
-Cycle.js is a framework with very few concepts to learn. The core API has just one function: `run(app, drivers)`. Besides that, there are **streams**, **functions**, **drivers** (plugins for different types of I/O effects), and a helper function to isolate scoped components. This is a framework with very little "magic". Most of the building blocks are just JavaScript functions. Usually the lack of "magic" leads to very verbose code, but since functional reactive streams are able to build complex dataflows with a few operations, you will come to see how apps in Cycle.js are small and readable.
+> Cycle.js is a framework with very few concepts to learn. The core API has just one function: `run(app, drivers)`. Besides that, there are **streams**, **functions**, **drivers** (plugins for different types of I/O effects), and a helper function to isolate scoped components. This is a framework with very little "magic". Most of the building blocks are just JavaScript functions. Usually the lack of "magic" leads to very verbose code, but since functional reactive streams are able to build complex dataflows with a few operations, you will come to see how apps in Cycle.js are small and readable.
 
-## Extensible and Testable
+Cycle.js는 배우기 위해 몇가지 컨셉만 알면 된다. 중심 API는 `run(app, drivers)` 함수만 가지고 있다.
+게다가 컴포넌트 범위를 격리하는 stream, functions, drivers 그리고 helper function들이 있다. 거의 "마법"이 없는 프레임워크이다. 대게 블록을 만드는 것은 자바스크립트 함수이다. 일반적으로 "마법"의 부재는 매우 장황한 코드와 연결되지만 함수형 반응형 스트림은 몇가지 오퍼레이터로 복잡한 데이터 흐름 구축할 수 있기 때문에 당신은 Cycle.js 앱이 얼마나 작고 읽기 쉬운지 알게 될 것입니다.
+
+## 확장성과 테스트용이성 Extensible and Testable
 
 Drivers are plugin-like simple functions that take messages from sinks and call imperative functions. All I/O effects are contained in drivers. This means your application is just a pure function, and it becomes easy to swap drivers around. The community has built drivers for [React Native](https://github.com/cyclejs/cycle-react-native), [HTML5 Notification](https://github.com/cyclejs/cycle-notification-driver), [Socket.io](https://github.com/cgeorg/cycle-socket.io), etc. Sources and sinks can be easily used as [Adapters and Ports](https://iancooper.github.io/Paramore/ControlBus.html). This also means testing is mostly a matter of feeding inputs and inspecting the output. No deep mocking needed. Your application is just a pure transformation of data.
 
