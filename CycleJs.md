@@ -1,5 +1,8 @@
 > https://cycle.js.org/ 웹사이트 번역글
 
+- [CycleJs Streams](CycleJs-Streams)
+- [CycleJs Model-View-Intent](CycleJs-MVI)
+
 ## 데이터 흐름 Dataflow
 
 > **Your app and the external world as a circuit**
