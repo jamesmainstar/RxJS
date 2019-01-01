@@ -1,18 +1,27 @@
 > https://cycle.js.org/ 웹사이트 번역글
 
-## Dataflow
+## 데이터 흐름 Dataflow
 
 > **Your app and the external world as a circuit**
+
+> 순환으로의 앱과 외부 세상
 
 <p>
   <img src="https://cycle.js.org/img/cycle-nested-frontpage.svg">
 </p>
 
-Cycle's core abstraction is your application as a pure function `main()` where inputs are read effects (*sources*) from the external world and outputs (*sinks*) are write effects to affect the external world. These I/O effects in the external world are managed by *drivers*: plugins that handle DOM effects, HTTP effects, etc.
+> Cycle's core abstraction is your application as a pure function `main()` 
+where inputs are read effects (*sources*) from the external world and 
+outputs (*sinks*) are write effects to affect the external world.
+These I/O effects in the external world are managed by *drivers*: plugins that handle DOM effects, HTTP effects, etc.
 
-The internals of `main()` are built using Reactive Programming primitives, which maximizes separation of concerns and provides a fully declarative way of organizing your code. The *dataflow* is plainly visible in the code, making it readable and traceable.
+Cycle의 중심 추상적 개념은 애플리케이션은 순수함수인 `main()`로, 입력(Sources)은 외부에서 전달된 해석된 이펙트이고 아웃풋(Sinks)은 외부에 영향을 주는 변경된 이펙트이다. 외부세상에 I/O 효과들은 드라이브로 관리된다. 드라이브는 DOM, HTTP을 다루는 플러그인이다.
 
-## Example
+> The internals of `main()` are built using Reactive Programming primitives, which maximizes separation of concerns and provides a fully declarative way of organizing your code. The *dataflow* is plainly visible in the code, making it readable and traceable.
+
+`main()` 내부는 최대한 분리된 관심사와 완전히 선언적인 방법으로 제공한 프리미티브 리엑티브 프로그래밍으로 만들어진다. 데이터 흐름은 읽을 수 있고 추적할 수 있는 코드로 명확히 표현된다.
+
+## 예제 Example
 
 ```
 npm install xstream @cycle/run @cycle/dom
