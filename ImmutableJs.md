@@ -64,21 +64,30 @@ const map2 = map1.set('b', 50);
 map1.get('b') + " vs. " + map2.get('b'); // 2 vs. 50
 ```
 
-### Browser
+### 브라우저 Browser
 
-Immutable.js has no dependencies, which makes it predictable to include in a Browser.
+> Immutable.js has no dependencies, which makes it predictable to include in a Browser.
 
-It's highly recommended to use a module bundler like [webpack](https://webpack.github.io/),
+Immutable.js는 의존성이 없으므로 브라우저에서 사용할 수 있다.
+
+> It's highly recommended to use a module bundler like [webpack](https://webpack.github.io/),
 [rollup](https://rollupjs.org/), or
 [browserify](http://browserify.org/). The `immutable` npm module works
 without any additional consideration. All examples throughout the documentation
 will assume use of this kind of tool.
 
-Alternatively, Immutable.js may be directly included as a script tag. Download
+Immutable.js는 webpack, rollup, browserify과 같은 모듈 번들러를 사용하는 것을 매우 추천한다.
+`Immutable` npm 모듈은 추가적인 고려없이 동작한다. 설명서 전체의 모든예는 이러한 도구를 사용하는 것으로 가정한다.
+
+> Alternatively, Immutable.js may be directly included as a script tag. Download
 or link to a CDN such as [CDNJS](https://cdnjs.com/libraries/immutable)
 or [jsDelivr](https://www.jsdelivr.com/package/npm/immutable).
 
-Use a script tag to directly add `Immutable` to the global scope:
+그 대신에 Immutable.js는 script 태그에 직접 포함 할 수 있다. jsDelivr 또는 CDNJS에서 다운로드를 하거나 링크를 걸어서 사용할 수있다.
+
+> Use a script tag to directly add `Immutable` to the global scope:
+
+`Immutable`을 글로벌 스코프에 포함하려면 script 태그를 직접 사용
 
 ```html
 <script src="immutable.min.js"></script>
@@ -90,7 +99,9 @@ Use a script tag to directly add `Immutable` to the global scope:
 </script>
 ```
 
-Or use an AMD-style loader (such as [RequireJS](http://requirejs.org/)):
+> Or use an AMD-style loader (such as [RequireJS](http://requirejs.org/)):
+
+또는 AMD-style 로더를 사용(RequireJS 같은)
 
 ```js
 require(['./immutable.min.js'], function (Immutable) {
@@ -101,7 +112,7 @@ require(['./immutable.min.js'], function (Immutable) {
 });
 ```
 
-### Flow & TypeScript
+### 플로우 & 타입스크립트 Flow & TypeScript
 
 Use these Immutable collections and sequences as you would use native
 collections in your [Flowtype](https://flowtype.org/) or [TypeScript](http://typescriptlang.org) programs while still taking
