@@ -1,28 +1,38 @@
 > https://facebook.github.io/immutable-js/ 웹사이트 번역글
 
-Immutable collections for JavaScript
+자바스크립트를 위한 이뮤터블 컬렉션 Immutable collections for JavaScript
 ====================================
 
-[![Build Status](https://travis-ci.org/facebook/immutable-js.svg?branch=master)](https://travis-ci.org/facebook/immutable-js) [![Join the chat at https://gitter.im/immutable-js/Lobby](https://badges.gitter.im/immutable-js/Lobby.svg)](https://gitter.im/immutable-js/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[Immutable][] data cannot be changed once created, leading to much simpler
+> Immutable data cannot be changed once created, leading to much simpler
 application development, no defensive copying, and enabling advanced memoization
-and change detection techniques with simple logic. [Persistent][] data presents
-a mutative API which does not update the data in-place, but instead always
-yields new updated data.
+and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.
 
-Immutable.js provides many Persistent Immutable data structures including:
+이뮤터블 데이터는 일단 생성되면 변경이 불가능함으로 훨씬 더 단순한 애플리케이션 개발로 연결되고,
+방어적인 복사가 없고, 간단한 로직으로 고급 메모이제이션과 변경감지기술을 할수 있다.
+영구 데이터는 데이터 이동으로 업데이트하지 않고 항상 새로운 업데이트된 데이터를 생성하는 변경 API를 제공한다.
+
+> Immutable.js provides many Persistent Immutable data structures including:
 `List`, `Stack`, `Map`, `OrderedMap`, `Set`, `OrderedSet` and `Record`.
 
-These data structures are highly efficient on modern JavaScript VMs by using
-structural sharing via [hash maps tries][] and [vector tries][] as popularized
+Immutable.js는 많은 영구 불변 데이터 자료구조들을 포함하여 제공한다. `List`, `Stack`, `Map`, `OrderedMap`, `Set`, `OrderedSet`, `Record`.
+
+> These data structures are highly efficient on modern JavaScript VMs by using
+structural sharing via hash maps tries and vector tries as popularized
 by Clojure and Scala, minimizing the need to copy or cache data.
 
-Immutable.js also provides a lazy `Seq`, allowing efficient
+이러한 자료구조는 구조 공유를 사용하는 모던 자바스크립트 VM들에서 매우 효율적이고 복사와 캐싱이 최소화 된다.
+
+> Immutable.js also provides a lazy `Seq`, allowing efficient
 chaining of collection methods like `map` and `filter` without creating
 intermediate representations. Create some `Seq` with `Range` and `Repeat`.
 
-Want to hear more? Watch the presentation about Immutable.js:
+Immutable.js는 지연성있는 자료구조인 `Seq`를 제공한다.
+컬렉션의 `map` 그리고 `filter`과 같은 효율적인 체이닝을 사용할 수 있다. 
+`Seq`는 `Range`, `Repeat`과 만들다.
+
+> Want to hear more? Watch the presentation about Immutable.js:
+
+추가적인 정보를 원하면 Immutable.js 관한 발표를 봐라:
 
 <a href="https://youtu.be/I7IdS-PbEgI" target="_blank" alt="Immutable Data and React"><img src="https://img.youtube.com/vi/I7IdS-PbEgI/0.jpg" /></a>
 
@@ -32,18 +42,21 @@ Want to hear more? Watch the presentation about Immutable.js:
 [vector tries]: http://hypirion.com/musings/understanding-persistent-vector-pt-1
 
 
-Getting started
+시작하기 Getting started
 ---------------
 
-Install `immutable` using npm.
+> Install `immutable` using npm.
+
+npm을 사용해서 `immutable`를 설치한다.
 
 ```shell
 npm install immutable
 ```
 
-Then require it into any module.
+> Then require it into any module.
 
-<!-- runkit:activate -->
+그리고 그것은 어느 모듈에 포함한다.
+
 ```js
 const { Map } = require('immutable');
 const map1 = Map({ a: 1, b: 2, c: 3 });
