@@ -113,23 +113,25 @@ require(['./immutable.min.js'], function (Immutable) {
 ```
 
 ### 플로우 & 타입스크립트 Flow & TypeScript
-
 Use these Immutable collections and sequences as you would use native
 collections in your [Flowtype](https://flowtype.org/) or [TypeScript](http://typescriptlang.org) programs while still taking
 advantage of type generics, error detection, and auto-complete in your IDE.
 
-Installing `immutable` via npm brings with it type definitions for Flow (v0.55.0 or higher)
-and TypeScript (v2.1.0 or higher), so you shouldn't need to do anything at all!
+이러한 불변 켈렉션과 시퀀스를 네이티브 컬렉션을 사용할 때는 타입 제네릭, 오류 감지, 자동 완료를 위해 Flowtype 또는 Typescript 프로그램을 사용해라.
 
-#### Using TypeScript with Immutable.js v4
+> Installing `immutable` via npm brings with it type definitions for Flow (v0.55.0 or higher) and TypeScript (v2.1.0 or higher), so you shouldn't need to do anything at all!
 
-Immutable.js type definitions embrace ES2015. While Immutable.js itself supports
+`immutable` 설치할 때 Flow 그리고 Typescript와 같은 타입 정의 도구를 가져오기 때문에 별도로 설치할 필요가 없다.
+
+#### Immutable.js v4와 타입스크립트 사용법 Using TypeScript with Immutable.js v4
+> Immutable.js type definitions embrace ES2015. While Immutable.js itself supports
 legacy browsers and environments, its type definitions require TypeScript's 2015
 lib. Include either `"target": "es2015"` or `"lib": "es2015"` in your
 `tsconfig.json`, or provide `--target es2015` or `--lib es2015` to the
 `tsc` command.
 
-<!-- runkit:activate -->
+Immutable.js 타입 정의는 ES2015를 받아들였다. Immutable.js는 기존의 브라우저와 환경을 지원하지만 타입정의를 위해서는 타입스크립트의 2015 라이브러리가 필요합니다. `tsconfig.json`에 `"target": "es2015"` 또는 `"lib": "es2015"`를 포함하거나 `tsc` 명령어에 `--target es2015` 또는 `--lib es2015`를 사용하면 된다.
+
 ```js
 const { Map } = require("immutable");
 const map1 = Map({ a: 1, b: 2, c: 3 });
@@ -137,7 +139,7 @@ const map2 = map1.set('b', 50);
 map1.get('b') + " vs. " + map2.get('b'); // 2 vs. 50
 ```
 
-#### Using TypeScript with Immutable.js v3 and earlier:
+#### Immutable.js v3 그리고 이전 버전과 타입스크립트 사용법 Using TypeScript with Immutable.js v3 and earlier:
 
 Previous versions of Immutable.js include a reference file which you can include
 via relative path to the type definitions at the top of your file.
