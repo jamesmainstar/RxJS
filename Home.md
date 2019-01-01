@@ -9,14 +9,14 @@
   - [Immutable.js](ImmutableJs)
   - [Cycle.js](CycleJs)
 - 스터디
+  - [함수형 프로그래밍](함수형-프로그래밍)
+  - [리엑티브 프로그래밍](리엑티브-프로그래밍)
   - [수학](수학)
   - [함수형프로그래밍과 ES6+ | 유인동](함수형프로그래밍과-ES6)
-  - [리엑티브 프로그래밍](리엑티브-프로그래밍)
   - [코드스피츠](코드스피츠)
   - [BEPECO](BEPECO)
-- 연구
+- 정리
   - [No Library No Framework](No-Library-No-Framework)
-  - [FP Lab](FP-Lab)
   - [Technical Debt](Technical-Debt)
 - 프로젝트 회고
   - [18.10~11 오픈빌더](오픈빌더)
