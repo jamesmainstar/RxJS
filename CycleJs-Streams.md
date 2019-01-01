@@ -6,7 +6,7 @@ Reactivity is an important aspect in Cycle.js, and part of the core principles t
 
 Say you have a module Foo and a module Bar. A *module* can be considered to be an object of an [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) class, or any other mechanism of encapsulating state. Let's assume all code lives in some module. Here we have an arrow from Foo to Bar, indicating that Foo somehow affects state living inside Bar.
 
-![modules foo bar](img/modules-foo-bar.svg)
+![modules foo bar](https://cycle.js.org/img/modules-foo-bar.svg)
 
 A practical example of such arrow would be: *whenever Foo does a network request, increment a counter in Bar*. If all code lives in some module, **where does this arrow live?** Where is it defined? The typical choice would be to write code inside Foo which calls a method in Bar to increment the counter.
 
@@ -22,13 +22,13 @@ function onNetworkRequest() {
 
 Because Foo owns the relationship "*when network request happens, increment counter in Bar*", we say the arrow lives at the arrow tail, i.e., Foo.
 
-![passive foo bar](img/passive-foo-bar.svg)
+![passive foo bar](https://cycle.js.org/img/passive-foo-bar.svg)
 
 Bar is **passive**: it allows other modules to change its state. Foo is proactive: it is responsible for making Bar's state function correctly. The passive module is unaware of the existence of the arrow which affects it.
 
 The alternative to this approach inverts the ownership of the arrow, without inverting the arrow's direction.
 
-![passive foo bar](img/reactive-foo-bar.svg)
+![passive foo bar](https://cycle.js.org/img/reactive-foo-bar.svg)
 
 With this approach, Bar listens to an event happening in Foo, and manages its own state when that event happens. Bar is **reactive**: it is fully responsible for managing its own state by reacting to external events. Foo, on the other hand, is unaware of the existence of the arrow originating from its network request event.
 
@@ -70,7 +70,7 @@ In short, a *Stream* in *xstream* is an event stream which can emit zero or more
 
 As an example, here is a typical Stream: it emits some events, then it eventually completes.
 
-![completed stream](img/completed-stream.svg)
+![completed stream](https://cycle.js.org/img/completed-stream.svg)
 
 Streams can be listened to, just like EventEmitters and DOM events can. Notice there are 3 handlers: one for events, one for errors, and one for "complete".
 
