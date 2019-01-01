@@ -160,9 +160,11 @@ map2.get('b'); // 50
 불변 경우 The case for Immutability
 -------------------------
 
-Much of what makes application development difficult is tracking mutation and
+> Much of what makes application development difficult is tracking mutation and
 maintaining state. Developing with immutable data encourages you to think
 differently about how data flows through your application.
+
+어플리케이션 개발을 어렵게 만드는 부분은 변경 추적과 상태 관리이다. 불변 데이터로 개발하면 데이터가 애플리케이션을 통해 어떻게 흘러가는지에 대해 다르게 생각할 수 있다. 
 
 Subscribing to data events throughout your application creates a huge overhead of
 book-keeping which can hurt performance, sometimes dramatically, and creates
