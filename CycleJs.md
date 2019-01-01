@@ -72,7 +72,7 @@ Cycle.js는 배우기 위해 몇가지 컨셉만 알면 된다. 중심 API는 `r
 
 Drivers are plugin-like simple functions that take messages from sinks and call imperative functions. All I/O effects are contained in drivers. This means your application is just a pure function, and it becomes easy to swap drivers around. The community has built drivers for [React Native](https://github.com/cyclejs/cycle-react-native), [HTML5 Notification](https://github.com/cyclejs/cycle-notification-driver), [Socket.io](https://github.com/cgeorg/cycle-socket.io), etc. Sources and sinks can be easily used as [Adapters and Ports](https://iancooper.github.io/Paramore/ControlBus.html). This also means testing is mostly a matter of feeding inputs and inspecting the output. No deep mocking needed. Your application is just a pure transformation of data.
 
-## Explicit dataflow
+## 명시적인 데이터 흐름 Explicit dataflow
 
 In every Cycle.js app, each of the stream declarations is a node in a dataflow graph, and the dependencies between declarations are arrows. This means there is a one-to-one correspondence between your code and *minimap*-like graph of the dataflow between external inputs and external outputs.
 
