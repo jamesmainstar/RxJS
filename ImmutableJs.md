@@ -141,8 +141,11 @@ map1.get('b') + " vs. " + map2.get('b'); // 2 vs. 50
 
 #### Immutable.js v3 그리고 이전 버전과 타입스크립트 사용법 Using TypeScript with Immutable.js v3 and earlier:
 
-Previous versions of Immutable.js include a reference file which you can include
+> Previous versions of Immutable.js include a reference file which you can include
 via relative path to the type definitions at the top of your file.
+
+이전 버전의 Immutable.js는 타입 정의를 사용하기 위해 참고파일을 제공한다.
+참조파일은 파일 최상단에 상태 경로로 포함할 수 있다.
 
 ```js
 ///<reference path='./node_modules/immutable/dist/immutable.d.ts'/>
@@ -154,8 +157,7 @@ map1.get('b'); // 2
 map2.get('b'); // 50
 ```
 
-
-The case for Immutability
+불변 경우 The case for Immutability
 -------------------------
 
 Much of what makes application development difficult is tracking mutation and
