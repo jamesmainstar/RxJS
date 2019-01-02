@@ -63,6 +63,27 @@ export class AppComponent {
 }
 ```
 
+### Reactive Forms
+```html
+<input type="text" [formControl]="name">
+<div>{{name$ | async}}</div>
+```
+```ts
+export class AppComponent {
+  nameUpdate$: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  name$ = this.nameUpdate$.pipe(
+    scan((acc, numbers: string) => numbers, '')
+  );
+
+  name = new FormControl('');
+
+  constructor() {
+    this.name.setValue('Hello');
+    this.name.valueChanges.subscribe(this.nameUpdate$);
+  }
+}
+```
+
 #### 참고 자료
 - https://github.com/RxJS-CN/angular-rxjs-todos/blob/master/src/app/services/todo.service.ts
 - https://angular.io/api/common/AsyncPipe
