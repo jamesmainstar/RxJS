@@ -9,9 +9,15 @@
 #### Code Climate 기술적 부채 분석 포인트 10가지
 Argument count - Methods or functions defined with a high number of arguments
 
+인자 갯수 - 많은 인자와 정의된 함수 또는 메소드
+
 Complex boolean logic - Boolean logic that may be hard to understand
 
+복잡한 불 로직 - 이해하기 힘든 불 로직
+
 File length - Excessive lines of code within a single file
+
+파일 길이 - 한파일에 과도한 라인의 코드
 
 Identical blocks of code - Duplicate code which is syntactically identical (but may be formatted differently)
 
