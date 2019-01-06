@@ -4,7 +4,7 @@
   - [DRY 원칙](프로그래밍의-정석#22-drydont-repeat-yourself) 위배면 기술적 부채
 - [오버 엔지니어링](https://zetawiki.com/wiki/오버엔지니어링)
   - 요구사항보다 높은 스펙일 때
-  - [KISS 원칙](프로그래밍의-정석#21-kisskeep-it-simple-stupid--keep-it-short-and-simple) 위배
+  - [KISS 원칙](2-원칙-프로그래밍의-가이드라인#21-kisskeep-it-simple-stupid--keep-it-short-and-simple) 위배
 
 #### Code Climate 기술적 부채 분석 포인트 10가지
 Argument count - Methods or functions defined with a high number of arguments
