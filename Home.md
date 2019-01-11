@@ -18,6 +18,7 @@
 - 정리
   - [No Library No Framework](No-Library-No-Framework)
   - [Technical Debt](Technical-Debt)
+  - [코드를 줄여보자](코드를-줄여보자)
 - 프로젝트 회고
   - [18.10~11 오픈빌더](오픈빌더)
   - [18.12 오픈빌더 리펙토링](오픈빌더-리펙토링)
