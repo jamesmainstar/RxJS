@@ -15,6 +15,7 @@
   - [수학](수학)
   - [코드스피츠](코드스피츠)
   - [BEPECO](BEPECO)
+  - [인공지능](인공지능)
 - 정리
   - [No Library No Framework](No-Library-No-Framework)
   - [Technical Debt](Technical-Debt)
