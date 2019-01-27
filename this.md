@@ -13,5 +13,12 @@ foo(); // Hello World
 
 두번째, 호출부에 콘텍스트 객체가 있을 때, 객체가 **암시적 바인딩**을 한다.
 ```js
-const obj = { 
+function foo () {
+  console.log(this.a);
+}
+const obj = {
+  a: 2019,
+  foo
+};
+obj.foo();
 ```
