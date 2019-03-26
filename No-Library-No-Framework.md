@@ -20,33 +20,33 @@ Throttle 기법을 사용하면 일정한 시간을 주기로 콜백을 실행 �
 ```js
 /**
  * Throttle
- * 
+ *
  * @param callback {Function} Callback function
  * @param _threshhold {Number} Throttle time
  * @return {Function} Event Listener
  */
 function throttle(callback, _threshhold){
-	var timer = null;
-	var threshhold = _threshhold || 100;
-	var last = 0;
+  var timer = null;
+  var threshhold = _threshhold || 100;
+  var last = 0;
 
-	return function () {
-		var self = this;
-		var now = +new Date;
-		var args = arguments;
+  return function () {
+    var self = this;
+    var now = +new Date;
+    var args = arguments;
 
-		if (last && now < last + threshhold){
-			clearTimeout(timer);
+    if (last && now < last + threshhold){
+      clearTimeout(timer);
 
-			timer = setTimeout(function () {
-				last = now;
-				callback.apply(self, args);
-			}, threshhold);
-		} else {
-			last = now;
-			callback.apply(self, args);
-		}
-	};
+      timer = setTimeout(function () {
+        last = now;
+        callback.apply(self, args);
+      }, threshhold);
+    } else {
+      last = now;
+      callback.apply(self, args);
+    }
+  };
 }
 ```
 
@@ -56,22 +56,22 @@ function throttle(callback, _threshhold){
 ```js
 /**
  * Debounce
- * 
+ *
  * @param callback {Function} Callback function
  * @param _delay {Number} Delay time
  * @return {Function} Event Listener
  */
 function debounce(callback, _delay){
-	var timer = null;
-	var delay = _delay || 100;
+  var timer = null;
+  var delay = _delay || 100;
 
-	return function(){
-		var self = this;
-		var args = arguments;
-		clearTimeout(timer);
-		timer = setTimeout(function () {
-			callback.apply(self, args);
-		}, delay);
-	};
+  return function(){
+    var self = this;
+    var args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      callback.apply(self, args);
+    }, delay);
+  };
 }
 ```
