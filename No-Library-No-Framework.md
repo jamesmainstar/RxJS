@@ -25,29 +25,43 @@ Throttle 기법을 사용하면 일정한 시간을 주기로 콜백을 실행 �
  * @param _threshhold {Number} Throttle time
  * @return {Function} Event Listener
  */
-function throttle(callback, _threshhold){
-  var timer = null;
-  var threshhold = _threshhold || 100;
-  var last = 0;
+const throttle = (callback, ms = 100) => {
+  let timer = null
+  let last = 0
 
-  return function () {
-    var self = this;
-    var now = +new Date;
-    var args = arguments;
+  return function (...args) {
+    const self = this
+    const now = +new Date
 
-    if (last && now < last + threshhold){
-      clearTimeout(timer);
-
-      timer = setTimeout(function () {
-        last = now;
-        callback.apply(self, args);
-      }, threshhold);
+    if (last && now < last + ms){
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        last = now
+        callback.apply(self, args)
+      }, ms)
     } else {
-      last = now;
-      callback.apply(self, args);
+      last = now
+      callback.apply(self, args)
     }
-  };
+  }
 }
+```
+```js
+const log = throttle(console.log, 1000)
+setInterval(() => {
+  console.log('------')
+  log('1000')
+  console.log('------')
+}, 500)
+
+// ------
+// 1000
+// ------
+// ------
+// ------
+// ------
+// 1000
+// ------
 ```
 
 #### Debounce
@@ -72,4 +86,12 @@ const debounce = (callback, ms) => {
     }, ms)
   }
 }
+```
+```js
+const log = debounce(console.log, 100)
+log('1')
+log('2')
+log('3')
+log('4')
+// output: 4
 ```
