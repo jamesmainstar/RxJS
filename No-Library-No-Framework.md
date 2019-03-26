@@ -61,17 +61,15 @@ function throttle(callback, _threshhold){
  * @param _delay {Number} Delay time
  * @return {Function} Event Listener
  */
-function debounce(callback, _delay){
-  var timer = null;
-  var delay = _delay || 100;
+const debounce = (callback, ms) => {
+  let timer = null
 
-  return function(){
-    var self = this;
-    var args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(function () {
-      callback.apply(self, args);
-    }, delay);
-  };
+  return function(...args){
+    const self = this
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      callback.apply(self, args)
+    }, ms)
+  }
 }
 ```
