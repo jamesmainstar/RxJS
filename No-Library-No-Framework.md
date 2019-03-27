@@ -95,3 +95,40 @@ log('3')
 log('4')
 // output: 4
 ```
+
+#### Text More
+```css
+.txt{
+  width: 200px;
+  max-height: 35px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.txt.show{display:block;max-height:none}
+.txt.show + .more{display:none}
+```
+```html
+<div class="wrap">
+  <div class="txt">
+    가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마
+    가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마
+  </div>
+  <a href="#" class="more" onclick="toggle()">More</a>
+</div>
+```
+```js
+const toggle = () => {
+  const txt = document.querySelector('.txt').classList
+  if (txt.contains('show')) {
+    txt.remove('show')
+  } else {
+    txt.add('show')
+  }
+}
+```
