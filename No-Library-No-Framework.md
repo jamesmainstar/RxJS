@@ -5,6 +5,12 @@
 - [Slider](http://meandmax.github.io/lory/)
 - [JS Animation](https://javascript.info/js-animation)
 
+#### 천단위 콤마 표시
+```js
+const price = 10000
+price.toLocaleString() // 10,000
+```
+
 #### 정렬
 ```js
 const arr = [0, 2, 3, 1]
