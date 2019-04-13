@@ -1,4 +1,4 @@
-## SMACSSS(Scalable and Modular Architecture for CSS)
+## SMACSS(Scalable and Modular Architecture for CSS)
 ### 정의
 - CSS에 대한 확장형 모듈시 구조
 - CSS의 프레임워크가 아닌 하나의 스타일 가이드
