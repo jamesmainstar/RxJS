@@ -40,3 +40,12 @@
 .menu__item--disabled {}
 .search-form__input--focus {}
 ```
+
+### 혼합사용
+- block1, block2__element 형태로 사용 할 수 있다.
+- block2__element에 여백이나 위치를 지정하고 block1은 독립적으로 유지할 수 있다.
+```html
+<div class="header">
+  <div class="search-form header__search-form"></div>
+</div>
+```
