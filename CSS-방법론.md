@@ -17,4 +17,13 @@
 ```
 
 #### 요소
-- 
+- 블록안에서 특정 기능을 담당하는 부분
+- `block__element` 형태로 사용(더블 언더바)
+- 형태(color, size)가 아닌 목적(item, text, title)에 맞게 결정해야 한다.
+- 요소는 중첩해서 작성할 수 있다.
+- 요소는 해당 블록에서만 사용할 수 있다.
+```css
+.header__title {}
+.menu__item {}
+.search-form__input {}
+```
