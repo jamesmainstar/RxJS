@@ -53,3 +53,6 @@ ul, ol {list-style:none}
 - 사이트 전반적 look and feel 제어
 - 색상이나 이미지를 불변하는 스타일과 분리, 기존 스타일을 재선언하여 사용할 수 있다.
 - 적용범위가 넓은 테마는 `theme-`를 붙여서 사용한다.
+```css
+.theme-color {}
+```
