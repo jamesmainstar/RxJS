@@ -112,4 +112,54 @@ ul, ol {list-style:none}
 ## OOCSS(Object-Oriented CSS)
 ### 2가지 기본원칙
 - 구조와 모양을 분리 : 반복적인 시각적 기능을 별로의 스킨으로 정의하여 다양한 객체와 혼합하여 중복 코드없이 시각적 다양성을 표현할 수 있다.
+```css
+.button {}
+.box {}
+.widget {}
+.skin {}
+```
 - 콘테이너와 콘텐츠의 분리 : 스타일을 정의할 때 위치에 의존적인 스타일을 사용하지 않는다. 사물의 모양은 어디에 위치 하던지 동일하게 보인다.
+```css
+.header {}
+.header-inside {}
+```
+
+### 네이밍방법
+- 가능한 짧고 간결하게 작성한다.
+- 동작과 형태가 예상 가능하도록 명확하게 작성한다.
+- 어떻게 생겼는지 보다는 어떤 목적인지 알 수 있도록 의미있게 작성한다.
+- 지나치게 구체적 이지 않게 일반적으로 사용가능 하도록 작성한다.
+#### 잘못된 사용
+```css
+.twitterbtn {
+  border:3px solid #000;
+  padding:10px 20px;
+  color:#fff;
+  border-radius:10px;
+  background:red;
+}
+ 
+.facebookbtn {
+  border:3px solid #000;
+  padding:10px 20px;
+  color:#fff;
+  border-radius:10px;
+  background:gray;
+}
+```
+#### 옳바른 사용
+```css
+.btnbase {
+  border:3px solid #000;
+  padding:10px 20px;
+  color:#fff;
+  border-radius:10px;
+}
+ 
+.twitter {
+  background:red;
+}
+.facebook {
+  background:gray;
+}
+```
