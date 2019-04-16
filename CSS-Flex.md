@@ -123,3 +123,35 @@
 
 #### 480px
 ![](https://user-images.githubusercontent.com/17817719/56207718-70754e00-608a-11e9-8d84-e6a775bd7e4f.png)
+
+### 리스트 코딩
+```css
+.wrapper {display: flex; justify-content: center}
+.list {width: 1140px; display: flex; justify-content: space-between}
+.list__item {width: 150px; text-align: center}
+```
+```html
+<div class="wrapper">
+  <div class="list">
+    <figure class="list__item">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="width: 100%">
+      <figcaption>아이템1</figcaption>
+    </figure>
+    <figure class="list__item">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="width: 100%">
+      <figcaption>아이템2</figcaption>
+    </figure>
+    <figure class="list__item">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="width: 100%">
+      <figcaption>아이템3</figcaption>
+    </figure>
+    <figure class="list__item">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="width: 100%">
+      <figcaption>아이템4</figcaption>
+    </figure>
+  </div>
+</div>
+```
+![](https://user-images.githubusercontent.com/17817719/56209498-afa59e00-608e-11e9-9fe7-7bc3994a38f0.png)
+
+![](https://user-images.githubusercontent.com/17817719/56209499-b03e3480-608e-11e9-82ec-513db601edcb.png)
