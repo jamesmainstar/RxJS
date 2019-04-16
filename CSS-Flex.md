@@ -99,3 +99,27 @@
 ![](https://user-images.githubusercontent.com/17817719/56206336-1757eb00-6087-11e9-9ab5-a94de43f99b6.png)
 
 ## Flex 레이아웃 코딩
+### 헤더 코딩하기
+```html
+<header style="display: flex; max-width: 1000px">
+  <figure style="width: 150px">
+    <img
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      style="width: 100%">
+  </figure>
+  <nav style="flex: 1">
+    <ul style="display: flex; justify-content: space-between">
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+      <li><a href="">메뉴5</a></li>
+    </ul>
+  </nav>
+</header>
+```
+#### 1024px
+![](https://user-images.githubusercontent.com/17817719/56207715-6c493080-608a-11e9-8f90-2f9437552326.png)
+
+#### 480px
+![](https://user-images.githubusercontent.com/17817719/56207718-70754e00-608a-11e9-8d84-e6a775bd7e4f.png)
