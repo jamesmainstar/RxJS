@@ -1,3 +1,4 @@
+## Flex Basic
 ### Flex는 flex를 사용한 자식들에게 비율 크기를 할당해줍니다.
 ```html
 <div style="display: flex">
