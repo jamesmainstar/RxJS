@@ -27,6 +27,7 @@
 ```
 - CSS Grid
   - http://www.usefulparadigm.com/2017/03/31/a-few-ways-to-make-a-grid-layout/
+  - https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Grid_Layout
 
 ### 아이디어
 - [Kakao i simpson | 텍스트 애니메이션](https://www.youtube.com/watch?v=fzXwGQeVNI4)
