@@ -27,6 +27,7 @@
   - [URL 스펙 정리](URL-스펙-정리)
   - [성능 최적화](성능-최적화)
   - [Atomic Design](https://brunch.co.kr/@ultra0034/63)
+  - [JAM Stack](https://jamstack.org/)
 - [프로젝트 회고](프로젝트-회고)
 - 도메인
   - [챗봇](챗봇)
