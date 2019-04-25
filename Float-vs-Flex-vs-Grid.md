@@ -87,6 +87,8 @@ Flex를 사용한다고 해서 `position`의 `absolute`, `reletive` 사용이 �
 ```
 
 #### Grid
+Grid를 사용하면 2차원 배열을 만들어 자식 요소를 원하는 위치에 넣을 수 있습니다. `position`의 `absolute`, `reletive`를 사용하지 않고, `top/bottom/left/right`를 사용하지 않더라도 원하는 위치에 넣을 수 있습니다.
+
 ```css
 .grid__wrapper {
   display: grid;
