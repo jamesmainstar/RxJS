@@ -35,19 +35,32 @@ Float로 개발할 때는 가로 사이즈를 우리가 계산해서 작성을 �
 #### Flex
 Flex가 도입이 되면서 좀더 추상적으로 기입이 가능했습니다. 1:3:2 비율을 자식 엘리먼트에 기입하면 레이아웃을 지정 가능합니다.
 
+```css
+.box {display: flex;}
+.item:nth-of-type(1) {flex: 1}
+.item:nth-of-type(2) {flex: 3; margin: 0 10px}
+.item:nth-of-type(3) {flex: 2}
+```
 ```html
-<div style="display: flex;">
-  <div style="flex: 1">flex(1)</div>
-  <div style="flex: 3; margin: 0 10px">flex(3)</div>
-  <div style="flex: 2">flex(2)</div>
+<div class="box">
+  <div class="item">flex(1)</div>
+  <div class="item">flex(3)</div>
+  <div class="item">flex(2)</div>
 </div>
 ```
 #### Grid
 Grid는 Flex처럼 추상적으로 비율이 기입 가능하고, 그것은 부모에서 가능하게 합니다. 자식들의 레이아웃을 부모에서 조작이 가능하므로
 레이아웃 코딩은 한 부분에서 수정이 가능합니다.
 
+```css
+.box {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-gap: 10px
+}
+```
 ```html
-<div style="display: grid; grid-template-columns: 1fr 3fr 2fr; grid-gap: 10px">
+<div class="box">
   <div>1fr</div>
   <div>3fr</div>
   <div>2fr</div>
