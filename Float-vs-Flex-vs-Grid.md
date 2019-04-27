@@ -132,6 +132,7 @@ div {border: 1px solid #000}
 Flex를 사용한다고 해서 `position`의 `absolute`, `reletive` 사용이 줄진 않았습니다. 단지 각 요소들간의 간격을 쉽게 맞출 수 있는 장점이 있습니다.
 
 ```css
+div {border: 1px solid #000}
 .wrapper {
   position: relative;
   height: 300px;
