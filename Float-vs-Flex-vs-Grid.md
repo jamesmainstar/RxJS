@@ -77,21 +77,54 @@ Grid는 Flex처럼 추상적으로 비율이 기입 가능하고, 그것은 부�
 #### Float
 Float를 사용 할 때는 `position`의 `absolute`, `reletive`와 `top/bottom/left/right`와 같은 속성을 굉장히 세밀하게 다룰 수 있어야 했습니다. 이 방식은 굉장히 시간과 코딩양이 많아 집니다.
 ```css
-.float__wrapper {position: relative; height: 300px; overflow: hidden}
-.float__wrapper__content,
-.float__wrapper__radio,
-.float__wrapper_bg {position: absolute}
-.float__wrapper__content {left: 10%; bottom: 30px; width: 80%; height: 100px}
-.float__wrapper__radio {z-index: 2; right: calc(10% + 20px)}
-.float__wrapper_bg {left: 0; top: 0; z-index: 1; width: 100%; height: 100%}
+div {border: 1px solid #000}
+.wrapper {
+  position: relative;
+  height: 300px;
+  overflow: hidden
+}
+.content {
+  position: absolute;
+  z-index: 2;
+  left: 10%;
+  bottom: 30px;
+  width: 80%;
+  height: 100px;
+}
+.radio {
+  position: absolute;
+  z-index: 2;
+  right: calc(10% + 20px)
+}
+.bg {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.radio:nth-of-type(1) {bottom: 95px}
+.radio:nth-of-type(2) {bottom: 75px}
+.radio:nth-of-type(3) {bottom: 55px}
+.radio:nth-of-type(1):checked ~ .bg {
+  background: #f00
+}
+.radio:nth-of-type(2):checked ~ .bg {
+  background: #0f0
+}
+.radio:nth-of-type(3):checked ~ .bg {
+  background: #00f
+}
 ```
 ```html
-<div class="float__wrapper">
-  <div class="float__wrapper__content">&nbsp;</div>
-  <input type="radio" class="float__wrapper__radio" style="bottom: 95px">
-  <input type="radio" class="float__wrapper__radio" style="bottom: 75px">
-  <input type="radio" class="float__wrapper__radio" style="bottom: 55px">
-  <div class="float__wrapper_bg">&nbsp;</div>
+<div class="wrapper">
+  <div class="content">&nbsp;</div>
+  <input type="radio" class="radio" name="btn" checked>
+  <input type="radio" class="radio" name="btn">
+  <input type="radio" class="radio" name="btn">
+  <div class="bg">&nbsp;</div>
 </div>
 ```
 
@@ -99,20 +132,54 @@ Float를 사용 할 때는 `position`의 `absolute`, `reletive`와 `top/bottom/l
 Flex를 사용한다고 해서 `position`의 `absolute`, `reletive` 사용이 줄진 않았습니다. 단지 각 요소들간의 간격을 쉽게 맞출 수 있는 장점이 있습니다.
 
 ```css
-.flex__wrapper {position: relative; height: 300px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 30px}
-.flex__wrapper__content {width: 80%; height: 100px}
-.flex__wrapper__radio,
-.flex__wrapper_bg {position: absolute}
-.flex__wrapper__radio {right: calc(10% + 20px); z-index: 2}
-.flex__wrapper_bg {left: 0; top: 0; z-index: 1; width: 100%; height: 100%}
+.wrapper {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px
+}
+.content {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  height: 100px;
+}
+.radio {
+  position: absolute;
+  right: calc(10% + 20px);
+  z-index: 2
+}
+.bg {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.radio:nth-of-type(1) {bottom: 95px}
+.radio:nth-of-type(2) {bottom: 75px}
+.radio:nth-of-type(3) {bottom: 55px}
+.radio:nth-of-type(1):checked ~ .bg {
+  background: #f00
+}
+.radio:nth-of-type(2):checked ~ .bg {
+  background: #0f0
+}
+.radio:nth-of-type(3):checked ~ .bg {
+  background: #00f
+}
 ```
 ```html
-<div class="flex__wrapper">
-  <div class="flex__wrapper__content"></div>
-  <input type="radio" class="flex__wrapper__radio" style="bottom: 95px">
-  <input type="radio" class="flex__wrapper__radio" style="bottom: 75px">
-  <input type="radio" class="flex__wrapper__radio" style="bottom: 55px">
-  <div class="flex__wrapper_bg"></div>
+<div class="wrapper">
+  <div class="content"></div>
+  <input type="radio" class="radio" name="btn" checked>
+  <input type="radio" class="radio" name="btn">
+  <input type="radio" class="radio" name="btn">
+  <div class="bg"></div>
 </div>
 ```
 
@@ -120,7 +187,8 @@ Flex를 사용한다고 해서 `position`의 `absolute`, `reletive` 사용이 �
 Grid를 사용하면 2차원 배열을 만들어 자식 요소를 원하는 위치에 넣을 수 있습니다. `position`의 `absolute`, `reletive`를 사용하지 않고, `top/bottom/left/right`를 사용하지 않더라도 원하는 위치에 넣을 수 있습니다.
 
 ```css
-.grid__wrapper {
+div {border: 1px solid #000}
+.wrapper {
   display: grid;
   height: 300px;
   grid-template:
@@ -131,18 +199,34 @@ Grid를 사용하면 2차원 배열을 만들어 자식 요소를 원하는 위�
     '. . radio3 .' 20px
     '. . . .' 20px
     '. . . .' 30px
-  / 10% auto 32px 10%
+    / 10% auto 32px 10%
 }
-.grid__wrapper__content {grid-area: 2 / 2 / 7 / 4}
-.grid__wrapper__radio {z-index: 2}
-.grid__wrapper_bg {grid-area: 1 / 1 / 8 / 5; z-index: 1}
+.content {
+  z-index: 2;
+  grid-area: 2 / 2 / 7 / 4
+}
+.radio {z-index: 2}
+.bg {grid-area: 1 / 1 / 8 / 5; z-index: 1}
+
+.radio:nth-of-type(1) {grid-area: radio1}
+.radio:nth-of-type(2) {grid-area: radio2}
+.radio:nth-of-type(3) {grid-area: radio3}
+.radio:nth-of-type(1):checked ~ .bg {
+  background: #f00
+}
+.radio:nth-of-type(2):checked ~ .bg {
+  background: #0f0
+}
+.radio:nth-of-type(3):checked ~ .bg {
+  background: #00f
+}
 ```
 ```html
-<div class="grid__wrapper">
-  <div class="grid__wrapper__content"></div>
-  <input type="radio" class="grid__wrapper__radio" style="grid-area: radio1">
-  <input type="radio" class="grid__wrapper__radio" style="grid-area: radio2">
-  <input type="radio" class="grid__wrapper__radio" style="grid-area: radio3">
-  <div class="grid__wrapper_bg"></div>
+<div class="wrapper">
+  <div class="content"></div>
+  <input type="radio" class="radio" name="btn" checked>
+  <input type="radio" class="radio" name="btn">
+  <input type="radio" class="radio" name="btn">
+  <div class="bg"></div>
 </div>
 ```
