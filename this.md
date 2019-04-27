@@ -87,4 +87,22 @@ app.init()
 
 #### ES6
 ```js
+const app = {
+  count: 0,
+  init() {
+    document.querySelector('button')
+      .addEventListener('click', () => {
+        this.upCount()
+      })
+  },
+  upCount() {
+    this.count++
+    this.render()
+  },
+  render() {
+    document.querySelector('button')
+      .textContent = this.count
+  }
+}
+app.init()
 ```
