@@ -10,11 +10,25 @@
 #### Float
 Float로 개발할 때는 가로 사이즈를 우리가 계산해서 작성을 해야 됬습니다. 그리고 `overflow: hidden`과 같인 특별한 방법을 사용해서 코딩을 해야 합니다. 전처리기를 사용하지 않으면 여백값 수정 시 많은 코드를 수정해야 됩니다.
 
+```css
+.box {overflow: hidden}
+.item {float: left}
+.item:nth-of-type(1) {
+  width: calc((100% - 20px) * 1 / 6)
+}
+.item:nth-of-type(2) {
+  width: calc((100% - 20px) * 3 / 6);
+  margin: 0 10px
+}
+.item:nth-of-type(3) {
+  width: calc((100% - 20px) * 2 / 6)
+}
+```
 ```html
-<div style="overflow: hidden">
-  <div style="width: calc((100% - 20px) * 1 / 6); float: left">1/6</div>
-  <div style="width: calc((100% - 20px) * 3 / 6); float: left; margin: 0 10px">3/6</div>
-  <div style="width: calc((100% - 20px) * 2 / 6); float: left">2/6</div>
+<div class="box">
+  <div class="item">1/6</div>
+  <div class="item">3/6</div>
+  <div class="item">2/6</div>
 </div>
 ```
 
