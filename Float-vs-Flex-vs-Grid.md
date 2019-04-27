@@ -38,7 +38,10 @@ Flex가 도입이 되면서 좀더 추상적으로 기입이 가능했습니다.
 ```css
 .box {display: flex;}
 .item:nth-of-type(1) {flex: 1}
-.item:nth-of-type(2) {flex: 3; margin: 0 10px}
+.item:nth-of-type(2) {
+  flex: 3;
+  margin: 0 10px
+}
 .item:nth-of-type(3) {flex: 2}
 ```
 ```html
