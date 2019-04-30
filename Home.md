@@ -30,6 +30,7 @@
   - [Atomic Design](https://brunch.co.kr/@ultra0034/63)
   - [JAM Stack](https://jamstack.org/)
   - [면접](면접)
+  - [브라우저 저장소](브라우저-저장소)
 - [프로젝트 회고](프로젝트-회고)
 - 도메인
   - [챗봇](챗봇)
