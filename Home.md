@@ -8,16 +8,7 @@
 - 번역
   - [Immutable.js](ImmutableJs)
   - [Cycle.js](CycleJs)
-- 스터디
-  - [함수형프로그래밍과 ES6+ | 유인동](함수형프로그래밍과-ES6)
-  - [함수형 프로그래밍](함수형-프로그래밍)
-  - [리엑티브 프로그래밍](리엑티브-프로그래밍)
-  - [수학](수학)
-  - [코드스피츠](코드스피츠)
-  - [BEPECO](BEPECO)
-  - [인공지능](인공지능)
-  - [CSS](CSS)
-  - [E2E](E2E)
+- [스터디](스터디)
 - 정리
   - [No Library No Framework](No-Library-No-Framework)
   - [Technical Debt](Technical-Debt)
