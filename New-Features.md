@@ -58,6 +58,11 @@ obj = null
 
 ```
 ## Promise
+Promise는 대기, 이행, 거부 상태가 있습니다.
+- 대기 : 초기상태
+- 이행 : 성공 상태, resolve(), Promise.resolve()
+- 거부 : 실패 상태, reject(), Promise.reject()
+
 ### Usage
 #### resolve/reject
 ```javascript
