@@ -22,6 +22,10 @@
   - [Angular - Style Guide](https://angular.io/guide/styleguide)
   - [constructor는 의존성 바인딩만 사용](https://angular.io/tutorial/toh-pt4#call-it-in-ngoninit)
 
+#### TypeScript
+- [TypeScript Basic](TypeScript-Basic)
+- [Advanced Type](TypeScript-Advanced-Type)
+
 #### Vue
 - [router-link](router-link)
 - [axios 응답 데이터 SSR에 포함하기](axios-%EC%9D%91%EB%8B%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-SSR%EC%97%90-%ED%8F%AC%ED%95%A8%ED%95%98%EA%B8%B0)
