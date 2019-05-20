@@ -78,3 +78,29 @@ _.reduce(
   )
 )
 ```
+
+#### map과 filter를 통한 안전한 합성
+```js
+const f = x => x + 10
+const g = x => x * x
+const fg = x => f(g(x))
+// Not Cool
+fg(10) // 110
+fg() // undefined 
+
+// Cool
+_.each(console.log, _.map(fg, [10]))
+```
+
+```js
+// Not Cool
+const user = _.find(u => u.name === 'BB', users)
+if (user) {
+  console.log(user)
+}
+
+// Cool
+_.each(console.log,
+  L.take(1,
+    L.filter(u => u.name === 'BB', users)))
+```
