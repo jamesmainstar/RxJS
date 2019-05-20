@@ -33,3 +33,21 @@ function f3 (end) {
   )
 }
 ```
+
+#### `reduce + 복잡한 함수 + add` 보다 `map + 간단한 함수 + reduce`
+```js
+const users = [
+  { name: 'AA', age: 12 },
+  { name: 'BB', age: 15 },
+  { name: 'CC', age: 17 },
+]
+```
+```js
+// Not Cool
+_.reduce((total, u) => total + u.age, 0, users)
+
+// Cool
+const add = (a, b) => a + b;
+const ages = L.map(({age}) => age)
+_.reduce(add, ages(users))
+```
