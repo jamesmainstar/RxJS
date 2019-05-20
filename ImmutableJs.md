@@ -14,7 +14,7 @@ and change detection techniques with simple logic. Persistent data presents a mu
 > Immutable.js provides many Persistent Immutable data structures including:
 `List`, `Stack`, `Map`, `OrderedMap`, `Set`, `OrderedSet` and `Record`.
 
-Immutable.js는 많은 영구 불변 데이터 자료구조들을 포함하여 제공한다. `List`, `Stack`, `Map`, `OrderedMap`, `Set`, `OrderedSet`, `Record`.
+Immutable.js는 많은 영속 불변 데이터 자료구조들을 포함하여 제공한다. `List`, `Stack`, `Map`, `OrderedMap`, `Set`, `OrderedSet`, `Record`.
 
 > These data structures are highly efficient on modern JavaScript VMs by using
 structural sharing via hash maps tries and vector tries as popularized
