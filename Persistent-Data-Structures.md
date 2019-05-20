@@ -6,3 +6,5 @@
 
 #### 참고자료
 - [Immutable Data and React](https://ohgyun.com/585)
+- [Persistent data structure 위키](https://en.wikipedia.org/wiki/Persistent_data_structure)
+- [Immutable.js, persistent data structures and structural sharing](https://medium.com/@dtinth/immutable-js-persistent-data-structures-and-structural-sharing-6d163fbd73d2)
