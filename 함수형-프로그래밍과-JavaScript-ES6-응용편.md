@@ -51,3 +51,30 @@ const add = (a, b) => a + b;
 const ages = L.map(({age}) => age)
 _.reduce(add, ages(users))
 ```
+
+#### reduce 하나 보다 `map + filter + reduce`
+```js
+// Not Cool
+_.reduce(
+  (total, u) => u.age >= 30 ? total : total + u.age,
+  0,
+  users
+)
+
+// Cool
+_.reduce(
+  add,
+  L.map(
+    u => u.age,
+    L.filter(u => u.age < 30, users)
+  )
+)
+
+_.reduce(
+  add,
+  L.filter(
+    n => n < 30,
+    L.map(u => u.age, users)
+  )
+)
+```
