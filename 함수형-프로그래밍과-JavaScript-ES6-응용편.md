@@ -1,3 +1,5 @@
+> https://www.inflearn.com/course/함수형_ES6_응용편
+
 #### while을 range로
 ```js
 function f3 (end) {
