@@ -1,3 +1,5 @@
+> 두서 없이 정리한 async await
+
 #### async 함수
 async 함수는 Promise를 반환한다.
 ```js
