@@ -30,6 +30,15 @@ const f = async () => Promise.reject('Hi!')
 f().catch(error => console.log('에러 발생!')) // 에러 발생!
 ```
 
+#### async에서 Promise 반환값의 throw
+async 반환되는 Promise의 내부에서 예외 상황이 발생했을 때는 async의 reject 상태가 된다.
+```js
+const f = async () => {
+  return new Promise(() => die)
+}
+f().catch(() => console.log('에러 발생!'))
+```
+
 #### async await
 Promise를 반환하는 코드를 다수 기술이 필요할 경우 await를 사용하면 읽기 쉽게 기술이 가능하다. await는 resolve 상태의 값은 좌항에 바인딩하고, reject 상태는 async의 catch로 전달된다.
 
@@ -57,4 +66,26 @@ async function f() {
 }
 
 f().catch(console.log) // 에러 발생!
+```
+
+#### async await throw
+await를 사용된 함수에서 예외가 발생되면 catch로 전달된다.
+```js
+const g = () => Promise.resolve(die)
+const f = async () => {
+  return await g()
+}
+
+f().catch((err) => console.log('에러 발생!', err)) // 에러 발생!
+```
+
+#### await 동기 코드 에러
+await에서 동기 코드에서 에러가 발생되면 catch로 전달된다.
+```js
+const g = () => die
+const f = async () => {
+  return await g()
+}
+
+f().catch(() => console.log('에러 발생!')) // 에러 발생!
 ```
