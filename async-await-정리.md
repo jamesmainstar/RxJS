@@ -1,4 +1,4 @@
-> 두서 없이 정리한 async await
+> 두서 없이 케이스별로 정리한 async await
 
 #### async 함수
 async 함수는 Promise를 반환한다.
