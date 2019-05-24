@@ -6,7 +6,8 @@ Promise는 대기, 이행, 거부 상태가 있습니다.
 - 이행 : 성공 상태, resolve(), Promise.resolve()
 - 거부 : 실패 상태, reject(), Promise.reject()
 
-#### Active Async Control
+### 응답 결과 전달 방법
+#### [Promise] Active Async Control
 프로미스는 `then`을 호출해야 결과를 얻는 다.
 ```js
 let result;
@@ -23,6 +24,23 @@ promise1.then(result => {
         result.nick = v.nick;
         report(result);
     });
+});
+```
+#### [Callback] Passive Async Control
+콜백을 보낼 수는 있지만 언제 올지는 모른다.
+```js
+$.post(url. data, e=>{ // 언제 실행 되는 가 })
+```
+
+현실적으로 다수의 API 요청을 통해 결과를 만들기 때문에 언제 응답이 오는 지 중요하다.
+```js
+let result;
+$.post(url1, data1, v => {
+    result = v;
+});
+$.post(url2, data2, v => {
+    result.nick = v.nick;
+    report(result);
 });
 ```
 
