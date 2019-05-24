@@ -112,6 +112,40 @@ const recur = () => Promise.all([
 ]).then(recur)
 ```
 
+#### async, await + Promise.all
+async, await를 사용하여 동기코드와 유사하게 코드 작성이 가능하다. 여기에 Promise.all를 사용하면
+병렬처리를 구현할 수 있다. 아래와 같이 일정시간이 지나면 resolve를 실행해는 delay함수가 있다.
+```js
+const delay = (ms) => new Promise((resolve) => setTimeout(() => resolve(ms), ms));
+```
+Promise를 리턴하는 함수를 사용할 때 await를 통해 resolve값을 받을 수 있다. main 함수의 결과는 6005ms 뒤에 반환된다.
+```js
+const main = async () => {
+  console.time('main');
+  const delay1s = await delay(1000);
+  const delay2s = await delay(2000);
+  const delay3s = await delay(3000);
+  console.timeEnd('main');
+  return delay1s + delay2s + delay3s;
+};
+main().then(console.log);
+// main: 6005.81787109375ms
+// 6000
+```
+각각의 Promise들이 서로 영향이 없다면 병렬로 처리할 필요가 있다. 모든 Promise가 끝날 때 Promise.all를 통해 확인한다.
+함수의 결과는 3005ms 뒤에 반환된다. 병렬 처리를 하게 되면 빠른 응답을 받을 수 있다.
+```js
+const main = async () => {
+  console.time('main');
+  const [delay1s, delay2s, delay3s] = await Promise.all([delay(1000), delay(2000), delay(3000)]);
+  console.timeEnd('main');
+  return delay1s + delay2s + delay3s;
+};
+main().then(console.log);
+// main: 3001.468017578125ms
+// 6000
+```
+
 #### 참고자료
 - [인프런](https://www.inflearn.com/course/functional-es6#curriculum) 함수형 프로그래밍과 JavaScript ES6+ - 비동기:동시성 프로그래밍 1
 - [Youtube](https://youtu.be/fWRMM6AaMMc) NAVER 테크톡 - 함수형 자바스크립트와 동시성 프로그래밍
