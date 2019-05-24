@@ -1,5 +1,3 @@
-## Promise
-
 #### 내부 상태
 Promise는 대기, 이행, 거부 상태가 있습니다.
 - 대기 : 초기상태
@@ -103,3 +101,6 @@ Promise.race([
   .then(data => console.log(data))
   .catch(err => console.error(err))
 ```
+
+#### 참고자료
+- [링크](https://www.inflearn.com/course/functional-es6#curriculum): 함수형 프로그래밍과 JavaScript ES6+ - 비동기:동시성 프로그래밍 1
