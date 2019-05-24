@@ -18,13 +18,13 @@ Promise의 상태는 **대기**, **이행**, **거부** 상태가 있다.
 **이행상태**는 then으로 처리할 수 있다. resolve를 통해 전달한 값이 then에 인자로 전달된다.
 ```js
 Promise.resolve(10)
-  .then(result => console.log(result))
+  .then(result => console.log(result)) // 10
 ```
 
 **거부상태**는 catch으로 처리할 수 있다. reject를 통해 전달한 값이 catch에 인자로 전달된다.
 ```js
 Promise.reject({code: 404})
-  .catch(({code}) => console.log(code))
+  .catch(({code}) => console.log(code)) // 404
 ```
 
 ### 응답 결과 전달 방법
