@@ -7,7 +7,6 @@ Promise는 대기, 이행, 거부 상태가 있습니다.
 - 거부 : 실패 상태, reject(), Promise.reject()
 
 #### Active Async Control
-#### [Promise] Active Async Control
 프로미스는 `then`을 호출해야 결과를 얻는 다.
 ```js
 let result;
