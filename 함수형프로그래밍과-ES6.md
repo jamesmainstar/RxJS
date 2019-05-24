@@ -1,5 +1,7 @@
 > 강의사이트 : https://programmers.co.kr/learn/courses/7637
 
+> 인프런 : https://www.inflearn.com/course/functional-es6/
+
 > 요약 : https://youtu.be/fWRMM6AaMMc
 
 - [파트1. 함수형 자바스크립트 기본기](파트1.-함수형-자바스크립트-기본기)
