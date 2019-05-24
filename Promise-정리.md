@@ -52,7 +52,9 @@ promise1.then(result => {
 #### [Callback] Passive Async Control
 콜백을 보낼 수는 있지만 언제 올지는 모른다.
 ```js
-$.post(url. data, e=>{ // 언제 실행 되는 가 })
+$.post(url. data, () => {
+  // 언제 실행 되는 가
+})
 ```
 
 현실적으로 다수의 API 요청을 통해 결과를 만들기 때문에 언제 응답이 오는 지 중요하다.
@@ -187,9 +189,11 @@ const recur = () => Promise.all([
 async, await를 사용하여 동기코드와 유사하게 코드 작성이 가능하다. 여기에 Promise.all를 사용하면
 병렬처리를 구현할 수 있다. 아래와 같이 일정시간이 지나면 resolve를 실행해는 delay함수가 있다.
 ```js
-const delay = (ms) => new Promise((resolve) => setTimeout(() => resolve(ms), ms));
+const delay = ms => new Promise(resolve => {
+  setTimeout(() => resolve(ms), ms)
+});
 ```
-Promise를 리턴하는 함수를 사용할 때 await를 통해 resolve값을 받을 수 있다. main 함수의 결과는 6005ms 뒤에 반환된다.
+Promise를 리턴하는 함수를 사용할 때 await를 통해 resolve값을 받을 수 있다. main 함수의 결과는 6000ms 뒤에 반환된다.
 ```js
 const main = async () => {
   console.time('main');
@@ -204,7 +208,7 @@ main().then(console.log);
 // 6000
 ```
 각각의 Promise들이 서로 영향이 없다면 병렬로 처리할 필요가 있다. 모든 Promise가 끝날 때 Promise.all를 통해 확인한다.
-함수의 결과는 3005ms 뒤에 반환된다. 병렬 처리를 하게 되면 빠른 응답을 받을 수 있다.
+함수의 결과는 3000ms 뒤에 반환된다. 병렬 처리를 하게 되면 빠른 응답을 받을 수 있다.
 ```js
 const main = async () => {
   console.time('main');
