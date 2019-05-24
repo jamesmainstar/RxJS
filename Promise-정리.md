@@ -102,6 +102,16 @@ Promise.race([
   .catch(err => console.error(err))
 ```
 
+### 적용 사례
+#### 최소 요청 시간이 있는 비동기 처리
+5초전에 응답이 오면 경우 5초뒤에 재요청할 것이고 5초뒤에 응답이 오면 응답이 온뒤 재요청한다.
+```js
+const recur = () => Promise.all([
+  new Promise(resolve => setTimeout(resolve, 5000)),
+  getData
+]).then(recur)
+```
+
 #### 참고자료
 - [인프런 링크](https://www.inflearn.com/course/functional-es6#curriculum) 함수형 프로그래밍과 JavaScript ES6+ - 비동기:동시성 프로그래밍 1
 - [유투브 링크](https://youtu.be/_aFGnJUUmKA) 코드스피츠77 - ES6+ 기초편 6회차
