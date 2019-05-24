@@ -103,4 +103,5 @@ Promise.race([
 ```
 
 #### 참고자료
-- [링크](https://www.inflearn.com/course/functional-es6#curriculum): 함수형 프로그래밍과 JavaScript ES6+ - 비동기:동시성 프로그래밍 1
+- [인프런 링크](https://www.inflearn.com/course/functional-es6#curriculum) 함수형 프로그래밍과 JavaScript ES6+ - 비동기:동시성 프로그래밍 1
+- [유투브 링크](https://youtu.be/_aFGnJUUmKA) 코드스피츠77 - ES6+ 기초편 6회차
