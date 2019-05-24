@@ -1,12 +1,37 @@
-#### 내부 상태
-Promise는 대기, 이행, 거부 상태가 있습니다.
+> 두서없이 정리한 Promise
+
+### 목차
+- Promise 상태
+- 응답 결과 전달 방법
+- 마이크로테스크
+- 연속적인 동작
+- Promise API
+- 적용 사례
+
+### Promise 상태
+Promise의 상태는 **대기**, **이행**, **거부** 상태가 있다.
+상태는 대기에서 이행/거부로만 변경이 가능하다.
 - 대기 : 초기상태
 - 이행 : 성공 상태, resolve(), Promise.resolve()
 - 거부 : 실패 상태, reject(), Promise.reject()
 
+**이행상태**는 then으로 처리할 수 있다. resolve를 통해 전달한 값이 then에 인자로 전달된다.
+```js
+Promise.resolve(10)
+  .then(result => console.log(result))
+```
+
+**거부상태**는 catch으로 처리할 수 있다. reject를 통해 전달한 값이 catch에 인자로 전달된다.
+```js
+Promise.reject({code: 404})
+  .catch(({code}) => console.log(code))
+```
+
 ### 응답 결과 전달 방법
+응답 결과의 전달에 있어서 Callback과 Promise 차이가 있다.
 #### [Promise] Active Async Control
-프로미스는 `then`을 호출해야 결과를 얻는 다.
+프로미스는 then을 호출해야 결과를 얻는 다.
+필요할 때 then을 호출해서 데이터를 받는 것이다.
 ```js
 let result;
 const promise = new Promise(r => $.post(url1, data1, r));
@@ -43,6 +68,8 @@ $.post(url2, data2, v => {
 ```
 
 ### 마이크로테스크
+비동기로 등록되는 테스크 중 가장먼저 실행되는 마이크로테스크가 있다.
+마이크로테스크는 Promise를 통해 등록 가능하다.
 
 #### 자바스크립트 엔진
 자바스크립트 엔진은 기본적으로 하나의 스레드에서 동작한다. 하나의 스레드는 하나의 스택을 가지고 있다는 의미하고, 
@@ -55,8 +82,8 @@ $.post(url2, data2, v => {
 
 이벤트 루프는 계속 반복해서 콜 스택과 큐 사이의 작업을 확인한다. 콜 스택이 비워 있는 경우 큐에서 작업을 꺼내어 콜 스택에 넣는 다.
 
-콜 스택에 작업이 없을 경우 우선적으로 마이크로태스크 큐를 확인한다. 마이크로테스크에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
-만약 마이크로테스크 큐가 비어서 더 이상 처리할 작업이 없으면 태스크 큐를 확인한다. 태스크 큐에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
+콜 스택에 작업이 없을 경우 우선적으로 마이크로테스크 큐를 확인한다. 마이크로테스크에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
+만약 마이크로테스크 큐가 비어서 더 이상 처리할 작업이 없으면 테스크 큐를 확인한다. 테스크 큐에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
 
 #### 자바스크립트 처리 과정
 1. 비동기 작업으로 등록되는 작업은 Task와 Microtask 그리고 AnimationFrame 작업으로 구분된다.
@@ -85,7 +112,9 @@ $ setTimeout
 ```
 
 ### 연속적인 동작
-Promise는 비동기를 값으로 다룰 수 있다는 것이 큰 차이이다. 그래서 콜백으로 처리하는 함수는 리턴되는 값이 없지만 Promise로 처리하는 함수는 리턴된 Promise를 통해서 연속적인 동작을 할 수 있다.
+Promise는 비동기를 값으로 다룰 수 있다.
+Promise로 처리하는 함수는 리턴된 Promise를 통해서 **연속적인 동작**을 할 수 있다.
+반면에 콜백으로 처리하는 함수는 리턴되는 값이 없어 내부에서 처리해야 한다.
 ```js
 const add10 = (a, callback) => {
   setTimeout(() => callback(a + 10), 100);
@@ -106,7 +135,7 @@ add20(10)
   .then(console.log);
 ```
 
-### Usage
+### Promise API
 #### resolve/reject
 ```javascript
 const promise = new Promise((resolve, reject) => {
@@ -116,13 +145,12 @@ const promise = new Promise((resolve, reject) => {
   )
 })
 ```
-#### then / catch
+#### then/catch
 ```javascript
 promise
   .then(data => console.log(data))
   .catch(err => console.error(err))
 ```
-### Multiple
 #### all
 ```javascript
 Promise.all([
