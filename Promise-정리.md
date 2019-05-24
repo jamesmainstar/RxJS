@@ -42,6 +42,48 @@ $.post(url2, data2, v => {
 });
 ```
 
+### 마이크로테스크
+
+#### 자바스크립트 엔진
+자바스크립트 엔진은 기본적으로 하나의 스레드에서 동작한다. 하나의 스레드는 하나의 스택을 가지고 있다는 의미하고, 
+동시에 단 하나의 작업만을 할 수 있다는 의미이다. 그 비밀은 이벤트 루프와 큐에 있다.
+
+#### 이벤트 루프와 큐
+> https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+자바스크립트는 이벤트 루프와 큐를 통해 비동기 작업을 수행한다. 직접적인 작업은 Web API에서 처리되고, 작업이 완료되면 요청 시 등록했던
+콜백이 큐에 등록된다.
+
+이벤트 루프는 계속 반복해서 콜 스택과 큐 사이의 작업을 확인한다. 콜 스택이 비워 있는 경우 큐에서 작업을 꺼내어 콜 스택에 넣는 다.
+
+콜 스택에 작업이 없을 경우 우선적으로 마이크로태스크 큐를 확인한다. 마이크로테스크에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
+만약 마이크로테스크 큐가 비어서 더 이상 처리할 작업이 없으면 태스크 큐를 확인한다. 태스크 큐에 작업이 있다면 작업을 꺼내서 콜 스택에 넣는 다.
+
+#### 자바스크립트 처리 과정
+1. 비동기 작업으로 등록되는 작업은 Task와 Microtask 그리고 AnimationFrame 작업으로 구분된다.
+2. Microtask는 Task보다 먼저 작업이 처리된다.
+3. Microtask가 처리된 이후 requestAnimationFrame이 호출되고 이후 브라우저 렌더링이 발생한다.
+```js
+console.log('script start')
+
+setTimeout(() => console.log('setTimeout'), 0)
+
+Promise.resolve()
+  .then(() => console.log('promise1'))
+  .then(() => console.log('promise2'))
+
+requestAnimationFrame(() => console.log('requestAnimationFrame'))
+
+console.log('script end')
+```
+```
+$ script start
+$ script end
+$ promise1
+$ promise2
+$ requestAnimationFrame
+$ setTimeout
+```
+
 ### 연속적인 동작
 Promise는 비동기를 값으로 다룰 수 있다는 것이 큰 차이이다. 그래서 콜백으로 처리하는 함수는 리턴되는 값이 없지만 Promise로 처리하는 함수는 리턴된 Promise를 통해서 연속적인 동작을 할 수 있다.
 ```js
@@ -150,3 +192,4 @@ main().then(console.log);
 - [인프런](https://www.inflearn.com/course/functional-es6#curriculum) 함수형 프로그래밍과 JavaScript ES6+ - 비동기:동시성 프로그래밍 1
 - [Youtube](https://youtu.be/fWRMM6AaMMc) NAVER 테크톡 - 함수형 자바스크립트와 동시성 프로그래밍
 - [Youtube](https://youtu.be/_aFGnJUUmKA) 코드스피츠77 - ES6+ 기초편 6회차
+- RxJs 퀵스타트 도서 - 자바스크립트 비동기 처리 과정과 RxJS 스케줄러
