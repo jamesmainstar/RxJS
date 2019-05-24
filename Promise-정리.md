@@ -44,6 +44,28 @@ $.post(url2, data2, v => {
 });
 ```
 
+### 연속적인 동작
+Promise는 비동기를 값으로 다룰 수 있다는 것이 큰 차이이다. 그래서 콜백으로 처리하는 함수는 리턴되는 값이 없지만 Promise로 처리하는 함수는 리턴된 Promise를 통해서 연속적인 동작을 할 수 있다.
+```js
+const add10 = (a, callback) => {
+  setTimeout(() => callback(a + 10), 100);
+};
+
+add10(10, res => {
+  add10(res, res => {
+    console.log(res);
+  });
+});
+
+const add20 = (a, callback) => {
+  return new Promise(resolve => setTimeout(() => resolve(a + 20), 100));
+};
+
+add20(10)
+  .then(add20)
+  .then(console.log);
+```
+
 ### Usage
 #### resolve/reject
 ```javascript
