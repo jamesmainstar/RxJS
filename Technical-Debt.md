@@ -7,6 +7,7 @@
   - [KISS 원칙](2-원칙-프로그래밍의-가이드라인#21-kisskeep-it-simple-stupid--keep-it-short-and-simple) 위배
 
 #### Code Climate 기술적 부채 분석 포인트 10가지
+##### 원본
 1. Argument count - Methods or functions defined with a high number of arguments
 2. Complex boolean logic - Boolean logic that may be hard to understand
 3. File length - Excessive lines of code within a single file
