@@ -19,6 +19,7 @@
 9. Similar blocks of code - Duplicate code which is not identical but shares the same structure (e.g. variable names may differ)
 10. Method complexity - Functions or methods that may be hard to understand
 
+##### 번역
 1. 인자 갯수 - 많은 수의 인자로 정의된 메소드 또는 함수
 2. 복잡한 불리언 로직 - 이해하기 힘든 불리언 로직
 3. 파일 길이 - 한파일에 과도한 라인의 코드
