@@ -155,6 +155,7 @@ promise
   .catch(err => console.error(err))
 ```
 #### all
+**Promise.all**은 모두 **이행**상태일 때 **then**을 통해 결과를 받게 된다.
 ```javascript
 Promise.all([
   getPromise(),
@@ -164,7 +165,11 @@ Promise.all([
   .then(data => console.log(data))
   .catch(err => console.error(err))
 ```
+
+**하나**라도 **거부**상태가 되면 **catch**가 실행되게 된다.
+
 #### race
+**Promise.race**는 **하나라도 이행 또는 거부 상태일 때** 완료를 하게 된다. 완료시에는 상태에 따라 then 또는 catch를 실행하게 된다.
 ```javascript
 Promise.race([
   getPromise(), //1000ms
