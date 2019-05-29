@@ -12,3 +12,26 @@
 - 사용자 관점 테스트 자동화
 - 시각적 변경 테스트 자동화
 - 기능 테스트
+
+### Puppeteer
+#### Install
+```
+npm i puppeteer
+```
+
+#### Usage
+```
+const puppeteer = require('puppeteer');
+
+(async () => {
+  const browser = await puppeteer.launch({headless: false});
+  const page = await browser.newPage();
+  await page.goto('https://example.com');
+  await page.screenshot({path: 'example.png'});
+
+  await browser.close();
+})();
+```
+```
+node example.js
+```
