@@ -35,3 +35,6 @@ const puppeteer = require('puppeteer');
 ```
 node example.js
 ```
+
+### Chrome Plugin
+**Puppeteer Recorder**라는 크롬 플러그인을 통해 레코딩이 가능하다.
