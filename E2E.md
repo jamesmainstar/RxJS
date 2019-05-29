@@ -20,7 +20,7 @@ npm i puppeteer
 ```
 
 #### Usage
-```
+```js
 const puppeteer = require('puppeteer');
 
 (async () => {
