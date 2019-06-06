@@ -1,0 +1,1 @@
+https://lunit.gitbook.io/redux-in-korean/introduction/motivation
