@@ -1,2 +1,3 @@
-- [MVC XEROX PARC](MVC-XEROX-PARC)
+- [멘탈 모델](멘탈-모델)
 - [MVC 용어정의 1979 12 10](MVC-용어정의-1979-12-10)
+- [MVC XEROX PARC](MVC-XEROX-PARC)
