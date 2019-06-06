@@ -4,28 +4,28 @@
 
 ### Flux 구성
 #### View
-- 역할: 데이터를 뷰에 표시
+- 역할: 뷰 랜더링
 - 협력
-  - [Input] Store: 변경된 데이터 수신
-  - [Output] Action: 사용자의 상호작용 전파
+  - [Input] Store에게 상태를 수신
+  - [Output] Action에게 사용자의 상호작용 송신
 
 #### Action
 - 역할: 사용자 상호작용을 받아 Dispatcher에게 전파
 - 협력
-  - [Input] View: 사용자 상호작용을 받음
-  - [Output] Dispatcher: 이벤트 전파
+  - [Input] View: 사용자 상호작용을 수신
+  - [Output] Dispatcher에게 이벤트 송신
 
 #### Dispatcher
-- 역할: Action에게 받은 이벤트를 Store에게 전파
+- 역할: Flux 어플리케이션의 중앙허브로 모든 데이터의 흐름을 관리한다.
 - 협력
-  - [Input] Action: 이벤트 전파
-  - [Ouput] Store: 이벤트 전파
+  - [Input] Action의 이벤트를 수신
+  - [Ouput] Store의 콜백에 송신
 
 #### Store
-- 역할: 데이터와 비즈니스 로직 담당
+- 역할: 어플리케이션 내의 개별적인 도메인에서 상태와 비즈니스 로직 담당
 - 협력
-  - [Input] Dispatcher: 이벤트 전파
-  - [Output] View: 데이터 전달
+  - [Input] Dispatcher에게 이벤트를 수신
+  - [Output] View에게 새로운 상태 송신
 
 #### 참고
 https://haruair.github.io/flux/docs/overview.html
