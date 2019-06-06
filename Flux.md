@@ -10,9 +10,9 @@
   - [Output] Action에게 사용자의 상호작용 송신
 
 #### Action
-- 역할: 사용자 상호작용을 받아 Dispatcher에게 전파
+- 역할: 사용자 상호작용을 받아 Dispatcher가 Store에게 송신할 수 있도록 함
 - 협력
-  - [Input] View: 사용자 상호작용을 수신
+  - [Input] View에게 사용자 상호작용을 수신
   - [Output] Dispatcher에게 이벤트 송신
 
 #### Dispatcher
