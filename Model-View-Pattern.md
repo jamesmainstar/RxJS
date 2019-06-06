@@ -16,3 +16,6 @@
 - [Flux](Flux)
 - [Redux](Redux)
 - [Mobx](Mobx)
+
+#### Vuex
+- [Vuex](Vuex)
