@@ -7,3 +7,6 @@
 
 #### MVP
 - [MVP The Taligent Programming Model](MVP-The-Taligent-Programming-Model)
+
+#### MVVM
+- [Introduction to MVVM for WPF](Introduction-to-MVVM-for-WPF)
