@@ -26,3 +26,6 @@
 - 협력
   - [Input] Dispatcher: 이벤트 전파
   - [Output] View: 데이터 전달
+
+#### 참고
+https://haruair.github.io/flux/docs/overview.html
