@@ -3,7 +3,7 @@ Flux는 클라이언트 사이드 어플리케이션 아키텍쳐이다. Flux는
 양방향 데이터 바인딩은 연속적인 갱신이 발생하고 객체 하나의 변경이 다른 객체를 변경하게 되어 실제 필요한 업데이트보다 더 많은 분량을 실행하게 된다. 어플리케이션의 규모가 커지면 데이터의 연속적인 갱신이 되는 상황에서는 사용자 상호작용의 결과가 어떤 변화를 만드는지 예측하는데 어려워진다. 갱신으로 인한 데이터 변경이 한 차례만 이뤄진다면 전체 어플리케이션은 좀 더 예측하기 쉽게 된다.
 
 Flux는 MVC와는 다르게 단방향으로 데이터가 흐른다. 
-Flux는 Action, Dispatcher, Stores, Views로 구성되며 각 부분들은 단방향으로만 데이터가 흐르게 되어 있다.
+Flux는 Actions, Dispatcher, Stores, Views로 구성되며 각 부분들은 단방향으로만 데이터가 흐르게 되어 있다.
 
 각 구성의 역할은 이렇다. Action은 사용자의 상호작용, HTTP 응답 등이 될 수 있으며 type 프로퍼티에 역할을 지정한다. Dispatcher는 모든 Action을 받으며, Stores가 콜백들 등록할 수 있다. Stores는 데이터와 비즈니스 로직을 담당하고 Views가 변경감시를 할 수 있도록 제공한다. Views는 Controller-Views-Views 형태를 이루고, Store에게 데이터를 가져와 View를 갱신한다.
 
@@ -20,6 +20,9 @@ Store는 상태와 로직을 담당한다. Store는 어플리케이션 내의 �
 
 #### Views
 Flux의 View는 Controller-View라고 부른다. Store를 통해 변경 이벤트를 전파받으면 Store에게 상태를 요청한다. View는 부모-자식 관계를 가질 수 있으며 부모가 자식 View에게 상태를 전달한다. 그래서 Flux의 Views는 Controller-Views-Views를 가질 수 있다.
+
+#### Actions
+Action은 사용자 상호작용, HTTP 응답을 담당한다. Action Creator 메소드를 통해 type을 추가할 수 있다. type은 UPDATE_TEXT와 같은 이름을 사용한다. 
 
 #### 참고
 https://haruair.github.io/flux/docs/overview.html
