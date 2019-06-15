@@ -7,9 +7,16 @@ Flux는 Action, Dispatcher, Stores, Views로 구성되며 각 부분들은 단�
 
 각 구성의 역할은 이렇다. Action은 사용자의 상호작용, HTTP 응답 등이 될 수 있으며 type 프로퍼티에 역할을 지정한다. Dispatcher는 모든 Action을 받으며, Stores가 콜백들 등록할 수 있다. Stores는 데이터와 비즈니스 로직을 담당하고 Views가 변경감시를 할 수 있도록 제공한다. Views는 Controller-Views-Views 형태를 이루고, Store에게 데이터를 가져와 View를 갱신한다.
 
-데이터가 흐르게 되면 이렇게 흐르게 된다. 사용자의 상호작용이 발생되면 View는 Action에게 전달한다. Action은 서버에서 데이터를 요청하고 응답이 오면 Dispatcher에게 type과 데이터를 전파한다. Dispatcher는 모든 Stores에게 type과 데이터를 전파한다. Stores는 전달된 type이 상태와 의존이 있으면 Views change 이벤트를 전파한다. Views는 변화를 감지하고 Store에게 새로운 데이터를 가져온 뒤 모든 Views에게 새로운 데이터를 제공한다.
+데이터가 흐르게 되면 이렇게 흐르게 된다. 사용자의 상호작용이 발생되면 View는 Action에게 전달한다. Action은 서버에서 데이터를 요청하고 응답이 오면 Dispatcher에게 type과 데이터를 전파한다. Dispatcher는 모든 Stores에게 type과 데이터를 전파한다. Stores는 전달된 type이 상태와 의존이 있으면 Views 변경 이벤트를 전파한다. Views는 변화를 감지하고 Store에게 새로운 데이터를 가져온 뒤 모든 Views에게 새로운 데이터를 제공한다.
 
+#### Dispatcher
+Dispatcher는 Flux 아키텍쳐에서 단일로 구성되며 중앙 허브로 모든 데이터 흐름을 관리한다.
+Store의 콜백을 등록받고 Action을 Store에게 배분해주는 동작을 한다.
+어플리케이션의 규모가 커지면 Dispatcher의 역할은 더욱 필수적이다. Store 간의 의존성을 특정 순서로 콜백을 실행하는 과정을 관리한다.
 
+#### Stores
+Store는 상태와 로직을 담당한다. Store는 어플리케이션 내의 개별적인 도메인에서 어플리케이션의 상태를 관리한다.
+하나의 어플리케이션이라도 각 기능별로 Store를 가질 수 있다. Store는 Dispatcher에 콜백을 등록한다. 콜백은 Action의 type을 인자로 전달 받고 상태를 변경한다. 상태가 변경되면 Views에게 변경 이벤트를 전파한다.
 
 #### 참고
 https://haruair.github.io/flux/docs/overview.html
