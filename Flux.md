@@ -16,7 +16,10 @@ Store의 콜백을 등록받고 Action을 Store에게 배분해주는 동작을 
 
 #### Stores
 Store는 상태와 로직을 담당한다. Store는 어플리케이션 내의 개별적인 도메인에서 어플리케이션의 상태를 관리한다.
-하나의 어플리케이션이라도 각 기능별로 Store를 가질 수 있다. Store는 Dispatcher에 콜백을 등록한다. 콜백은 Action의 type을 인자로 전달 받고 상태를 변경한다. 상태가 변경되면 Views에게 변경 이벤트를 전파한다.
+하나의 어플리케이션이라도 각 기능별로 Store를 가질 수 있다. Store는 Dispatcher에 콜백을 등록한다. 콜백은 Action의 type을 인자로 전달 받고 상태를 변경한다. 상태가 변경되면 Views에게 변경 이벤트를 전파한다. Store는View에 상태를 요청할 수 있도록 getter를 제공한다.
+
+#### Views
+Flux의 View는 Controller-View라고 부른다. Store를 통해 변경 이벤트를 전파받으면 Store에게 상태를 요청한다. View는 부모-자식 관계를 가질 수 있으며 부모가 자식 View에게 상태를 전달한다. 그래서 Flux의 Views는 Controller-Views-Views를 가질 수 있다.
 
 #### 참고
 https://haruair.github.io/flux/docs/overview.html
