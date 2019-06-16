@@ -3,10 +3,12 @@ Vuex는 Vue 어플리케이션의 상태 관리 아키텍쳐를 라이브러리�
 Flux, Redux, Elm 아키텍처에서 영감을 받아 Vue의 반응형 시스템을 활용하도록 특별히 고안된 아키텍쳐이다.
 애플리케이션의 모든 컴포넌트에 대한 중앙 집중식 저장소 역할을 하며 예측 가능한 방식으로 상태를 변경할 수 있다.
 
-Vuex는 Store라는 컨테이너를 제공합니다. Store는 State, Getters, Mutations, Actions, Modules로 이루어 집니다.
+Vuex는 Store라는 컨테이너를 제공한다. Store는 State, Getters, Mutations, Actions, Modules로 이루어 진다.
 
-State는 어플리케이션의 상태를 가진다. Getters는 State의 계산된 속성이다.
-Mutations은 State의 변경을 위한 유일한 방법이다. Actions는 비동기 작업을 하며, 상태를 변경하기 위해 Mutations에게 전파한다. 마지막으로 Modules는 어플리케이션의 규모가 커질 때, State, Getters, Mutations, Actions를 분할하여 선언하는 역할을 한다.
+State는 어플리케이션의 상태를 가지고, Getters는 State의 계산된 속성이다.
+Mutations은 State의 변경을 위한 유일한 방법이고 Actions는 비동기 작업을 한다. Actions은 상태를 변경하기 위해 Mutations에게 전파한다.
+
+마지막으로 Modules는 어플리케이션의 규모가 커질 때 State, Getters, Mutations, Actions를 분할하여 선언하는 역할을 한다.
 
 #### State
 State는 상태를 담당한다. Vuex는 단일 상태 트리를 가진다. 단일 객체는 어플리케이션의 모든 상태를 포함하며 원본 소스의 역할을 한다.
