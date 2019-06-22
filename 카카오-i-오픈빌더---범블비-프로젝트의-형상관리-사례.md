@@ -41,7 +41,7 @@
 
 기능을 쪼개는 단위는 페이지나 부문으로 나누면 경험상 대부분 해결됐습니다. 이렇게 브랜치를 나누면 해당 기능 개발에 집중할 수 있고, 코드리뷰 시 코드분량의 따른 부담을 줄일 수 있습니다.
 
-##### 그림. 작은 기능을 나눠만든 feature 브랜치 예시
+##### 그림1. 작은 기능을 나눠만든 feature 브랜치 예시
 ![]({{ '/assets/img/git-scm-experience/1.png' | prepend: site.baseurl }})
 
 #### 많은 기능을 혼자 개발 할 때 사례
@@ -49,7 +49,7 @@
 
 브랜치가 하나일 경우 특정 기능을 제거하기 위한 많은 시간과 위험성을 가지게 됩니다. 다수의 브랜치로 작업을 하게 되면 병합 전에는 유연하게 대응 가능하므로 브랜치를 나눠 작업하는 것을 권하고 싶습니다.
 
-##### 그림. 기능을 나눠만든 feature 브랜치 예시
+##### 그림2. 기능을 나눠만든 feature 브랜치 예시
 ![]({{ '/assets/img/git-scm-experience/2.png' | prepend: site.baseurl }})
 
 ### 예외 상황일 때 대응 사례
@@ -59,12 +59,12 @@
 충돌은 feature 브랜치를 develop 브랜치에 병합을 할 때 발생할 확률이 높습니다. 충돌이 발생하면 develop 브랜치를 feature 브랜치에 병합합니다.
 병합 시에는 발생한 충돌 사항들 중 동료와 연관있는 기능이라면 꼭 페어 체크를 해야 합니다.
 
-##### 그림. develop 브랜치를 feature 브랜치에 병합 예시
+##### 그림3. develop 브랜치를 feature 브랜치에 병합 예시
 ![]({{ '/assets/img/git-scm-experience/9.png' | prepend: site.baseurl }})<br>
 
 충돌을 수정완료 한 뒤에는 다시 feature 브랜치를 develop 브랜치에 병합하면 완료됩니다.
 
-##### 그림. feature 브랜치를 develop 브랜치에 병합 예시
+##### 그림4. feature 브랜치를 develop 브랜치에 병합 예시
 ![]({{ '/assets/img/git-scm-experience/10.png' | prepend: site.baseurl }})
 
 #### Pull Request 중인 브랜치에 작업한 사례
@@ -72,7 +72,7 @@
 
 이 경우를 해결하기 위해서는 먼저 feature 브랜치를 develop 브랜치로부터 만든다. 그리고 생성한 feature 브랜치에 필요한 내용만 `cherry-pick`하여 가져가면 해결됩니다.
 
-##### 그림. cherry-pick 예시
+##### 그림5. cherry-pick 예시
 ![]({{ '/assets/img/git-scm-experience/11.png' | prepend: site.baseurl }})
 
 #### 예정된 배포 일정 앞에 기능 배포한 사례
@@ -80,22 +80,22 @@
 
 이 상황은 hotfix 전략으로 해결할 수 있습니다. 먼저 `hotfix/YYYYMMDD`로 hotfix+develop 역할의 핫픽스 개발 브랜치를 생성합니다. hotfix 처럼 개발완료 시 master/develop에 병합되고, develop 처럼 feature를 만들어 병합할 수 있는 역할의 브랜치입니다. 
 
-##### 그림. hotfix+develop 역할 브랜치 만들기 예시
+##### 그림6. hotfix+develop 역할 브랜치 만들기 예시
 ![]({{ '/assets/img/git-scm-experience/12.png' | prepend: site.baseurl }})<br>
 
 그리고 `hotfix/YYYYMMDD`를 기준으로 기능별로 브랜치를 만들어서 작업합니다. 해당 브랜치도 핫픽스의 의미를 내포하여 hotfix라는 접두사를 붙여 작명을 합니다.
 
-##### 그림. hotfix 브랜치 만들기 예시
+##### 그림7. hotfix 브랜치 만들기 예시
 ![]({{ '/assets/img/git-scm-experience/13.png' | prepend: site.baseurl }})<br>
 
 각 기능의 PR은 `hotfix/YYYYMMDD`에 진행을 합니다. 개발 완료 후 내부 테스트가 필요하면 Sandbox에 배포 시 `hotfix/YYYYMMDD`로 배포를 합니다. 
 
-##### 그림. hotfix 브랜치를 hotfix/YYYYMMDD 브랜치에 병합 예시
+##### 그림8. hotfix 브랜치를 hotfix/YYYYMMDD 브랜치에 병합 예시
 ![]({{ '/assets/img/git-scm-experience/14.png' | prepend: site.baseurl }})<br>
 
 테스트 완료 후 master/develop에 머지를 진행합니다. production 배포는 기존 프로세스와 같이 master로 진행합니다. 이렇게 되면 깃플로우 정책을 해치지 않고 작업이 가능합니다.
 
-##### 그림. hotfix/YYYYMMDD를 master와 develop 브랜치에 병합 예시
+##### 그림9. hotfix/YYYYMMDD를 master와 develop 브랜치에 병합 예시
 ![]({{ '/assets/img/git-scm-experience/15.png' | prepend: site.baseurl }})
 
 ##### 고민이 되었던 부분
