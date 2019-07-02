@@ -8,6 +8,7 @@
 
 #### Angular
 - [Angular 철학](Angular)
+- [Angular 최적화](Angular-최적화)
 - [도서] Angular Development with TypeScript
   - [Angular 소개](Angular-소개)
   - [Angular 시작하기](Angular-시작하기)
