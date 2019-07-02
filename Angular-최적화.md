@@ -10,5 +10,6 @@ Angular는 빠르지만 더 빠른 기능을 제공할 수 있다. 컴포넌트 
 ```
 
 ### 참고사이트
+- https://github.com/mgechev/angular-performance-checklist
 - https://netbasal.com/optimizing-the-performance-of-your-angular-application-f222f1c16354
 - https://medium.com/@spp020/44-quick-tips-to-fine-tune-angular-performance-9f5768f5d945
