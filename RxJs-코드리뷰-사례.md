@@ -1,7 +1,7 @@
 아래 3가지 사례에 대한 글이다.
-- 상태 전파 코드 위치
-- 구독 해지 방법
-- 상태 의존성 관리
+- [상태 전파 코드 위치](#상태-전파-코드-위치)
+- [구독 해지 방법](#구독-해지-방법)
+- [상태 의존성 관리](#상태-의존성-관리)
 
 RxJs의 기본동작은 Subject에 Observer를 등록하고 사용하는 것이다.
 ```js
@@ -30,13 +30,13 @@ subject.next(2);
 subject.subscribe((v) => console.log(`observer: ${v}`));
 ```
 
-### [Question] 그럼 상태 전파 코드 위치는?
+#### [Question] 그럼 상태 전파 코드 위치는?
 1. 컴포넌트 파일
 2. 상태관리 파일
 3. 컴포넌트, 상태관리 파일 모두
 4. 마음속
 
-### [Answer] 정답은 "2. 상태관리 파일" 이다.
+#### [Answer] 정답은 "2. 상태관리 파일" 이다.
 - MVC의 Model 역할
 - Flux의 Store 역할
 - 데이터 관리 파일에 위치해야 함
@@ -101,32 +101,32 @@ ngDestory () {
 ```
 이 코드는 페이지 이탈 시에도 계속 구독중이다. 그리고 페이지 재진입시, 추가적으로 구독하게 된다.
 
-### RxJs는 DOM Event 구독해지와 동일한 디자인 패턴을 사용한다.
+#### RxJs는 DOM Event 구독해지와 동일한 디자인 패턴을 사용한다.
 ```js
 const elem = document.querySelector('div')
 const listener = () => console.log('Click!')
 ```
-#### 등록
+##### 등록
 ```js
 elem.addEventListener('click', listener)
 ```
-#### 미사용 시 해지
+##### 미사용 시 해지
 ```js
 elem.removeEventListener('click', listener)
 ```
 
-### Subject 구독해지는 이렇게 한다.
+#### Subject 구독해지는 이렇게 한다.
 ```js
 const {Subject} = rxjs;
 const subject = new Subject();
 ```
-#### 등록
+##### 등록
 ```js
 const subscription = subject.subscribe((v) => {
   console.log(`observer: ${v}`)
 });
 ```
-#### 미사용 시 해지
+##### 미사용 시 해지
 ```js
 subscription.unsubscribe()
 ```
