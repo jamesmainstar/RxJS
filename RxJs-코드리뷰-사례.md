@@ -19,6 +19,7 @@ $ "observer: 1"
 $ "observer: 2"
 ```
 
+### 상태 전파 코드 위치
 이 부분이 Subject를 통해 상태 전파하는 코드이다.
 ```
 subject.next(1);
@@ -82,6 +83,7 @@ export class MyComponent {
 }
 ```
 
+### 구독 해지 방법
 구독 해지에 대한 사례이다. 이 코드는 Observer를 등록한 코드이다.
 ```
 subject.subscribe((v) => console.log(`observer: ${v}`));
@@ -149,10 +151,12 @@ $ "observer: 2"
 ```
 
 ### 상태 의존성 관리
-- 상태간의 의존성이 생김에 따른 리엑티브 처리
+- 상태 의존성은 상태간의 의존성이 생김에 따른 리엑티브 처리를 말한다.
 - 예
   - 달력의 시작날짜와 종료날짜
   - 범위를 담은 배열
+
+이런 형태의 코드가 있다고 가정하겠다.
 ```js
 startDate$ = new BehaviorSubject()
 endDate$ = new BehaviorSubject()
@@ -169,9 +173,7 @@ changeDate () {
 }
 ```
 
----
-
-## 수동으로 전파!
+#### 수동으로 전파!
 - 수동으로 전파할 경우, 모든 코드에 따라다님
 - 하나라도 미정의시 오류
 ```js
@@ -187,7 +189,7 @@ changeDate () {
 ```
 ---
 
-## RxJs의 자동 전파
+#### RxJs의 자동 전파
 - combineLatest 사용으로 **상태 의존성 관리**
 ```js
 startDate$ = new BehaviorSubject()
@@ -208,3 +210,5 @@ changeDate () {
   endDate$.next(endDate)
 }
 ```
+
+### 끝
