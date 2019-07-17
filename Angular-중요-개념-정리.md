@@ -8,3 +8,4 @@
   - Pipe
   - Service
   - Directive
+- Service의 역할 정의
