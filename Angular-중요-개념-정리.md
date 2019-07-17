@@ -1,6 +1,9 @@
 - AngularJs와 Angular는 사용측 구조 비교
 - 개발 모드와 프로덕션 모드
 - 변경 감지 격리
+- [컨벤션] constructor는 의존성 인젝션만 사용하
+- 커스텀 태그
+  - Host
 - Component의 볼륨을 줄이는 도구
   - Pipe
   - Service
