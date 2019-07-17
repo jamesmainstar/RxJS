@@ -1,0 +1,6 @@
+- 개발 모드와 프로덕션 모드
+- 변경 감지 격리
+- Component의 볼륨을 줄이는 도구
+  - Pipe
+  - Service
+  - Directive
