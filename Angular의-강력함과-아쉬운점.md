@@ -114,6 +114,47 @@ class HelloComponent {
 ```
 
 #### DOM의 동작은 Directive로 만들자
+Directive는 DOM의 조작을 캡슐화하기 위한 도구이다. 이벤트의 로직이 중복적으로 사용되면 Directive를 사용한다.
+
+예를 들어 Submit 버튼을 연속으로 눌렀을 때 Debounce를 통해 한번만 실행되게 하는 기능이 있는 것을 가정하겠다.
+
+debounce-submit 어트리뷰트를 통해 Directive를 사용하고, mySubmit 이벤트로 클릭 이벤트를 전달받는 다.
+```ts
+@Directive({
+  selector: '[debounce-submit]',
+  outputs: ['mySubmit'],
+  host: {
+    '(click)': 'onClick($event)'
+  }
+})
+export class DebounceSubmitDirective {
+  timer = null
+  mySubmit = new EventEmitter();
+  onClick (event) {
+    clearTimeout(this.timer)
+    this.timer = setTimeout(() => {
+      this.mySubmit.emit(event)
+    }, 250)
+  }
+}
+```
+
+탬플릿에서는 이렇게 사용된다. 버튼에 debounce-submit 어트리뷰트를 정의하고, mySubmit을 이벤트로 받는 다.
+```ts
+@Component({
+  selector: 'app-root',
+  template: `<div>
+    <input type="submit" value="저장" 
+    debounce-submit (mySubmit)="onSubmit()">
+  </div>`,
+})
+export class AppComponent {
+  onSubmit () {
+    console.log('Submit')
+  }
+}
+```
+
 #### 그래도 Component가 커지면 Service로 분리하자
 ### Angular의 메타몽인 Service
 #### 왜 오용이 발생되는 가
