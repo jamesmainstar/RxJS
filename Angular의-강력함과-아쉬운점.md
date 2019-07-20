@@ -114,11 +114,9 @@ class HelloComponent {
 ```
 
 #### DOM의 동작은 Directive로 만들자
-Directive는 DOM의 조작을 캡슐화하기 위한 도구이다. 이벤트의 로직이 중복적으로 사용되면 Directive를 사용한다.
+Directive는 DOM의 조작을 캡슐화하기 위한 도구이다. 이벤트의 로직이 중복적으로 사용되면 Directive를 사용한다. Directive를 사용할 때는 Attribute로 사용한다.
 
-예를 들어 Submit 버튼을 연속으로 눌렀을 때 Debounce를 통해 한번만 실행되게 하는 기능이 있는 것을 가정하겠다.
-
-debounce-submit 어트리뷰트를 통해 Directive를 사용하고, mySubmit 이벤트로 클릭 이벤트를 전달받는 다.
+저장 버튼을 연속으로 눌렀을 때 Debounce를 통해 한번만 실행되게 하는 기능이 있는 것을 가정하겠다. Attribute 이름은 debounce-submit이고, 이벤트는 mySubmit에 전달한다.
 ```ts
 @Directive({
   selector: '[debounce-submit]',
@@ -138,8 +136,7 @@ export class DebounceSubmitDirective {
   }
 }
 ```
-
-탬플릿에서는 이렇게 사용된다. 버튼에 debounce-submit 어트리뷰트를 정의하고, mySubmit을 이벤트로 받는 다.
+탬플릿에서는 이렇게 사용된다. 버튼에 debounce-submit를 정의하고, mySubmit로 이벤트를 받는 다.
 ```ts
 @Component({
   selector: 'app-root',
@@ -154,8 +151,11 @@ export class AppComponent {
   }
 }
 ```
+저장 버튼을 연속적으로 클릭해도 한번만 실행되는 기능을 만들었다. 중복되는 DOM 이벤트의 코드가 있다면 Directive로 중복을 해결할 수 있다.
 
 #### 그래도 Component가 커지면 Service로 분리하자
+아무리 Component를 잘게 쪼개고, Pipe와 Directive로 분리해도 Component의 볼륨이 커질 때가 있다. 이런 상황일 때는 Service를 통해 코드를 분리한다.
+
 ### Angular의 메타몽인 Service
 #### 왜 오용이 발생되는 가
 #### 오용을 예방하려면 어떻게 해야 할까
