@@ -21,13 +21,24 @@
 ### TypeScript의 강력함
 TypeScript는 사용한지 10개월 정도 됐는 데, 초기에 서비스 투입이 됐을 때 TypeScript를 어렵게만 느껴졌다. Javascript와 다르게 타입을 정의해야 하고 interface, type, enum 을 언제 사용해야 하는 지 익숙하지 않았기 때문이다.
 
-요세들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 시간과 기억의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 세 가지의 역할을 잘해주고 있다고 생각한다.
+요세들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 시간과 기억의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 두 가지의 역할을 잘해주고 있다고 생각한다.
 
-첫 번째는 API를 알려주는 것이다. 가끔 Array의 메소드를 사용하거나 Moment와 같은 라이브러리를 사용할 때 사용방법을 잊어버리곤 하지 않는가. TypeScript를 사용하기전에는 MDN이나 공식 사이트에서 API Document를 띄어두고 작업을 했었다. TypeScript를 사용하고부터는 IDE에서만으로 모두 확인 가능했다. TypeScript는 @type이라는 모듈을 설치하면 메소드들과 메소드의 인자들을 모두 알려준다. API를 브라우저에 검색하고 확인하는 일은 없어졌다.
+첫 번째는 스펙을 알려준다. 메소드의 인자의 값이 어떤 타입을 사용하는 지 알려준다. 타입은 string, number, boolean뿐만 아니라 사용자 정의형인 interface, type, enum을 사용했을 때 굉장히 좋은 결과를 가져다 준다.
 
-두 번째는 스펙을 알려준다.
+```js
+const movieInfo = movieTicket => {
+  const {movie, startTime, endTime} = movieTicket
+  return `${movie}(${startTime}~${endTime})`
+}
 
-마지막은 안정성 보장이다.
+const ticketInfo = movieTicket => {
+  const {count, seats, watched} = movieTicket
+  return `수량: ${count}, 좌석: ${seats.join(',')}<br>
+  관련 여부: ${watched ? '관람' : '미관람'}`
+}
+```
+
+두 번째는 안정성 보장이다.
 
 
 ### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
