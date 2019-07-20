@@ -25,6 +25,8 @@ TypeScript는 사용한지 10개월 정도 됐는 데, 초기에 서비스 투�
 
 첫 번째는 스펙을 알려준다. 메소드의 인자의 값이 어떤 타입을 사용하는 지 알려준다. 타입은 string, number, boolean뿐만 아니라 사용자 정의형인 interface, type, enum을 사용했을 때 굉장히 좋은 결과를 가져다 준다.
 
+Javascript로 작성했을 때는 코드를 분석해야 인자의 자세한 정보를 알 수 있다. 
+movieTicket는 movie, startTime, endTime, count, seats, watched의 프로퍼티를 가진다.
 ```js
 const movieInfo = movieTicket => {
   const {movie, startTime, endTime} = movieTicket
@@ -32,6 +34,29 @@ const movieInfo = movieTicket => {
 }
 
 const ticketInfo = movieTicket => {
+  const {count, seats, watched} = movieTicket
+  return `수량: ${count}, 좌석: ${seats.join(',')}<br>
+  관련 여부: ${watched ? '관람' : '미관람'}`
+}
+```
+
+하지만 TypeScript를 사용하면 인자의 타입으로 인자의 자세한 정보를 알 수 있다.
+```ts
+interface MovieTicket {
+  movie: string // 관람 영화명
+  count: number // 티켓 수량
+  startTime: string // 상영 시작 시간
+  endTime: string // 상영 종료 시간
+  seats: string[] // 좌석 정보
+  watched: boolean // 관람 여부
+}
+
+const movieInfo = (movieTicket: MovieTicket) => {
+  const {movie, startTime, endTime} = movieTicket
+  return `${movie}(${startTime}~${endTime})`
+}
+
+const ticketInfo = (movieTicket: MovieTicket) => {
   const {count, seats, watched} = movieTicket
   return `수량: ${count}, 좌석: ${seats.join(',')}<br>
   관련 여부: ${watched ? '관람' : '미관람'}`
