@@ -35,12 +35,12 @@ const movieInfo = movieTicket => {
 
 const ticketInfo = movieTicket => {
   const {count, seats, watched} = movieTicket
-  return `수량: ${count}, 좌석: ${seats.join(',')}<br>
+  return `수량: ${count}, 좌석: ${seats.join(',')}
   관련 여부: ${watched ? '관람' : '미관람'}`
 }
 ```
 
-하지만 TypeScript를 사용하면 인자의 타입으로 인자의 자세한 정보를 알 수 있다.
+하지만 TypeScript를 사용하면 인자의 타입으로 인자의 자세한 정보를 알 수 있다. 메소드 인자까지 어딘가에 기록해둘 수 있는 게 멋지지 않는 가.
 ```ts
 interface MovieTicket {
   movie: string // 관람 영화명
@@ -58,12 +58,12 @@ const movieInfo = (movieTicket: MovieTicket) => {
 
 const ticketInfo = (movieTicket: MovieTicket) => {
   const {count, seats, watched} = movieTicket
-  return `수량: ${count}, 좌석: ${seats.join(',')}<br>
+  return `수량: ${count}, 좌석: ${seats.join(',')}
   관련 여부: ${watched ? '관람' : '미관람'}`
 }
 ```
 
-두 번째는 안정성 보장이다.
+두 번째 역할은 안정성 보장이다. 내가 코딩을 할 때마다 내 코드의 안정성을 보장해준다. 잘못된 값을 사용했을 때 브라우저에 띄우기 전에 컴파일 시점에 미리 알려준다.
 
 
 ### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
