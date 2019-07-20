@@ -99,13 +99,18 @@ class HelloComponent {}
 #### 탬플릿만 사용되는 로직은 Pipe로 만들자
 간혹 탬플릿에서만 사용되는 로직들이 있다. Angular에서는 탬플릿에서만 사용되는 로직은 Pipe로 정의할 수 있게 제공한다.
 
-만약에 대문자로 변환하고 싶다면 Angular에서 제공하는 uppercase Pipe를 사용하면 된다.
+타임스탬프를 년월일 표기로 변경하는 것을 가정하겠다. 타임스탬프로는 사용자가 년월일을 알기 힘드므로 시각적으로 변경이 필요한 작업이다. 이 로직은 탬플릿에서 필요한 작업임으로 Pipe를 사용한다.
 ```ts
 @Component({
   selector: 'app-component',
-  template: '<h1>{{"Hello" | uppercase}}</h1>'
+  template: `<div>{{today | date: 'yyyy/MM/dd'}}</div>`,
 })
-class HelloComponent {}
+class HelloComponent {
+  today: number = Date.now();
+}
+```
+```
+2019/07/20
 ```
 
 #### DOM의 동작은 Directive로 만들자
