@@ -180,4 +180,19 @@ export class AppComponent {
 
 ### Angular의 메타몽인 Service
 #### 왜 오용이 발생되는 가
+Service는 Angular의 다른 요소들에 비해 명확한 역할이 정의되지 않는 다. @Component, @Pipe, @Directive들은 각각의 역할을 명확히 알 수 있다. 하지만 Service는 @Injectable로 정의된다. 어딘가에 주입가능하다는 것 외에는 구체적인 역할을 알 수 없다.
+
+Service를 정의한 코드이다. Service라는 것 외에 이 코드의 역할을 바로 알 수 있는가.
+```ts
+@Injectable()
+export class MyService {
+  constructor() {}
+}
+```
+
+구체적인 역할을 알 수 없기 때문에 다양한 역할을 하게 된다. 예를 들면 API 통신, 상태관리, 헬퍼 등 다양한 역할을 담당하게 된다. Service는 Subfix로 Service를 컨벤션으로 사용한다. 네이밍 컨벤션 또한 구체적인 역할을 기술하고 있지 않는 다. 그래서 Component의 볼륨을 줄이기 위한 Service를 만들면 대체로 Service의 볼륨을 굉장히 커지게 되는 것을 많이 봤다.
+
+이 문제는 AngularJs를 사용하는 프로젝트와 Angular를 사용하는 프로젝트 모두 발견된 이슈이다.
+
+
 #### 오용을 예방하려면 어떻게 해야 할까
