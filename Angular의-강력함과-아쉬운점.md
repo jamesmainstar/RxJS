@@ -87,7 +87,27 @@ const movieInfo = (movieTicket: MovieTicket) => {
 
 ### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
 #### 일단 Component가 무엇인가
+Component는 뷰와 데이터 로직을 재사용과 격리하기 위한 단위이다. Angular에서는 @Component를 통해 정의한다.
+```ts
+@Component({
+  selector: 'app-component',
+  template: '<h1>Hello</h1>'
+})
+class HelloComponent {}
+```
+
 #### 탬플릿만 사용되는 로직은 Pipe로 만들자
+간혹 탬플릿에서만 사용되는 로직들이 있다. Angular에서는 탬플릿에서만 사용되는 로직은 Pipe로 정의할 수 있게 제공한다.
+
+만약에 대문자로 변환하고 싶다면 Angular에서 제공하는 uppercase Pipe를 사용하면 된다.
+```ts
+@Component({
+  selector: 'app-component',
+  template: '<h1>{{"Hello" | uppercase}}</h1>'
+})
+class HelloComponent {}
+```
+
 #### DOM의 동작은 Directive로 만들자
 #### 그래도 Component가 커지면 Service로 분리하자
 ### Angular의 메타몽인 Service
