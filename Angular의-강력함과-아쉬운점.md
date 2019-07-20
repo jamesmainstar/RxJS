@@ -17,3 +17,13 @@
 - Angular의 메타몽인 Service
   - 왜 오용이 발생되는 가
   - 오용을 예방하려면 어떻게 해야 할까
+
+### TypeScript의 강력함
+### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
+#### 일단 Component가 무엇인가
+#### 탬플릿만 사용되는 로직은 Pipe로 만들자
+#### DOM의 동작은 Directive로 만들자
+#### 그래도 Component가 커지면 Service로 분리하자
+### Angular의 메타몽인 Service
+#### 왜 오용이 발생되는 가
+#### 오용을 예방하려면 어떻게 해야 할까
