@@ -196,3 +196,27 @@ export class MyService {
 
 
 #### 오용을 예방하려면 어떻게 해야 할까
+Service의 역할을 폴더로 구분했던 경험이 있다. 폴더로 구분해도 여전히 Service라는 Subfix때문에 오용하는 사례가 발생했었다.
+폴더의 역할을 통해 내부적인 파일의 역할을 구분하는 것까지 잘되리라 기대하기는 힘든 것이다.
+
+결국 Service의 Subfix 컨벤션을 제거하고 새로운 컨벤션을 만들어서 해결했다.
+
+Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, 헬퍼 이렇게 세 가지의 역할을 수행한다. 각각 폴더 위치를 다르지만 네이밍을 변경했다.
+
+각 역할의 Subfix를 이렇게 변경된다.
+```
+- API 통신: API
+- 상태관리: Store
+- 헬퍼: Helper
+```
+
+기존 Service 컨벤션과 비교하면 이렇다.
+```
+- API 통신: ConfigService => ConfigAPI
+- 상태관리: DashboardService => DashboardStore
+- 헬퍼: DateService => DateHelper
+```
+
+네이밍을 변경함으로써 Service의 역할이 기술된다. 역할이 기술되기 때문에 내부 코드를 작성할 때 해당 코드의 역할과 일치하는 지 쉽게 알 수 있게 되었다.
+
+### 끝
