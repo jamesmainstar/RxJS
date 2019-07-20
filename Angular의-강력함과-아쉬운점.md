@@ -156,6 +156,28 @@ export class AppComponent {
 #### 그래도 Component가 커지면 Service로 분리하자
 아무리 Component를 잘게 쪼개고, Pipe와 Directive로 분리해도 Component의 볼륨이 커질 때가 있다. 이런 상황일 때는 Service를 통해 코드를 분리한다.
 
+Service는 싱글톤 객체이다. 독립적인 상태와 메소드를 가질 수 있다. 대체로 API 통신 부분을 분리할 때 사용한다. Service는 @Injectable를 통해 정의한다.
+```ts
+@Injectable()
+export class MyService {
+  constructor(private http: HttpClient) { }
+  fetchConfig() {
+    return this.http.get('/path/to/config')
+  }
+}
+```
+
+Component에서는 의존성 주입받아 사용한다. Service를 사용하므로써 Component의 Class에 정의되는 코드의 볼륨을 줄일 수 있다.
+```ts
+@Component({})
+export class AppComponent {
+  constructor(private myService: MyService) {}
+  onClick () {
+    this.myService.fetchConfig()
+  }
+}
+```
+
 ### Angular의 메타몽인 Service
 #### 왜 오용이 발생되는 가
 #### 오용을 예방하려면 어떻게 해야 할까
