@@ -17,13 +17,14 @@
 - Angular의 메타몽인 Service
   - 왜 오용이 발생되는 가
   - 오용을 예방하려면 어떻게 해야 할까
+- [요약] Component 작업 시 체크 포인트
 
 ### TypeScript의 강력함
 TypeScript는 사용한지 10개월 정도 됐는 데, 초기에 서비스 투입이 됐을 때 TypeScript를 어렵게만 느껴졌다. Javascript와 다르게 타입을 정의해야 하고 interface, type, enum 을 언제 사용해야 하는 지 익숙하지 않았기 때문이다.
 
-요세들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 시간과 기억의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 두 가지의 역할을 잘해주고 있다고 생각한다.
+요세들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 기억과 시간의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 두 가지의 역할을 잘해주고 있다고 생각한다.
 
-첫 번째는 스펙을 코드에 기록할 수 있다. 예를 들어 메소드의 인자의 값이 어떤 타입을 사용하는 지 기록할 수 있다. 복잡한 기능을 구현할 수록 인자의 값을 복잡해진다. 인자의 타입은 string, number, boolean뿐만 아니라 interface, type, enum을 사용했을 때도 굉장히 좋은 결과를 가져다 준다.
+첫 번째는 기억의 한계를 해결해주는 것은 상세한 코드 스팩을 기록할 수 있는 것이다. 예를 들어 메소드의 인자의 값이 어떤 타입을 사용하는 지 기록할 수 있다. 복잡한 기능을 구현할 수록 인자의 값을 복잡해진다. 인자의 타입은 string, number, boolean뿐만 아니라 interface, type, enum을 사용했을 때도 굉장히 좋은 결과를 가져다 준다.
 
 Javascript로 작성했을 때는 코드를 분석해야 인자의 자세한 정보를 알 수 있다. 함수 내부로직을 분석하면 movieTicket는 movie, startTime, endTime, count, seats, watched의 프로퍼티를 가지는 것을 알 수 있다.
 ```js
@@ -39,7 +40,7 @@ const ticketInfo = movieTicket => {
 }
 ```
 
-하지만 TypeScript를 사용하면 인자의 타입으로 인자의 자세한 정보를 알 수 있다. 메소드 인자까지 어딘가에 기록해둘 수 있는 게 멋지지 않는 가.
+하지만 TypeScript를 사용하면 인자의 타입으로 인자의 자세한 정보를 알 수 있다.
 ```ts
 interface MovieTicket {
   movie: string // 관람 영화명
@@ -61,10 +62,13 @@ const ticketInfo = (movieTicket: MovieTicket) => {
   관련 여부: ${watched ? '관람' : '미관람'}`
 }
 ```
+메소드 인자까지 어딘가에 기록해둘 수 있는 게 멋지지 않는 가!!
 
-두 번째 역할은 안정성 보장이다. 내가 코딩을 할 때마다 내 코드의 안정성을 보장해준다. 잘못된 값을 사용했을 때 브라우저에 띄우기 전에 컴파일 시점에 미리 알려준다.
+두 번째 역할은 시간을 절약해주는 안정성 보장이다. 내가 코딩을 할 때마다 내 코드의 안정성을 보장해준다. 잘못된 값을 사용했을 때 브라우저에 띄우기 전에 컴파일 시점에 미리 알려준다.
 
-만약에 없는 프로퍼티를 사용하면 이렇게 잔소리를 해준다. 내가 잘못하고 있다는 것을 알려주는 게 정말 멋지지 않는 가.
+버그는 늦게 발견될 수록 시간 비용이 많이 든다. 가장 높은 비용을 발생되는 게 QA 기간에 발견되는 것이다. 개발 기간에 발견되는 게 가장 저렴한 비용이다.
+
+TypeScript는 만약에 없는 프로퍼티를 사용하면 이렇게 잔소리를 해준다.
 ```ts
 interface MovieTicket {
   movie: string // 관람 영화명
@@ -84,16 +88,20 @@ const movieInfo = (movieTicket: MovieTicket) => {
 - error TS2339: Property 'start' does not exist on type 'MovieTicket'.
 - error TS2339: Property 'end' does not exist on type 'MovieTicket'.
 ```
+내가 잘못하고 있다는 것을 알려주는 게 정말 멋지지 않는 가!!
 
 ### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
 #### 일단 Component가 무엇인가
 Component는 뷰와 데이터 로직을 재사용과 격리하기 위한 단위이다. Angular에서는 @Component를 통해 정의한다.
 ```ts
 @Component({
-  selector: 'app-component',
+  selector: 'hello-component',
   template: '<h1>Hello</h1>'
 })
 class HelloComponent {}
+```
+```html
+<hello-component></hello-component>
 ```
 
 #### 탬플릿만 사용되는 로직은 Pipe로 만들자
