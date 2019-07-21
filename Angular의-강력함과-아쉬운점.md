@@ -107,18 +107,38 @@ class HelloComponent {}
 #### 탬플릿만 사용되는 로직은 Pipe로 만들자
 간혹 탬플릿에서만 사용되는 로직들이 있다. Angular에서는 탬플릿에서만 사용되는 로직은 Pipe로 정의할 수 있게 제공한다.
 
-타임스탬프를 년월일 표기로 변경하는 것을 가정하겠다. 타임스탬프로는 사용자가 년월일을 알기 힘드므로 시각적으로 변경이 필요한 작업이다. 이 로직은 탬플릿에서 필요한 작업임으로 Pipe를 사용한다.
+Date 객체를 년월일로 UI에 표시하는 것을 가정하겠다. Date를 년월일로 표시하는 이유는 시각적인 표현을 위한 것이다. 이런 상황일 때 Pipe를 사용한다.
+```ts
+Date => 2019-07-10
+```
+
+Pipe는 @Pipe로 정의한다. transform 메소드를 통해 변환을 한다.
+```ts
+@Pipe({name: 'dateFormat'})
+class DateFormatPipe implements PipeTransform {
+  transform(date: Date): string {
+    const year = date.getFullYear()
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+
+    const longMonth = `${month < 10 ? 0 : ''}${month}`
+    const longDay = `${day < 10 ? 0 : ''}${day}`
+    return `${year}-${longMonth}-${longDay}`
+  }
+}
+```
+Pipe 사용은 Component에서 Pipe Operator(`|`)를 통해 사용한다. 
 ```ts
 @Component({
-  selector: 'app-component',
-  template: `<div>{{today | date: 'yyyy/MM/dd'}}</div>`,
+  selector: 'hello-component',
+  template: `<div>{{today | dateFormat}}</div>`,
 })
 class HelloComponent {
-  today: number = Date.now();
+  today: Date = new Date()
 }
 ```
 ```
-2019/07/20
+2019-07-10
 ```
 
 #### DOM의 동작은 Directive로 만들자
