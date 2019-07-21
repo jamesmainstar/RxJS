@@ -1,11 +1,11 @@
 ### 글의 목적
-서비스 개발 시 Angular를 사용중이다. AngularJs를 사용했던 경험이 있어 서비스 일원이 됬을 때 Angular에 대한 반감이 있었다. 하지만 최근들어 Angular는 Vue 못지 않게 강력하다는 것을 느끼고 있다.
+서비스 개발 시 Angular를 사용 중이다. AngularJs를 사용했던 경험이 있어 서비스 일원이 됐을 때 Angular에 대한 반감이 있었다. 하지만 최근 들어 Angular는 Vue 못지않게 강력하다는 것을 느끼고 있다.
 
-내가 강력하다고 느끼는 것은 두가지이다. AngularJs부터 사용된 Angular의 아키텍쳐와 TypeScript 사용 강제성이다. Angular의 아키텍쳐에서는 코드의 볼륨을 줄이는 도구들이 제공된다. 적절하게 사용된다면 작은 단위의 코드를 만들어 이해하기 쉬운 코드를 작성가능하다. TypeScript는 컴파일 시점에 코드의 안정성을 보장해준다. 코딩할 때마다 TypeScript가 안정성을 보장해주기 때문에 비서를 둔 듯한 느낌이 들었다.
+내가 강력하다고 느끼는 것은 두 가지다. AngularJs부터 사용된 Angular의 아키텍처와 TypeScript 사용 강제성이다. Angular의 아키텍처에서는 코드의 볼륨을 줄이는 도구들이 제공된다. 적절하게 사용된다면 작은 단위의 코드를 만들어 이해하기 쉬운 코드를 작성 가능하다. TypeScript는 컴파일 시점에 코드의 안정성을 보장해준다. 코딩할 때마다 TypeScript가 안정성을 보장해주기 때문에 비서를 둔 듯한 느낌이 들었다.
 
-하지만 강력함속에도 아쉬운점 하나있다. AngularJs부터 사용된 Service이다. Service는 Angular에서도 메타몽(포캣몬)같은 도구이다. 무엇이든 될 수 있기 때문에 오용되기 쉽다. AngularJs, Angular를 사용하는 프로젝트를 했을 때 항상 Service에서 오용이 발생되었다.
+하지만 강력함 속에도 아쉬운 점 하나 있다. AngularJs부터 사용된 Service이다. Service는 Angular에서도 메타몽(포캣몬)같은 도구이다. 무엇이든 될 수 있으므로 오용되기 쉽다. AngularJs, Angular를 사용하는 프로젝트를 했을 때 항상 Service에서 오용이 발생하였다.
 
-그래서 이 글에서는 지금까지 느꼈던 Angular의 강력함과 아쉬운점을 정리해봤다.
+그래서 이 글에서는 지금까지 느꼈던 Angular의 강력함과 아쉬운 점을 정리해봤다.
 
 ### 목차
 - TypeScript의 강력함
@@ -20,11 +20,11 @@
 - [요약] Component 작업 시 체크 포인트
 
 ### TypeScript의 강력함
-TypeScript는 사용한지 10개월 정도 됐는 데, 초기에 서비스 투입이 됐을 때 TypeScript를 어렵게만 느껴졌다. Javascript와 다르게 타입을 정의해야 하고 interface, type, enum 을 언제 사용해야 하는 지 익숙하지 않았기 때문이다.
+TypeScript는 사용한 지 10개월 정도 됐는데, 초기에 서비스 투입이 됐을 때 TypeScript를 어렵게만 느껴졌다. Javascript와 다르게 타입을 정의해야 하고 interface, type, enum 을 언제 사용해야 하는지 익숙하지 않았기 때문이다.
 
-요세들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 기억과 시간의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 두 가지의 역할을 잘해주고 있다고 생각한다.
+요새 들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 기억과 시간의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 두 가지의 역할을 잘해주고 있다고 생각한다.
 
-**첫 번째**는 기억의 한계를 해결해주는 것은 상세한 코드 스팩을 기록할 수 있는 것이다. 예를 들어 메소드의 인자의 값이 어떤 타입을 사용하는 지 기록할 수 있다. 복잡한 기능을 구현할 수록 인자의 값을 복잡해진다. 인자의 타입은 string, number, boolean뿐만 아니라 interface, type, enum을 사용했을 때도 굉장히 좋은 결과를 가져다 준다.
+**첫 번째**는 기억의 한계를 해결해주는 것은 상세한 코드 스팩을 기록할 수 있다. 예를 들어 메소드의 인자의 값이 어떤 타입을 사용하는지 기록할 수 있다. 복잡한 기능을 구현할수록 인자의 값을 복잡해진다. 인자의 타입은 string, number, boolean뿐만 아니라 interface, type, enum을 사용했을 때도 굉장히 좋은 결과를 가져다준다.
 
 Javascript로 작성했을 때는 코드를 분석해야 인자의 자세한 정보를 알 수 있다. 함수 내부로직을 분석하면 movieTicket는 movie, startTime, endTime, count, seats, watched의 프로퍼티를 가지는 것을 알 수 있다.
 ```js
@@ -62,11 +62,11 @@ const ticketInfo = (movieTicket: MovieTicket) => {
   관련 여부: ${watched ? '관람' : '미관람'}`
 }
 ```
-메소드 인자까지 어딘가에 기록해둘 수 있는 게 멋지지 않는 가!!
+메소드 인자까지 어딘가에 기록해둘 수 있는 게 멋지지 않은 가!!
 
 **두 번째** 역할은 시간을 절약해주는 안정성 보장이다. 내가 코딩을 할 때마다 내 코드의 안정성을 보장해준다. 잘못된 값을 사용했을 때 브라우저에 띄우기 전에 컴파일 시점에 미리 알려준다.
 
-버그는 늦게 발견될 수록 시간 비용이 많이 든다. 가장 높은 비용을 발생되는 게 QA 기간에 발견되는 것이다. 개발 기간에 발견되는 게 가장 저렴한 비용이다.
+버그는 늦게 발견될수록 시간 비용이 많이 든다. 가장 높은 비용을 발생하는 게 QA 기간에 발견되는 것이다. 개발 기간에 발견되는 게 가장 저렴한 비용이다.
 
 TypeScript는 만약에 없는 프로퍼티를 사용하면 이렇게 잔소리를 해준다.
 ```ts
@@ -88,7 +88,7 @@ const movieInfo = (movieTicket: MovieTicket) => {
 - error TS2339: Property 'start' does not exist on type 'MovieTicket'.
 - error TS2339: Property 'end' does not exist on type 'MovieTicket'.
 ```
-내가 잘못하고 있다는 것을 알려주는 게 정말 멋지지 않는 가!!
+내가 잘못하고 있다는 것을 알려주는 게 정말 멋지지 않은 가!!
 
 ### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
 #### 일단 Component가 무엇인가
@@ -107,7 +107,7 @@ class HelloComponent {}
 #### 탬플릿만 사용되는 로직은 Pipe로 만들자
 간혹 탬플릿에서만 사용되는 로직들이 있다. Angular에서는 탬플릿에서만 사용되는 로직은 Pipe로 정의할 수 있게 제공한다.
 
-Date 객체를 년월일로 UI에 표시하는 것을 가정하겠다. Date를 년월일로 표시하는 이유는 시각적인 표현을 위한 것이다. 이런 상황일 때 Pipe를 사용한다.
+Date 객체를 연월일로 UI에 표시하는 것을 가정하겠다. Date를 년월일로 표시하는 이유는 시각적인 표현을 위한 것이다. 이런 상황일 때 Pipe를 사용한다.
 ```ts
 Date => 2019-07-10
 ```
@@ -144,7 +144,7 @@ class HelloComponent {
 #### DOM의 동작은 Directive로 만들자
 Directive는 DOM의 조작을 캡슐화하기 위한 도구이다. 자주 사용되는 로직은 DOM 이벤트의 로직이 중복적으로 사용될 때이다. Directive는 `@Directive`로 정의한다.
 
-저장 버튼을 연속으로 눌렀을 때 Debounce를 통해 한번만 실행되게 하는 기능이 있는 것을 가정하겠다. Attribute 이름은 debounce-submit이고, 이벤트는 mySubmit에 전달한다.
+저장 버튼을 연속으로 눌렀을 때 Debounce를 통해 한 번만 실행되게 하는 기능이 있는 것을 가정하겠다. Attribute 이름은 debounce-submit이고, 이벤트는 mySubmit에 전달한다.
 ```ts
 @Directive({
   selector: '[debounce-submit]',
@@ -179,7 +179,7 @@ export class AppComponent {
   }
 }
 ```
-저장 버튼을 연속적으로 클릭해도 한번만 실행되는 기능을 만들었다. 중복되는 DOM 이벤트의 코드가 있다면 Directive로 중복을 해결할 수 있다.
+저장 버튼을 연속적으로 클릭해도 한 번만 실행되는 기능을 만들었다. 중복되는 DOM 이벤트의 코드가 있다면 Directive로 중복을 해결할 수 있다.
 
 #### 그래도 Component가 커지면 Service로 분리하자
 아무리 Component를 잘게 쪼개고, Pipe와 Directive로 분리해도 Component의 볼륨이 커질 때가 있다. 이런 상황일 때는 Service를 통해 코드를 분리한다.
@@ -195,7 +195,7 @@ export class MyService {
 }
 ```
 
-Component에서는 의존성 주입받아 사용한다. Service를 사용하므로써 Component의 Class에 정의되는 코드의 볼륨을 줄일 수 있다.
+Component에서는 의존성 주입받아 사용한다. Service를 사용함으로써 Component의 Class에 정의되는 코드의 볼륨을 줄일 수 있다.
 ```ts
 @Component({})
 export class AppComponent {
@@ -208,7 +208,7 @@ export class AppComponent {
 
 ### Angular의 메타몽인 Service
 #### 왜 오용이 발생되는 가
-Service는 Angular의 다른 요소들에 비해 명확한 역할이 정의되지 않는 다. @Component, @Pipe, @Directive들은 각각의 역할을 명확히 알 수 있다. 하지만 Service는 @Injectable로 정의된다. 어딘가에 주입가능하다는 것 외에는 구체적인 역할을 알 수 없다.
+Service는 Angular의 다른 요소들에 비해 명확한 역할이 정의되지 않는다. @Component, @Pipe, @Directive들은 각각의 역할을 명확히 알 수 있다. 하지만 Service는 @Injectable로 정의된다. 어딘가에 주입 가능하다는 것 외에는 구체적인 역할을 알 수 없다.
 
 Service를 정의한 코드이다. Service라는 것 외에 이 코드의 역할을 바로 알 수 있는가.
 ```ts
@@ -218,19 +218,19 @@ export class MyService {
 }
 ```
 
-구체적인 역할을 알 수 없기 때문에 다양한 역할을 하게 된다. 예를 들면 API 통신, 상태관리, 헬퍼 등 다양한 역할을 담당하게 된다. Service는 Subfix로 Service를 컨벤션으로 사용한다. 네이밍 컨벤션 또한 구체적인 역할을 기술하고 있지 않는 다. 그래서 Component의 볼륨을 줄이기 위한 Service를 만들면 대체로 Service의 볼륨을 굉장히 커지게 되는 것을 많이 봤다.
+구체적인 역할을 알 수 없으므로 다양한 역할을 하게 된다. 예를 들면 API 통신, 상태관리, 헬퍼 등 다양한 역할을 담당하게 된다. Service는 Subfix로 Service를 컨벤션으로 사용한다. 네이밍 컨벤션 또한 구체적인 역할을 기술하고 있지 않은 다. 그래서 Component의 볼륨을 줄이기 위한 Service를 만들면 대체로 Service의 볼륨을 굉장히 커지게 되는 것을 자주 봤다.
 
 이 문제는 AngularJs를 사용하는 프로젝트와 Angular를 사용하는 프로젝트 모두 발견된 이슈이다.
 
 #### 오용을 예방하려면 어떻게 해야 할까
-Service의 역할을 폴더로 구분했던 경험이 있다. 폴더로 구분해도 여전히 Service라는 Subfix때문에 오용하는 사례가 발생했었다.
+Service의 역할을 폴더로 구분했던 경험이 있다. 폴더로 구분해도 여전히 Service라는 Suffix 때문에 오용하는 사례가 발생했었다.
 폴더의 역할을 통해 내부적인 파일의 역할을 구분하는 것까지 잘되리라 기대하기는 힘든 것이다.
 
-결국 Service의 Subfix 컨벤션을 제거하고 새로운 컨벤션을 만들어서 해결했다.
+결국, Service의 Suffix 컨벤션을 제거하고 새로운 컨벤션을 만들어서 해결했다.
 
 Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, 헬퍼 이렇게 세 가지의 역할을 수행한다. 각각 폴더 위치를 다르지만 네이밍을 변경했다.
 
-각 역할의 Subfix를 이렇게 변경된다.
+각 역할의 Suffix를 이렇게 변경된다.
 ```
 - API 통신: API
 - 상태관리: Store
@@ -244,7 +244,7 @@ Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, �
 - 헬퍼: DateService => DateHelper
 ```
 
-네이밍을 변경함으로써 Service의 역할이 기술된다. 역할이 기술되기 때문에 내부 코드를 작성할 때 해당 코드의 역할과 일치하는 지 쉽게 알 수 있게 되었다.
+네이밍을 변경함으로써 Service의 역할이 기술된다. 역할이 기술되기 때문에 내부 코드를 작성할 때 해당 코드의 역할과 일치하는지 쉽게 알 수 있게 되었다.
 
 ### [요약] Component 작업 시 체크 포인트
 - 탬플릿에만 사용되는 로직인가?
@@ -253,11 +253,11 @@ Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, �
   - Directive로 중복 해결
 - Component의 볼륨이 큰가?
   - Service로 분리하기
-- Service에서 API 통신 역할을 하는 가?
+- Service에서 API 통신 역할을 하는가?
   - ConfigApi 형태로 Service 분리
-- Service에서 상태관리 역할을 하는 가?
+- Service에서 상태관리 역할을 하는가?
   - ConfigStore 형태로 Service 분리
-- Service에서 유틸리티, 헬퍼 역할을 하는 가?
+- Service에서 유틸리티, 헬퍼 역할을 하는가?
   - ConfigHelper 형태로 Service 분리
 
 ### 끝
