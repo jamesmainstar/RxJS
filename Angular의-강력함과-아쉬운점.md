@@ -208,7 +208,7 @@ export class AppComponent {
 
 ### Angular의 메타몽인 Service
 #### 왜 오용이 발생되는 가
-Service는 Angular의 다른 요소들에 비해 명확한 역할이 정의되지 않는다. @Component, @Pipe, @Directive들은 각각의 역할을 명확히 알 수 있다. 하지만 Service는 @Injectable로 정의된다. 어딘가에 주입 가능하다는 것 외에는 구체적인 역할을 알 수 없다.
+Service는 Angular의 다른 요소들에 비해 명확한 역할이 정의되지 않는다. `@Component`, `@Pipe`, `@Directive`들은 각각의 역할을 명확히 알 수 있다. 하지만 Service는 `@Injectable`로 정의된다. 어딘가에 주입 가능하다는 것 외에는 구체적인 역할을 알 수 없다.
 
 Service를 정의한 코드이다. Service라는 것 외에 이 코드의 역할을 바로 알 수 있는가.
 ```ts
