@@ -24,7 +24,7 @@ TypeScript는 사용한지 10개월 정도 됐는 데, 초기에 서비스 투�
 
 요세들어서는 TypeScript 사용은 필수라고 생각하고 있다. 나는 TypeScript를 비유적으로 비서라는 표현을 사용한다. 나의 기억과 시간의 한계를 TypeScript가 해결해주고 있기 때문이다. 내가 느끼기엔 두 가지의 역할을 잘해주고 있다고 생각한다.
 
-첫 번째는 기억의 한계를 해결해주는 것은 상세한 코드 스팩을 기록할 수 있는 것이다. 예를 들어 메소드의 인자의 값이 어떤 타입을 사용하는 지 기록할 수 있다. 복잡한 기능을 구현할 수록 인자의 값을 복잡해진다. 인자의 타입은 string, number, boolean뿐만 아니라 interface, type, enum을 사용했을 때도 굉장히 좋은 결과를 가져다 준다.
+**첫 번째**는 기억의 한계를 해결해주는 것은 상세한 코드 스팩을 기록할 수 있는 것이다. 예를 들어 메소드의 인자의 값이 어떤 타입을 사용하는 지 기록할 수 있다. 복잡한 기능을 구현할 수록 인자의 값을 복잡해진다. 인자의 타입은 string, number, boolean뿐만 아니라 interface, type, enum을 사용했을 때도 굉장히 좋은 결과를 가져다 준다.
 
 Javascript로 작성했을 때는 코드를 분석해야 인자의 자세한 정보를 알 수 있다. 함수 내부로직을 분석하면 movieTicket는 movie, startTime, endTime, count, seats, watched의 프로퍼티를 가지는 것을 알 수 있다.
 ```js
@@ -64,7 +64,7 @@ const ticketInfo = (movieTicket: MovieTicket) => {
 ```
 메소드 인자까지 어딘가에 기록해둘 수 있는 게 멋지지 않는 가!!
 
-두 번째 역할은 시간을 절약해주는 안정성 보장이다. 내가 코딩을 할 때마다 내 코드의 안정성을 보장해준다. 잘못된 값을 사용했을 때 브라우저에 띄우기 전에 컴파일 시점에 미리 알려준다.
+**두 번째** 역할은 시간을 절약해주는 안정성 보장이다. 내가 코딩을 할 때마다 내 코드의 안정성을 보장해준다. 잘못된 값을 사용했을 때 브라우저에 띄우기 전에 컴파일 시점에 미리 알려준다.
 
 버그는 늦게 발견될 수록 시간 비용이 많이 든다. 가장 높은 비용을 발생되는 게 QA 기간에 발견되는 것이다. 개발 기간에 발견되는 게 가장 저렴한 비용이다.
 
@@ -92,7 +92,7 @@ const movieInfo = (movieTicket: MovieTicket) => {
 
 ### Angular의 강력한 Component의 볼륨을 줄여주는 도구들
 #### 일단 Component가 무엇인가
-Component는 뷰와 데이터 로직을 재사용과 격리하기 위한 단위이다. Angular에서는 @Component를 통해 정의한다.
+Component는 뷰와 데이터 로직을 재사용과 격리하기 위한 단위이다. Angular에서는 `@Component`를 통해 정의한다.
 ```ts
 @Component({
   selector: 'hello-component',
@@ -112,7 +112,7 @@ Date 객체를 년월일로 UI에 표시하는 것을 가정하겠다. Date를 �
 Date => 2019-07-10
 ```
 
-Pipe는 @Pipe로 정의한다. transform 메소드를 통해 변환을 한다.
+Pipe는 `@Pipe`로 정의한다. transform 메소드를 통해 변환을 한다.
 ```ts
 @Pipe({name: 'dateFormat'})
 class DateFormatPipe implements PipeTransform {
@@ -142,7 +142,7 @@ class HelloComponent {
 ```
 
 #### DOM의 동작은 Directive로 만들자
-Directive는 DOM의 조작을 캡슐화하기 위한 도구이다. 이벤트의 로직이 중복적으로 사용되면 Directive를 사용한다. Directive를 사용할 때는 Attribute로 사용한다.
+Directive는 DOM의 조작을 캡슐화하기 위한 도구이다. 자주 사용되는 로직은 DOM 이벤트의 로직이 중복적으로 사용될 때이다. Directive는 `@Directive`로 정의한다.
 
 저장 버튼을 연속으로 눌렀을 때 Debounce를 통해 한번만 실행되게 하는 기능이 있는 것을 가정하겠다. Attribute 이름은 debounce-submit이고, 이벤트는 mySubmit에 전달한다.
 ```ts
