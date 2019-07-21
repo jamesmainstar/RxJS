@@ -84,7 +84,7 @@ const movieInfo = (movieTicket: MovieTicket) => {
   return `${movie}(${startTime}~${endTime})`
 }
 ```
-```diff
+```
 - error TS2339: Property 'start' does not exist on type 'MovieTicket'.
 - error TS2339: Property 'end' does not exist on type 'MovieTicket'.
 ```
