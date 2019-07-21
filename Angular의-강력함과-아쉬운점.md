@@ -184,7 +184,7 @@ export class AppComponent {
 #### 그래도 Component가 커지면 Service로 분리하자
 아무리 Component를 잘게 쪼개고, Pipe와 Directive로 분리해도 Component의 볼륨이 커질 때가 있다. 이런 상황일 때는 Service를 통해 코드를 분리한다.
 
-Service는 싱글톤 객체이다. 독립적인 상태와 메소드를 가질 수 있다. 대체로 API 통신 부분을 분리할 때 사용한다. Service는 @Injectable를 통해 정의한다.
+Service는 싱글톤 객체이다. 독립적인 상태와 메소드를 가질 수 있다. 대체로 API 통신 부분을 분리할 때 사용한다. Service는 `@Injectable`를 통해 정의한다.
 ```ts
 @Injectable()
 export class MyService {
@@ -222,7 +222,6 @@ export class MyService {
 
 이 문제는 AngularJs를 사용하는 프로젝트와 Angular를 사용하는 프로젝트 모두 발견된 이슈이다.
 
-
 #### 오용을 예방하려면 어떻게 해야 할까
 Service의 역할을 폴더로 구분했던 경험이 있다. 폴더로 구분해도 여전히 Service라는 Subfix때문에 오용하는 사례가 발생했었다.
 폴더의 역할을 통해 내부적인 파일의 역할을 구분하는 것까지 잘되리라 기대하기는 힘든 것이다.
@@ -246,5 +245,7 @@ Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, �
 ```
 
 네이밍을 변경함으로써 Service의 역할이 기술된다. 역할이 기술되기 때문에 내부 코드를 작성할 때 해당 코드의 역할과 일치하는 지 쉽게 알 수 있게 되었다.
+
+### [요약] Component 작업 시 체크 포인트
 
 ### 끝
