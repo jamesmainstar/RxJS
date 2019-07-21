@@ -239,7 +239,7 @@ Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, �
 
 기존 Service 컨벤션과 비교하면 이렇다.
 ```
-- API 통신: ConfigService => ConfigAPI
+- API 통신: ConfigService => ConfigApi
 - 상태관리: DashboardService => DashboardStore
 - 헬퍼: DateService => DateHelper
 ```
@@ -247,5 +247,17 @@ Service는 세 가지 역할을 수행하고 있다. API 통신, 상태관리, �
 네이밍을 변경함으로써 Service의 역할이 기술된다. 역할이 기술되기 때문에 내부 코드를 작성할 때 해당 코드의 역할과 일치하는 지 쉽게 알 수 있게 되었다.
 
 ### [요약] Component 작업 시 체크 포인트
+- 탬플릿에만 사용되는 로직인가?
+  - Pipe로 분리
+- DOM 조작이 중복되는가?
+  - Directive로 중복 해결
+- Component의 볼륨이 큰가?
+  - Service로 분리하기
+- Service에서 API 통신 역할을 하는 가?
+  - ConfigApi 형태로 Service 분리
+- Service에서 상태관리 역할을 하는 가?
+  - ConfigStore 형태로 Service 분리
+- Service에서 유틸리티, 헬퍼 역할을 하는 가?
+  - ConfigHelper 형태로 Service 분리
 
 ### 끝
