@@ -22,6 +22,7 @@
 - 코딩 스타일
   - [Angular - Style Guide](https://angular.io/guide/styleguide)
   - [constructor는 의존성 바인딩만 사용](https://angular.io/tutorial/toh-pt4#call-it-in-ngoninit)
+- [폴더 구조 설계](폴더-구조-설계)
 
 #### TypeScript
 - [TypeScript Basic](TypeScript-Basic)
