@@ -1,3 +1,4 @@
+## this와 객체 프로토타입
 ### 2.2 단지 규칙일 뿐
 #### 2.2.1 기본 바인딩
 첫 번째 규칙은 가장 평범한 함수 호출인 '단독 함수 실행'에 관한 규칙으로 나머지 규칙에 해당하지 않을 경우 적용되는 this의 기본 규칙이다.
@@ -104,4 +105,47 @@ console.log(obj2.a) // 3
 var bar = new obj1.foo(4)
 console.log(obj1.a) // 2
 console.log(bar.a) // 4
+```
+
+## 비동기와 성능
+### 2 콜백
+콜백은 큐에서 대기 중인 코드가 처리되자마자 본 프로그램으로 '되돌아올' 목적지기 때문에 콜백이다.
+
+#### 2.2.2 중첩/연쇄된 콜백
+```js
+listen('click', function handler(event) {
+  setTimeout(function request() {
+    ajax('http://some.url.1', function response(text) {
+      if (text === 'hello') {
+        handler()
+      } else if (text === 'world') {
+        request()
+      }
+    })
+  }, 500)
+})
+```
+이른 바 콜백 지옥 또는 운명의 피라미트라고도 불리는 코드다.
+
+하지만 콜백 지옥은 중접/들여쓰기와는 무관하고 그보다 훨씬 심각한 문제를 안고 있다.
+
+중첩이 원인일까? 비동기 흐름을 따라가기 어렵게 만드는 주범이 중첩인가? 물론 중첩이 원인 제공을 한 공범자인 건 맞다. 그러나 중첩 없이 이벤트/타임아웃/ajax 예제를 다시 써보면,
+```js
+listen('click', handler)
+
+function handler(event) {
+  setTimeout(request, 500)
+}
+
+function request() {
+    ajax('http://some.url.1', response)
+}
+
+function response(text) {
+  if (text === 'hello') {
+    handler()
+  } else if (text === 'world') {
+    request()
+  }
+}
 ```
