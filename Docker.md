@@ -45,3 +45,21 @@ ubuntu 이미지가 `A` + `B` + `C`의 집합이라면, ubuntu 이미지를 베�
 
 ### 도커 이미지 만들기
 #### Dockerfile
+도커는 이미지를 만들기 위해 `Dockerfile`이라는 파일에 자체 DSL(Domain-specific language) 언어를 이용하여 이미지 생성 과정을 적습니다.
+간단하지만 유용한 아이디어인데, 서버에 어떤 프로그램을 설치하려고 이것저것 의존성 패키지를 설치하고 설정파일을 만들었던 과정을 `Dockerfile`로 관리하면 된다. 이 파일은 소스와 함께 버전 관리되고 원한다면 누구나 이미지 생성과정을 보고 수정할 수 있다.
+
+```
+# vertx/vertx3 debian version
+FROM subicura/vertx3:3.3.1
+MAINTAINER chungsub.kim@purpleworks.co.kr
+
+ADD build/distributions/app-3.3.1.tar /
+ADD config.template.json /app-3.3.1/bin/config.json
+ADD docker/script/start.sh /usr/local/bin/
+RUN ln -s /usr/local/bin/start.sh /start.sh
+
+EXPOSE 8080
+EXPOSE 7000
+
+CMD ["start.sh"]
+```
