@@ -69,3 +69,6 @@ CMD ["start.sh"]
 
 ## 도커 설치 및 실행
 > [참고자료](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)
+
+## 이미지 만들고 배포하기
+> [참고자료](https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html)
