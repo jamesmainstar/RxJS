@@ -66,3 +66,6 @@ EXPOSE 7000
 
 CMD ["start.sh"]
 ```
+
+## 도커 설치 및 실행
+> [참고자료](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)
