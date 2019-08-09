@@ -3,7 +3,7 @@
 
 #### Nuxt
 - [Nuxt란](Nuxt란)
-- [Nuxt-TypeScript](Nuxt TypeScript)
+- [Nuxt TypeScript](Nuxt-TypeScript)
 
 #### RxJS
 - [RxJS Immutable Object](RxJS-Immutable-Object)
