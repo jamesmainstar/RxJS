@@ -6,3 +6,9 @@
 5. Not SEO friendly
 6. Vue apps can load slowly
 7. Difficult to change behavior
+
+### Rendering modes
+- Server Side Rendered
+- Statically Generated
+- Single Page App
+
