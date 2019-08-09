@@ -27,7 +27,7 @@ nuxt 타입을 IDE에서 자동완성을 할 수 있도록 `tsconfig.json`에 `@
 #### 설정파일을 TypeScript로 변경
 `nuxt.config.js`를 `nuxt.config.ts`로 변경한다. 그리고 아래와 같이 설정 파일을 변경한다.
 
-```json
+```ts
 import NuxtConfiguration from '@nuxt/config'
 
 const config: NuxtConfiguration = {
