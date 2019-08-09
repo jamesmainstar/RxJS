@@ -1,0 +1,1 @@
+> [참고자료](https://subicura.com/2019/05/19/kubernetes-basic-1.html)
