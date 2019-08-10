@@ -135,3 +135,36 @@ class Page extends Vue {
 export default Page
 </script>
 ```
+
+### Vuex 클래식 사용하기
+
+
+### Vuex 모듈 모드 사용하기
+모듈 모드로 정의할 때는 `store`에 다른 파일을 정의한다. 파일 내부에는 `state`, `mutations`, `getters`, `actions`를 정의한다.
+```ts
+// page.ts
+export const state = () => ({
+  count: 0
+})
+
+export const mutations = {
+  upCount(state) {
+    state.count++
+  },
+  downCount(state) {
+    state.count--
+  }
+}
+```
+
+컴포넌트에서 사용할 때는 모듈을 접근해서 사용한다.
+```ts
+class Page extends Vue {
+  @State((state) => state.page.count)
+  count
+  @Mutation('page/upCount')
+  upCount
+  @Mutation('page/downCount')
+  downCount
+}
+```
