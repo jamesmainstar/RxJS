@@ -1,6 +1,14 @@
 ### 설치
+#### NPX 설치
+```
+npm i -g npx
+```
 #### Nuxt 설치
-[공식 가이드 문서](https://nuxtjs.org/guide/installation)를 참고한다.
+> [공식 가이드 문서](https://nuxtjs.org/guide/installation)를 참고한다.
+
+```
+npx create-nuxt-app <project-name>
+```
 
 #### Nuxt TypeScript 설치
 ```
