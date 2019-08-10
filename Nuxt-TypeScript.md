@@ -46,10 +46,21 @@ const config: NuxtConfiguration = {
 export default config
 ```
 
-### 실행
+### 개발 실행
 Nuxt에서 TypeScript를 사용하기 위해서는 해당 명령어로 실행해야 한다.
 ```
 npx nuxt
+```
+
+### 빌드
+```
+npx nuxt build
+npx nuxt generate
+```
+
+### 빌드 실행
+```
+npx nuxt start
 ```
 
 ## TypeScript 코드 작성하기
