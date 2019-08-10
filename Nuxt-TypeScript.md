@@ -136,8 +136,31 @@ export default Page
 </script>
 ```
 
-### Vuex 클래식 사용하기
+### Vuex 루트에 사용하기
+루트에 정의할 때는 `store/index.ts`에 `state`, `mutations`, `getters`, `actions`를 정의한다.
+```ts
+export const state = () => ({
+  count: 0
+})
 
+export const mutations = {
+  upCount(state) {
+    state.count++
+  },
+  downCount(state) {
+    state.count--
+  }
+}
+```
+
+컴포넌트에서는 데코레이터만 붙이면 사용가능하다.
+```ts
+class Page extends Vue {
+  @State count
+  @Mutation upCount
+  @Mutation downCount
+}
+```
 
 ### Vuex 모듈 모드 사용하기
 모듈 모드로 정의할 때는 `store`에 다른 파일을 정의한다. 파일 내부에는 `state`, `mutations`, `getters`, `actions`를 정의한다.
