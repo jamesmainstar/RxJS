@@ -86,3 +86,41 @@ class Logo extends Vue {
 export default Logo
 </script>
 ```
+
+```html
+<template>
+  <div class="container">
+    <logo />
+    <a class="button--green" @click.prevent="upCount()">
+      Up
+    </a>
+    {{ count }}
+    <a class="button--grey" @click.prevent="downCount()">
+      Down
+    </a>
+  </div>
+</template>
+
+<script lang="ts">
+import Component from 'vue-class-component'
+import { Vue } from 'nuxt-property-decorator'
+import Logo from '~/components/Logo.vue'
+
+@Component({
+  components: {
+    Logo
+  }
+})
+class Page extends Vue {
+  count: number = 0
+  upCount() {
+    this.count++
+  }
+  downCount() {
+    this.count++
+  }
+}
+
+export default Page
+</script>
+```
