@@ -11,7 +11,7 @@ TypeScript 설정파일을 만든다.
 ```
 touch tsconfig.json
 ```
-nuxt 명령어를 실행하여 `tsconfig.json`를 업데이트한다.
+nuxt 명령어를 실행하여 `tsconfig.json`를 업데이트한 뒤 종료한다.
 ```
 npx nuxt
 ```
