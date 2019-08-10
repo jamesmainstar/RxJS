@@ -53,7 +53,36 @@ npx nuxt
 ```
 
 ## TypeScript 코드 작성하기
-
-### TypeScript로 컴포넌트 작성하기
+### TypeScript로 설정하기
 먼저 **주의**할 점은 `.vue`파일에 `<script>`는 `<script lang="ts">`로만 작성해야 한다. `lang="ts"`를 추가하면 IDE에서 컴포넌트를 자동으로 `import`가능하다.
 
+### 컴포넌트 작성하기
+> `v-for`를 사용하면 `:key`를 필수로 사용해야 한다.
+
+```html
+<template>
+  <div class="VueToNuxtLogo">
+    <template v-for="item in classes">
+      <div :class="`${COMMON_CLASS} ${item}`" :key="item"></div>
+    </template>
+  </div>
+</template>
+
+<script lang="ts">
+import Component from 'vue-class-component'
+import { Vue } from 'nuxt-property-decorator'
+
+@Component({})
+class Logo extends Vue {
+  COMMON_CLASS = 'Triangle'
+  classes: string[] = [
+    'Triangle--two',
+    'Triangle--one',
+    'Triangle--three',
+    'Triangle--four'
+  ]
+}
+
+export default Logo
+</script>
+```
