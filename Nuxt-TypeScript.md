@@ -50,3 +50,7 @@ Nuxt에서 TypeScript를 사용하기 위해서는 해당 명령어로 실행해
 ```
 npx nuxt
 ```
+
+### TypeScript로 컴포넌트 작성하기
+먼저 **주의**할 점은 `.vue`파일에 `<script>`는 `<script lang="ts">`로만 작성해야 한다. `lang="ts"`를 추가하면 IDE에서 컴포넌트를 자동으로 `import`가능하다.
+
