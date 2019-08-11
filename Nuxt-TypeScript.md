@@ -1,4 +1,8 @@
-## 개발환경세팅
+### 글의 목적
+Angular 기반한 프로젝트를 한 경험이 있다. Angular는 TypeScript를 필수로 사용한다. TypeScript를 사용하면 생산성이 높아지는 것을 경험으로 느끼게 되었다.
+
+Nuxt를 TypeScript 기반으로 개발하고 싶었다. 하지만 아직 많은 레퍼런스가 없기 때문에 직접 작성하기로 했다. 이 글에서는 Nuxt에 TypeScript를 세팅하는 방법과 TypeScript로 작성한 Vue와 Vuex 코드를 소개한다.
+
 ### 설치 및 설정
 #### NPX 설치
 > [npx](https://www.npmjs.com/package/npx#description)는 `node_modules/.bin`에 설치되는 커멘드를 프로젝트 로컬에서 실행가능하도록 해주는 모듈이다.
