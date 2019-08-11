@@ -18,7 +18,7 @@ npm i -g npx
 #### Nuxt 프로젝트 설치
 > [공식 가이드 문서](https://nuxtjs.org/guide/installation)를 참고한다.
 
-nuxt를 설치하는 것은 JS로 개발할 때와 동일하다. 이 명령어를 실행하면 UI Framework와 Server-side Framework 선택이 나온다. 원하는 Framework를 선택하면 된다.
+Nuxt를 설치하는 것은 JS로 개발할 때와 동일하다. 이 명령어를 실행하면 **UI Framework**와 **Server-side Framework** 선택이 나온다. 원하는 Framework를 선택하면 된다.
 ```
 npx create-nuxt-app <project-name>
 ```
