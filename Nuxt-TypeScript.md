@@ -1,12 +1,16 @@
 ## 개발환경세팅
-### 설치
+### 설치 및 설정
 #### NPX 설치
+> [npx](https://www.npmjs.com/package/npx#description)는 `node_modules/.bin`에 설치되는 커멘드를 프로젝트 로컬에서 실행가능하도록 해주는 모듈이다.
+
+TypeScript로 작성된 nuxt는 `npx`를 통해서만 빌드가 가능하다. 그렇기 때문에 `npx`를 설치한다.
 ```
 npm i -g npx
 ```
 #### Nuxt 프로젝트 설치
 > [공식 가이드 문서](https://nuxtjs.org/guide/installation)를 참고한다.
 
+nuxt를 설치하는 것은 JS로 개발할 때와 동일하다.
 ```
 npx create-nuxt-app <project-name>
 ```
@@ -16,6 +20,8 @@ npx create-nuxt-app <project-name>
 npm i -D @nuxt/typescript nuxt-property-decorator
 npm i ts-node
 ```
+
+#### 설정 파일 수정
 TypeScript 설정파일을 만든다.
 ```
 touch tsconfig.json
