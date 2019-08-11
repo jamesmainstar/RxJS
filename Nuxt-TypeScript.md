@@ -1,10 +1,10 @@
 ### 글의 목적
-Angular 기반한 프로젝트를 한 경험이 있다. Angular는 TypeScript를 필수로 사용한다. TypeScript를 사용하면 생산성이 높아지는 것을 경험으로 느끼게 되었다.
+Angular 기반한 프로젝트를 한 경험이 있다. Angular는 TypeScript를 필수로 사용한다. 그 프로젝트에서 TypeScript를 사용하면 생산성이 높아지는 것을 몸소 느끼게 되었다. 그래서 새롭게 프로젝트를 하게되면 TypeScript를 사용하는 것으로 마음(?)먹었다.
 
-Nuxt를 TypeScript 기반으로 개발하고 싶었다. 하지만 아직 많은 레퍼런스가 없기 때문에 직접 작성하기로 했다. 이 글에서는 Nuxt에 TypeScript를 세팅하는 방법과 TypeScript로 작성한 Vue와 Vuex 코드를 소개한다.
+이 글에서는 Nuxt를 TypeScript 기반으로 개발하는 것을 가이드한다. Nuxt를 TypeScript로 개발하는 것에 대한 레퍼런스가 아직 많이 없기 때문에 직접 작성하기로 했다. 이 글에서는 Nuxt에 TypeScript를 세팅하는 방법과 TypeScript로 작성한 Vue와 Vuex 코드를 소개한다.
 
 ### 설치 및 설정
-먼저 개발환경을 잡는 것이 우선이다.
+먼저 개발환경을 잡기 위해서 필요할 모듈 설치와 환경설정이 필요하다.
 
 #### NPX 설치
 TypeScript로 작성된 nuxt는 `npx`를 통해서만 빌드가 가능하다. 그렇기 때문에 `npx`를 설치한다.
