@@ -209,3 +209,4 @@ class Page extends Vue {
 ```
 
 ### 끝
+Nuxt에 TypeScript를 설정한 보일러 플레이트를 만들어서 [create-nuxt-ts](https://github.com/ChoDragon9/create-nuxt-ts)에 올렸다. 이 글에 작성된 과정없이 바로 사용 가능하다.
