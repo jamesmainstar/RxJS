@@ -7,7 +7,7 @@ Angular 기반한 프로젝트를 한 경험이 있다. Angular는 TypeScript를
 먼저 개발환경을 잡기 위해서 필요할 모듈 설치와 환경설정이 필요하다.
 
 #### NPX 설치
-TypeScript로 작성된 nuxt는 `npx`를 통해서만 빌드가 가능하다. 그렇기 때문에 `npx`를 설치한다.
+TypeScript로 작성된 Nuxt는 `npx`를 통해서 커멘드를 실행하는 게 좋다. 기본으로 제공하는 `dev` 명령어는 TypeScript를 기반으로 실행해주지 않기 때문에 `npx` 설치는 필수이다.
 
 [npx](https://www.npmjs.com/package/npx#description)는 `node_modules/.bin`에 설치되는 커멘드를 프로젝트 로컬에서 실행가능하도록 해주는 모듈이다.
 
