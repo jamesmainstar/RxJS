@@ -22,15 +22,9 @@ npm i ts-node
 ```
 
 #### 설정 파일 수정
-TypeScript 설정파일을 만든다.
-```
-touch tsconfig.json
-```
-nuxt 명령어를 실행하여 `tsconfig.json`를 업데이트한 뒤 종료한다.
-```
-npx nuxt
-```
-nuxt 타입을 IDE에서 자동완성을 할 수 있도록 `tsconfig.json`에 `@nuxt/config`을 추가한다.
+1. `touch tsconfig.json` 명령어로 TypeScript 설정파일을 만든다. 
+2. `npx nuxt` 명령어로 `tsconfig.json`을 수정한다. `nuxt`를 처음 실행하면 `tsconfig.json`을 자동으로 업데이트 해준다.
+3. `tsconfig.json`에 `@nuxt/config`을 추가한다. nuxt 타입을 IDE에서 자동완성 가능하게 된다.
 ```diff
   "types": [
     "@types/node",
@@ -40,8 +34,8 @@ nuxt 타입을 IDE에서 자동완성을 할 수 있도록 `tsconfig.json`에 `@
 ```
 
 #### 설정파일을 TypeScript로 변경
-`nuxt.config.js`를 `nuxt.config.ts`로 변경한다. 그리고 아래와 같이 설정 파일을 변경한다.
-
+1. `nuxt.config.js`를 `nuxt.config.ts`로 변경한다. 
+2. TypeScript로 `nuxt.config.ts`를 수정한다.
 ```ts
 import NuxtConfiguration from '@nuxt/config'
 
