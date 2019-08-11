@@ -209,4 +209,6 @@ class Page extends Vue {
 ```
 
 ### 끝
-Nuxt에 TypeScript를 설정한 보일러 플레이트를 만들어서 [create-nuxt-ts](https://github.com/ChoDragon9/create-nuxt-ts)에 올렸다. 이 글에 작성된 과정없이 바로 사용 가능하다.
+이 글에서 작성된 설정과정을 보일러 플레이트로 만들어서 [create-nuxt-ts](https://github.com/ChoDragon9/create-nuxt-ts)에 올렸다. 이 저장소를 내려받으면 설정 과정없이 바로 사용 가능하다.
+
+그리고 처음 인텔리제이를 통해서 개발환경세팅을 했는 데, 인텔리제이는 IDE에 설정과정에서 많은 삽질이 필요하다. 웹스톰을 사용하면 별도로 IDE 설정 필요없이 바로 사용가능하다.
