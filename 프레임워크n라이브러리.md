@@ -23,11 +23,11 @@
   - [컴포넌트 통신](컴포넌트-통신)
 - [사용방법정리](Angular-사용방법정리)
 - [CoreModule, SharedModule](CoreModule-SharedModule)
-- [Angular 폴더구조](Angular-폴더구조)
 - [SonarTS](https://github.com/SonarSource/SonarTS/blob/master/README.md) : 기술적 부채 해결
 - 코딩 스타일
   - [Angular - Style Guide](https://angular.io/guide/styleguide)
   - [constructor는 의존성 바인딩만 사용](https://angular.io/tutorial/toh-pt4#call-it-in-ngoninit)
+- [Angular 폴더구조](Angular-폴더구조)
 - [폴더 구조 설계](폴더-구조-설계)
 
 #### TypeScript
