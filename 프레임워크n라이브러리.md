@@ -4,6 +4,7 @@
 #### Nuxt
 - [Nuxt란](Nuxt란)
 - [Nuxt TypeScript](Nuxt-TypeScript)
+- [Nuxt 폴더구조](Nuxt-폴더구조)
 
 #### RxJS
 - [RxJS Immutable Object](RxJS-Immutable-Object)
