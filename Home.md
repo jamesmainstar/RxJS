@@ -38,3 +38,5 @@
   - Android : GAID(Google Advertising ID), IOS : IDFA(IDentifier For Advertisers)
 - XAMPP 파일 서버 설정을 위한 php.ini 수정
   - upload_max_filesize=2M => upload_max_filesize=4096M
+- 웹스톰 멀티 선택
+  - Keymap => Add or Remove Caret
