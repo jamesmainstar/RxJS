@@ -1,4 +1,6 @@
-> [참고자료](https://subicura.com/2019/05/19/kubernetes-basic-1.html)
+> [참고자료 블로그](https://subicura.com/2019/05/19/kubernetes-basic-1.html)
+
+> [공식문서 한글](https://kubernetes.io/ko/docs/concepts/overview/working-with-objects/kubernetes-objects/)
 
 ### 쿠버네티스란?
 쿠버네티스는 컨테이너를 쉽고 빠르게 배포/확장하고 관리를 자동화해주는 오픈소스 플랫폼이다. 쿠버네티스가 너무 길어서 흔히 케이츠(k8s) 또는 큐브(kube)라고 줄여서 부른다.
