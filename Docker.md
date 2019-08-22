@@ -83,3 +83,55 @@ CMD ["start.sh"]
 
 ## 이미지 만들고 배포하기
 > [참고자료](https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html)
+
+도커는 이미지를 만들기 위해 `Dockerfile`이라는 이미지 빌드용 DSL(Domain Specific Language)파일을 사용한다.
+
+#### Ruby 웹 어플리케이션을 ubuntu에 배포하는 과정 예제
+1. ubuntu 설치
+2. ruby 설치
+3. 소스 복사
+4. Gen 패키지 설치
+5. Sinatra 서버 실행
+
+##### 쉘 스크립트 예제
+```
+# 1. ubuntu 설치 (패키지 업데이트)
+apt-get update
+
+# 2. ruby 설치
+apt-get install ruby
+gem install bundler
+
+# 3. 소스 복사
+mkdir -p /usr/src/app
+scp Gemfile app.rb root@ubuntu:/usr/src/app  # From host
+
+# 4. Gem 패키지 설치
+bundle install
+
+# 5. Sinatra 서버 실행
+bundle exec ruby app.rb
+```
+
+##### Dockerfile로 과정을 옮긴 예제
+```
+# 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)
+FROM       ubuntu:16.04
+MAINTAINER subicura@subicura.com
+RUN        apt-get -y update
+
+# 2. ruby 설치
+RUN apt-get -y install ruby
+RUN gem install bundler
+
+# 3. 소스 복사
+COPY . /usr/src/app
+
+# 4. Gem 패키지 설치 (실행 디렉토리 설정)
+WORKDIR /usr/src/app
+RUN     bundle install
+
+# 5. Sinatra 서버 실행 (Listen 포트 정의)
+EXPOSE 4567
+CMD    bundle exec ruby app.rb -o 0.0.0.0
+```
