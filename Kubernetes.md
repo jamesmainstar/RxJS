@@ -68,8 +68,16 @@ metadata:
 spec:
     containers:
     - name: busybox
-        image: busybox:1.25
+      image: busybox:1.25
 ```
+##### 요구되는 필드
+> [스펙 상세 설명](https://blog.voidmainvoid.net/138)
+
+- apiVersion: 스크립트를 실행하기 위한 **쿠버네티스 API 버전**
+- kind: 어떤 종류의 오브젝트를 생성하고자 하는 지
+- metadata
+  - name: 오브젝트를 유일하게 구분지어 줄 데이터. 이름, UID 그리고 선택적인 네임스페이스를 포함.
+- spec
 
 #### 쿠버네티스 배포방식
 쿠버네티스는 애플리케이션을 배포하기 위해 **원하는 상태**를 다양한 오브젝트에 라벨을 붙여 정의(YAML)하고 API 서버에 전달하는 방식을 사용한다.
