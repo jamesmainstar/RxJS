@@ -3,15 +3,21 @@
 
 ### 서버 인프라 구성 방식에 따른 비교
 - On-Premises
-  - You Manage: Networking / Storage / Servers / Virtualization / O/S / Middleware / Runtime / Data / Applications
+  - You Manage
+    - Networking / Storage / Servers / Virtualization
+    - O/S / Middleware / Runtime / Data / Applications
 - Infrastructure as a Service
   - You Manage: O/S / Middleware / Runtime / Data / Applications
   - Other Manage: Networking / Storage / Servers / Virtualization
 - Platform as a Service
   - You Manage: Data / Applications
-  - Other Manage: Networking / Storage / Servers / Virtualization / O/S / Middleware / Runtime
+  - Other Manage
+    - Networking / Storage / Servers / Virtualization
+    - O/S / Middleware / Runtime
 - Software as a Service
-  - Other Manage: Networking / Storage / Servers / Virtualization / O/S / Middleware / Runtime / Data / Applications
+  - Other Manage
+    - Networking / Storage / Servers / Virtualization
+    - O/S / Middleware / Runtime / Data / Applications
 
 ### On-Permise(온프레미스)
 - 소프트웨어 솔루션을 원격환경이 아닌 자체적으로 보유한 전산실 서버에 직접 설치 및 운영하는 방식
