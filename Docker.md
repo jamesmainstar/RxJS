@@ -70,5 +70,16 @@ CMD ["start.sh"]
 ## 도커 설치 및 실행
 > [참고자료](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)
 
+### 컨테이너 업데이트
+1. 새 버전의 이미지를 다운
+   - `docker pull`
+2. 기존 컨테이너 삭제
+   - `docker stop`
+   - `docker rm`
+3. 새 버전의 이미지 실행
+   - `docker run`
+
+컨테이너를 삭제하면 컨테이너에서 생성된 파일이 사라진다. 컨테이너 삭제시 유지해야하는 데이터는 반드시 컨테이너 외부 스토리지에 저장해야 한다.
+
 ## 이미지 만들고 배포하기
 > [참고자료](https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html)
