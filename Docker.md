@@ -135,3 +135,21 @@ RUN     bundle install
 EXPOSE 4567
 CMD    bundle exec ruby app.rb -o 0.0.0.0
 ```
+
+### 이미지 저장소
+빌드한 도커 이미지는 서버에 직접 파일을 복사하지 않는 다. 도커 레지스트라는 이미지 저장소를 사용한다. 도커 명령어를 이용하여 이미지를 레지스트리에 푸시하고 다른 서버에서 풀 받아 사용하는 구조이다.
+
+도커 레지스트리는 오픈소스로 무료로 설치할 수 있고 설치형이 싫다면 도커(Docker Inc.)에서 서비스 중인 도커 허브를 사용할 수 있다.
+
+#### Docker Hub
+도커 허브는 도커에서 제공하는 기본 이미지 저장소로 ubuntu, centos, debian등의 베이스 이미지와 ruby, golang, java, python 등의 공식 이미지가 저장되어 있다.
+
+#### 이미지 태그
+도커 이미지 이름은 다음과 같은 형태로 구성된다.
+
+```
+[Registry URL]/[사용자 ID]/[이미지명]:[tag]
+```
+
+`Registry URL`은 기본적으로 도커 허브를 바라보고 있고 `사용자 ID`를 지정하지 않으면 기본값인 library를 사용한다.
+따라서 `ubuntu` = `library/ubuntu` = `docker.io/library/ubuntu`는 모두 동일한 표현이다.
