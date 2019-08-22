@@ -81,6 +81,17 @@ CMD ["start.sh"]
 
 컨테이너를 삭제하면 컨테이너에서 생성된 파일이 사라진다. 컨테이너 삭제시 유지해야하는 데이터는 반드시 컨테이너 외부 스토리지에 저장해야 한다.
 
+### 컨테이너 실행하기
+도커를 실행하는 명령어는 다음과 같다.
+```
+docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+```
+
+`-p` 옵션을 사용하면 호스트의 `1234`포트를 컨테이너의 `6379`포트로 연결하였고, `localhost:1234`로 접속하면 redis를 사용가능하게 되는 것이다.
+```
+docker run -p 1234:6379 redis
+```
+
 ## 이미지 만들고 배포하기
 > [참고자료](https://subicura.com/2017/02/10/docker-guide-for-beginners-create-image-and-deploy.html)
 
